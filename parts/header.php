@@ -2,7 +2,8 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-    </div>
+        <?php include 'parts/nav.php'; ?>
+      </div>
     </div>
   </div>
 </header>
