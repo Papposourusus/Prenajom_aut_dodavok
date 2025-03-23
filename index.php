@@ -29,8 +29,8 @@ https://templatemo.com/tm-576-snapx-photography
 
 -->
 <body>
-  <?php include 'header.php'; ?>
-  <?php include 'nav.php'; ?>
+  <?php include 'parts/header.php'; ?>
+  <?php include 'parts/nav.php'; ?>
 
 
   <div id="modal" class="popupContainer" style="display:none;">
