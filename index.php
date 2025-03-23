@@ -126,8 +126,8 @@ https://templatemo.com/tm-576-snapx-photography
       <div class="row">
         <div class="col-lg-10 offset-lg-1">
           <div class="header-text">
-            <h2>Enter a world of <em>Photos</em> &amp; Amazing <em>Awards</em></h2>
-            <p>SnapX Photography is a professional website template with 5 different HTML pages for maximum customizations. It is free for commercial usage. This Bootstrap v5.1.3 CSS layout is provided by TemplateMo Free CSS Templates.</p>
+            <h2>Vaše cesty začínajú u <em>NÁS</em> &amp; Prenájom dodávok a áut na každú príležitosť – pohodlne, rýchlo a bez komplikácií. Objavte slobodu jazdy ešte <em>DNES</em></h2>
+            <p>Pre každú cestu máme riešenie – spoľahlivé dodávky a autá, ktoré vás bezpečne dovedú k cieľu. Prenájom bez komplikácií, s dôrazom na pohodlie a kvalitu.</p>
             <div class="buttons">
               <div class="big-border-button">
                 <a href="contests.html">Explore SnapX Contest</a>
