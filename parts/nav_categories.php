@@ -1,5 +1,6 @@
- <!-- ***** Logo Start ***** -->
- <a href="categories.php" class="logo">
+                     <nav class="main-nav">
+                      <!-- ***** Logo Start ***** -->
+                      <a href="index.html" class="logo">
                           <img src="assets/images/logo.png" alt="SnapX Photography Template">
                       </a>
                       <!-- ***** Logo End ***** -->
@@ -24,8 +25,3 @@
                       </a>
                       <!-- ***** Menu End ***** -->
                   </nav>
-              </div>
-          </div>
-      </div>
-  </header>
-  <!-- ***** Header Area End ***** -->
