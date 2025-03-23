@@ -32,7 +32,7 @@ https://templatemo.com/tm-576-snapx-photography
 
 <body>
 
-  <?php include 'parts/header(2).php'; ?>
+  <?php include 'parts/header_user.php'; ?>
   
                       
 
