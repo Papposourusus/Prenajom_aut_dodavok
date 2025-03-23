@@ -16,8 +16,8 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 </head>
 <body>
-  <?php include 'header.php'; ?>
-  <?php include 'nav.php'; ?>
+  <?php include 'parts/header.php'; ?>
+  <?php include 'parts/nav.php'; ?>
   <!-- Vaše hlavné obsahové časti -->
   <div class="main-banner">
     <div class="container">
@@ -39,7 +39,8 @@
       </div>
     </div>
   </div>
-  <?php include 'footer.php'; ?>
+
+  <?php include 'parts/footer.php'; ?>
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
