@@ -126,7 +126,7 @@ https://templatemo.com/tm-576-snapx-photography
       <div class="row">
         <div class="col-lg-10 offset-lg-1">
           <div class="header-text">
-            <h2>Vaše cesty začínajú u <em>NÁS</em> &amp; Prenájom dodávok a áut na každú príležitosť – pohodlne, rýchlo a bez komplikácií. Objavte slobodu jazdy ešte <em>DNES</em></h2>
+            <h1>Vaše cesty začínajú u <em>NÁS</em> &amp; Prenájom dodávok a áut na každú príležitosť – pohodlne, rýchlo a bez komplikácií. Objavte slobodu jazdy ešte <em>DNES</em></h1>
             <p>Pre každú cestu máme riešenie – spoľahlivé dodávky a autá, ktoré vás bezpečne dovedú k cieľu. Prenájom bez komplikácií, s dôrazom na pohodlie a kvalitu.</p>
             <div class="buttons">
               <div class="big-border-button">
