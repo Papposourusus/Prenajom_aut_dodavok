@@ -1,4 +1,4 @@
-<nav class="main-nav">
+nav class="main-nav">
   <!-- ***** Logo Start ***** -->
   <a href="index.html" class="logo">
     <img src="assets/images/logo.png" alt="SnapX Photography Template">
@@ -30,6 +30,10 @@
 <!-- Add your JavaScript here -->
 <script>
     function toggleBackground() {
-        document.body.style.backgroundColor = document.body.style.backgroundColor === 'black' ? 'white' : 'black';
+        const body = document.body;
+        const header = document.querySelector('.main-nav');
+        const newColor = body.style.backgroundColor === 'black' ? 'white' : 'black';
+        body.style.backgroundColor = newColor;
+        header.style.backgroundColor = newColor;
     }
 </script>
