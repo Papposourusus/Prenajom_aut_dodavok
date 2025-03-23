@@ -1,5 +1,5 @@
  <!-- ***** Logo Start ***** -->
- <a href="index.html" class="logo">
+ <a href="categories.php" class="logo">
                           <img src="assets/images/logo.png" alt="SnapX Photography Template">
                       </a>
                       <!-- ***** Logo End ***** -->

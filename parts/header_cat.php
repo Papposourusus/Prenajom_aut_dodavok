@@ -1,5 +1,4 @@
-<header class="header-area header-sticky">
- <!-- ***** Header Area Start ***** -->
+
  <header class="header-area header-sticky">
       <div class="container">
           <div class="row">
