@@ -30,7 +30,7 @@ https://templatemo.com/tm-576-snapx-photography
 -->
 <body>
   <?php include 'parts/header.php'; ?>
-  <?php include 'parts/nav.php'; ?>
+  
 
 
 
@@ -303,7 +303,7 @@ https://templatemo.com/tm-576-snapx-photography
         </div>
         <div class="col-lg-6">
           <div class="main-button">
-            <a href="categories.html">Discover All Categories</a>
+            <a href="categories.php">Discover All Categories</a>
           </div>
         </div>
         <div class="col-lg-3 col-sm-6">
