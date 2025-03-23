@@ -20,8 +20,16 @@
   <div class="border-button">
     <a id="modal_trigger" href="#modal" class="sign-in-up"><i class="fa fa-user"></i> Sign In/Up</a>
   </div>
+  <button onclick="toggleBackground()">Zmeniť farbu pozadia</button>
   <a class='menu-trigger'>
     <span>Menu</span>
   </a>
   <!-- ***** Menu End ***** -->
 </nav>
+
+<!-- Add your JavaScript here -->
+<script>
+    function toggleBackground() {
+        document.body.style.backgroundColor = document.body.style.backgroundColor === 'black' ? 'white' : 'black';
+    }
+</script>
