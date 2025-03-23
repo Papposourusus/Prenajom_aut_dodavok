@@ -1,4 +1,4 @@
-nav class="main-nav">
+<nav class="main-nav">
   <!-- ***** Logo Start ***** -->
   <a href="index.html" class="logo">
     <img src="assets/images/logo.png" alt="SnapX Photography Template">
