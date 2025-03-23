@@ -30,10 +30,6 @@
 <!-- Add your JavaScript here -->
 <script>
     function toggleBackground() {
-        const body = document.body;
-        const header = document.querySelector('.main-nav');
-        const newColor = body.style.backgroundColor === 'black' ? 'white' : 'black';
-        body.style.backgroundColor = newColor;
-        header.style.backgroundColor = newColor;
+        document.body.style.backgroundColor = document.body.style.backgroundColor === 'black' ? 'white' : 'black';
     }
 </script>
