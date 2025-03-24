@@ -131,10 +131,10 @@ https://templatemo.com/tm-576-snapx-photography
             <p>Pre každú cestu máme riešenie – spoľahlivé dodávky a autá, ktoré vás bezpečne dovedú k cieľu. Prenájom bez komplikácií, s dôrazom na pohodlie a kvalitu.</p>
             <div class="buttons">
               <div class="big-border-button">
-                <a href="contests.html">Explore SnapX Contest</a>
+                <a href="categories.php">Čekni naše fára</a>
               </div>
               <div class="icon-button">
-                <a href="https://youtube.com/templatemo" target="_blank"><i class="fa fa-play"></i> Watch Our Video Now</a>
+                <a href="https://www.youtube.com/watch?v=ALhAQyaYGwk&ab_channel=VSromio" target="_blank"><i class="fa fa-play"></i> Z 0 na 100 jak sa patrý <---</a>
               </div>
             </div>
           </div>
