@@ -7,7 +7,7 @@
                       <!-- ***** Menu Start ***** -->
                       <ul class="nav">
                           <li><a href="index.php">Home</a></li>
-                          li class="has-sub">
+                          <li class="has-sub">
       <a href="javascript:void(0)">zatial nic</a>
       <ul class="sub-menu">
         <li><a href="contests.php">Do buducnosti</a></li>
