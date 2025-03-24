@@ -8,10 +8,7 @@
   <ul class="nav">
     <li><a href="index.php" class="active">Home</a></li>
     <li class="has-sub">
-      <a href="javascript:void(0)">Photos &amp; Videos</a>
-      <ul class="sub-menu">
-        <li><a href="contests.php">Contests</a></li>
-        <li><a href="contest-details.html">Single Contest</a></li>
+     
       </ul>
     </li>
     <li><a href="categories.php">Categories</a></li>
