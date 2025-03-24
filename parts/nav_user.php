@@ -7,13 +7,13 @@
                       <!-- ***** Menu Start ***** -->
                       <ul class="nav">
                           <li><a href="index.php">Home</a></li>
-                          <li class="has-sub">
-                              <a href="javascript:void(0)" class="active">Photos &amp; Videos</a>
-                              <ul class="sub-menu">
-                                  <li><a href="contests.php">Contests</a></li>
-                                  <li><a href="contest-details.php">Single Contest</a></li>
-                              </ul>
-                          </li>
+                          li class="has-sub">
+      <a href="javascript:void(0)">zatial nic</a>
+      <ul class="sub-menu">
+        <li><a href="contests.php">Do buducnosti</a></li>
+        <li><a href="contest-details.html">Daco take</a></li>
+      </ul>
+    </li>
                           <li><a href="categories.php">Categories</a></li>
                           <li><a href="users.php">Users</a></li>
                       </ul>   
