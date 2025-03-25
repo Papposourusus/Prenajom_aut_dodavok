@@ -30,8 +30,8 @@
 .logo_d {
   position: relative;
   left:-5%;
-  width:5.2%;
-  height:15%;
+  width:15%;
+  height:5.2%;
 }
 
 </style>
