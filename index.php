@@ -152,7 +152,7 @@ https://templatemo.com/tm-576-snapx-photography
           <div class="owl-features owl-carousel" style="position: relative; z-index: 5;">
             <div class="item">
               <div class="thumb">
-                <img src="assets/images/featured-01.jpg" alt="">
+                <img src="assets/images/Master.jpg" alt="">
                 <div class="hover-effect">
                   <div class="content">
                     <h4>Renault master <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(4.5)</span></h4>
