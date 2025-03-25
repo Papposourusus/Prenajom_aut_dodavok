@@ -34,5 +34,9 @@
   height:auto;
   border-radius: 20%;
 }
+.logo_d img {
+    border-radius: 20%; /* Aplikuje zaoblenie na obrázok */
+  
+}
 
 </style>
