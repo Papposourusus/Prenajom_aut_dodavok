@@ -32,6 +32,7 @@
   left:-5%;
   width: 15%;
   height:auto;
+  border-radius: 10px;
 }
 
 </style>
