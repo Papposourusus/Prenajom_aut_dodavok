@@ -1,6 +1,6 @@
 <nav class="main-nav">
                       <!-- ***** Logo Start ***** -->
-                      <a href="index.php" class="logo">
+                      <a href="index.php" class="logo_d">
                       <img src="assets/images/logo.jpg" alt="Ano ej to AI niet penazi na grafika">
                       </a>
                       <!-- ***** Logo End ***** -->
@@ -25,3 +25,18 @@
                       </a>
                       <!-- ***** Menu End ***** -->
                   </nav>
+
+                  <style>
+.logo_d {
+  position: relative;
+  left:-5%;
+  width: 16%;
+  height:auto;
+  border-radius: 20%;
+}
+.logo_d img {
+    border-top-right-radius: 20%; /* Aplikuje zaoblenie na obrázok */
+    border-bottom-right-radius: 20%;
+}
+
+</style>
