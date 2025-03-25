@@ -28,8 +28,8 @@
 
 <style>
 .logo_d {
-  display: block;
-  text-align: left; /* Aligns the logo to the left */
+  position: relative;
+  left:2%
 }
 
 </style>
