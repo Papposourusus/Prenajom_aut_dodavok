@@ -1,6 +1,6 @@
 <nav class="main-nav">
   <!-- ***** Logo Start ***** -->
-  <a href="index.html" class="logo">
+  <a href="index.html" class="logo_d">
     <img src="assets/images/logo.jpg" alt="Ano ej to AI niet penazi na grafika">
   </a>
   <!-- ***** Logo End ***** -->
@@ -25,3 +25,11 @@
   </a>
   <!-- ***** Menu End ***** -->
 </nav>
+
+<style>
+.logo_d {
+  display: block;
+  text-align: left; /* Aligns the logo to the left */
+}
+
+</style>

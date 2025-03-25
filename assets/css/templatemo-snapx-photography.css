@@ -41,10 +41,7 @@ figure, header, nav, section, article, aside, footer, figcaption {
   outline: 0;
 }
 
-.logo_d {
-  display: block;
-  text-align: left; /* Aligns the logo to the left */
-}
+
 
 .clearfix:after {
   content: ".";
