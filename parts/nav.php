@@ -31,7 +31,7 @@
   position: relative;
   left:-5%;
   width:5.2%;
-  height: 15%;
+  height:15%;
 }
 
 </style>
