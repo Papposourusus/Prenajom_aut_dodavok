@@ -29,7 +29,7 @@
 <style>
 .logo_d {
   position: relative;
-  left:2%
+  left:-5%;
 }
 
 </style>
