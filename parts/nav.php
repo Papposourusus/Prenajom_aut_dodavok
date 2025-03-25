@@ -32,7 +32,7 @@
   left:-5%;
   width: 15%;
   height:auto;
-  border-radius: 10px;
+  border-radius: 20%;
 }
 
 </style>
