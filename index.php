@@ -155,11 +155,11 @@ https://templatemo.com/tm-576-snapx-photography
                 <img src="assets/images/featured-01.jpg" alt="">
                 <div class="hover-effect">
                   <div class="content">
-                    <h4>Walk In The Nature <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(4.5)</span></h4>
+                    <h4>Renault master <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(4.5)</span></h4>
                     <ul>
-                      <li><span>Contest Winner:</span> Vincent Adam</li>
-                      <li><span>Contest Author:</span> Anthony Soft</li>
-                      <li><span>Awards:</span> $1.000 + Camera Nikon</li>
+                      <li><span>Cena:</span> 60€/deň</li>
+                      <li><span>Majiteľ:</span> Maduda s.r.o</li>
+                      <li><span>Objem náložného priestoru:</span> 10,8 m³</li>
                     </ul>
                   </div>
                 </div>
