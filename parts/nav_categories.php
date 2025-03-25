@@ -1,7 +1,7 @@
                      <nav class="main-nav">
                       <!-- ***** Logo Start ***** -->
                       <a href="index.php" class="logo">
-                          <img src="assets/images/logo.png" alt="SnapX Photography Template">
+                      <img src="assets/images/dodavka_logo.png" alt="Ano ej to AI niet penazi na grafika">
                       </a>
                       <!-- ***** Logo End ***** -->
                       <!-- ***** Menu Start ***** -->
