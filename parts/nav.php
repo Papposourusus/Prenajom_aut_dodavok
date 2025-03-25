@@ -35,8 +35,8 @@
   border-radius: 20%;
 }
 .logo_d img {
-    border-radius: 20%; /* Aplikuje zaoblenie na obrázok */
-  
+    border-top-right-radius: 20%; /* Aplikuje zaoblenie na obrázok */
+    border-bottom-right-radius: 20%;
 }
 
 </style>
