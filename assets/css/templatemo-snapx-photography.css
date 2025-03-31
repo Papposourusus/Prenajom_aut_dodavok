@@ -933,7 +933,7 @@ Banner Style
 */
 
 .main-banner {
-  background-image: url(../images/banner-bg.jpg);
+  background-image: url('./images/dod_bcg.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
