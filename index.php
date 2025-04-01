@@ -159,7 +159,7 @@ https://templatemo.com/tm-576-snapx-photography
                     <ul>
                       <li><span>Cena:</span> 60€/deň</li>
                       <li><span>Majiteľ:</span> Maduda s.r.o</li>
-                      <li><span>Objem náložného priestoru:</span> 10,8 m³</li>
+                      <li><span>Objem náložného priestoru:</span> 3,8 m³</li>
                     </ul>
                   </div>
                 </div>
@@ -167,14 +167,14 @@ https://templatemo.com/tm-576-snapx-photography
             </div>
             <div class="item">
               <div class="thumb">
-                <img src="assets/images/featured-02.jpg" alt="">
+                <img src="assets/images/vclass.jpg" alt="">
                 <div class="hover-effect">
                   <div class="content">
-                    <h4>Smile In The Nature <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(4.5)</span></h4>
+                    <h4>Mercedes-Benz V class <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(4.5)</span></h4>
                     <ul>
-                      <li><span>Contest Winner:</span> Thomas Eddy</li>
-                      <li><span>Contest Author:</span> Anthony Soft</li>
-                      <li><span>Awards:</span> $1,200 + Canon EOS R7</li>
+                      <li><span>Cena:</span> 80€/deň</li>
+                      <li><span>Majiteľ:</span> Hedin Atomotive</li>
+                      <li><span>Objem náložného priestoru:</span> 4,4 m³</li>
                     </ul>
                   </div>
                 </div>
@@ -182,14 +182,14 @@ https://templatemo.com/tm-576-snapx-photography
             </div>
             <div class="item">
               <div class="thumb">
-                <img src="assets/images/featured-03.jpg" alt="">
+                <img src="assets/images/trans.jpg" alt="">
                 <div class="hover-effect">
                   <div class="content">
-                    <h4>Happy In The Nature <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(4.5)</span></h4>
+                    <h4>Volkswagen Transit<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(4.5)</span></h4>
                     <ul>
-                      <li><span>Contest Winner:</span> Vincent Adam</li>
-                      <li><span>Contest Author:</span> Anthony Soft</li>
-                      <li><span>Awards:</span> $1,800 + Canon EOS R6</li>
+                      <li><span>Cena</span> 75€/deň</li>
+                      <li><span>Majiteľ:</span> </li>
+                      <li><span>Objem náložného priestoru:</span> 4,8 m³</li>
                     </ul>
                   </div>
                 </div>
