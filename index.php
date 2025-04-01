@@ -159,7 +159,7 @@ https://templatemo.com/tm-576-snapx-photography
                     <ul>
                       <li><span>Cena:</span> 60€/deň</li>
                       <li><span>Majiteľ:</span> Maduda s.r.o</li>
-                      <li><span>Objem náložného priestoru:</span> 3,8 m³</li>
+                      <li><span>Rok výroby:</span> 2007</li>
                     </ul>
                   </div>
                 </div>
@@ -174,7 +174,7 @@ https://templatemo.com/tm-576-snapx-photography
                     <ul>
                       <li><span>Cena:</span> 80€/deň</li>
                       <li><span>Majiteľ:</span> Hedin Atomotive</li>
-                      <li><span>Objem náložného priestoru:</span> 4,4 m³</li>
+                      <li><span>Rok výroby</span> 2020</li>
                     </ul>
                   </div>
                 </div>
@@ -185,11 +185,11 @@ https://templatemo.com/tm-576-snapx-photography
                 <img src="assets/images/trans.jpg" alt="">
                 <div class="hover-effect">
                   <div class="content">
-                    <h4>Volkswagen Transit<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(4.5)</span></h4>
+                    <h4>Volkswagen Transport<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(4.5)</span></h4>
                     <ul>
                       <li><span>Cena</span> 75€/deň</li>
                       <li><span>Majiteľ:</span> </li>
-                      <li><span>Objem náložného priestoru:</span> 4,8 m³</li>
+                      <li><span>Rok výroby:</span> 2013</li>
                     </ul>
                   </div>
                 </div>
@@ -197,14 +197,14 @@ https://templatemo.com/tm-576-snapx-photography
             </div>
             <div class="item">
               <div class="thumb">
-                <img src="assets/images/featured-01.jpg" alt="">
+                <img src="assets/images/transit.jpg" alt="">
                 <div class="hover-effect">
                   <div class="content">
-                    <h4>Walk In The Nature <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(4.5)</span></h4>
+                    <h4>Ford Transit <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(4.5)</span></h4>
                     <ul>
-                      <li><span>Contest Winner:</span> Thomas Eddy</li>
-                      <li><span>Contest Author:</span> Anthony Soft</li>
-                      <li><span>Awards:</span> $8,400 + Canon EOS R1</li>
+                      <li><span>Cena:</span> 80€/deň</li>
+                      <li><span>Majiteľ:</span>Tim Radobický</li>
+                      <li><span>Rok výroby:</span> 2021</li>
                     </ul>
                   </div>
                 </div>
@@ -212,14 +212,14 @@ https://templatemo.com/tm-576-snapx-photography
             </div>
             <div class="item">
               <div class="thumb">
-                <img src="assets/images/featured-02.jpg" alt="">
+                <img src="assets/images/pegot.jpg" alt="">
                 <div class="hover-effect">
                   <div class="content">
-                    <h4>Run In The Nature <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(4.5)</span></h4>
+                    <h4>Peugeot Boxer<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(4.5)</span></h4>
                     <ul>
-                      <li><span>Contest Winner:</span> Vincent Adam</li>
-                      <li><span>Contest Author:</span> Anthony Soft</li>
-                      <li><span>Awards:</span> $5,500 + Canon EOS R3</li>
+                      <li><span>Cena:</span> 70€/deň</li>
+                      <li><span>Majiteľ:</span> Alex"Smažák"Pláštiak</li>
+                      <li><span>Rok výroby:</span>2015</li>
                     </ul>
                   </div>
                 </div>
@@ -227,14 +227,14 @@ https://templatemo.com/tm-576-snapx-photography
             </div>
             <div class="item">
               <div class="thumb">
-                <img src="assets/images/featured-03.jpg" alt="">
+                <img src="assets/images/doblo.jpg" alt="">
                 <div class="hover-effect">
                   <div class="content">
-                    <h4>Stay In The Nature <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(4.5)</span></h4>
+                    <h4>Fiat Doblo <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(4.5)</span></h4>
                     <ul>
-                      <li><span>Contest Winner:</span> Thomas Eddy</li>
-                      <li><span>Contest Author:</span> Anthony Soft</li>
-                      <li><span>Awards:</span> $4,400 + Canon EOS R5</li>
+                      <li><span>Cena:</span> 60€/deň</li>
+                      <li><span>Majiteľ:</span> Maduda s.r.o.</li>
+                      <li><span>Rok výroby:</span> 2010</li>
                     </ul>
                   </div>
                 </div>
@@ -242,14 +242,14 @@ https://templatemo.com/tm-576-snapx-photography
             </div>
             <div class="item">
               <div class="thumb">
-                <img src="assets/images/featured-01.jpg" alt="">
+                <img src="assets/images/malibu.jpg" alt="">
                 <div class="hover-effect">
                   <div class="content">
-                    <h4>Walk In The Nature <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(4.5)</span></h4>
+                    <h4>Fiat Doblo Malibu <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(4.5)</span></h4>
                     <ul>
-                      <li><span>Contest Winner:</span> Vincent Adam</li>
-                      <li><span>Contest Author:</span> Anthony Soft</li>
-                      <li><span>Awards:</span> $3,800 + Canon EOS R6</li>
+                      <li><span>Cena:</span> 55€/deň</li>
+                      <li><span>Majiteľ:</span> Maduda s.r.o.</li>
+                      <li><span>Rok výroby:</span> 2010</li>
                     </ul>
                   </div>
                 </div>
@@ -257,14 +257,14 @@ https://templatemo.com/tm-576-snapx-photography
             </div>
             <div class="item">
               <div class="thumb">
-                <img src="assets/images/featured-02.jpg" alt="">
+                <img src="assets/images/hbyy.jpg" alt="">
                 <div class="hover-effect">
                   <div class="content">
-                    <h4>Shoot In The Nature <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(4.5)</span></h4>
+                    <h4>Hobby Van <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(4.5)</span></h4>
                     <ul>
-                      <li><span>Contest Winner:</span> Vincent Adam</li>
-                      <li><span>Contest Author:</span> Anthony Soft</li>
-                      <li><span>Awards:</span> $2,400 + Canon EOS R7</li>
+                      <li><span>Cena:</span> 80€/deň</li>
+                      <li><span>Majiteľ:</span> HaBByBy</li>
+                      <li><span>Rok výroby:</span> 2012</li>
                     </ul>
                   </div>
                 </div>
