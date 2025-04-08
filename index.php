@@ -297,13 +297,13 @@ https://templatemo.com/tm-576-snapx-photography
       <div class="row">
         <div class="col-lg-6">
           <div class="section-heading">
-            <h6>Our Categories</h6>
-            <h4>Check Out <em>Popular</em> Contest <em>Categories</em></h4>
+            <h6>Popularita</h6>
+            <h4>Pozrite si <em>Popularitu</em> Naších <em>Vozidiel</em></h4>
           </div>
         </div>
         <div class="col-lg-6">
           <div class="main-button">
-            <a href="categories.php">Discover All Categories</a>
+            <a href="categories.php">Pozrieť všetky kateórie</a>
           </div>
         </div>
         <div class="col-lg-3 col-sm-6">
