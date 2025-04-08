@@ -408,9 +408,9 @@ https://templatemo.com/tm-576-snapx-photography
             <div class="item">
               <div class="closed-item">
                 <div class="thumb">
-                  <img src="assets/images/closed-01.jpg" alt="">
-                  <span class="winner"><em>Winner:</em> Anthony Soft</span>
-                  <span class="price"><em>Award :</em> $1,600</span>
+                  <img src="assets/images/audi.jpg" alt="">
+                  <span class="winner"><em>Majiteľ:</em> Daniel Fritz</span>
+                  <span class="price"><em>Cena:</em> 120€/deň</span>
                 </div>
                 <div class="down-content">
                   <div class="row">
