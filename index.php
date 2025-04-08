@@ -399,8 +399,8 @@ https://templatemo.com/tm-576-snapx-photography
       <div class="row">
         <div class="col-lg-12">
           <div class="section-heading text-center">
-            <h6>Closed Photography Contests</h6>
-            <h4><em>Previous Contests</em> With Handpicked <em>Winners</em></h4>
+            <h6>Osobné autá na prenájom</h6>
+            <h4><em>Na výber od </em> MPV-čok <em> po </em> Kombička </em></h4>
           </div>
         </div>
         <div class="col-lg-12">
