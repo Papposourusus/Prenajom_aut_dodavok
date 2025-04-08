@@ -415,10 +415,10 @@ https://templatemo.com/tm-576-snapx-photography
                 <div class="down-content">
                   <div class="row">
                     <div class="col-7">
-                      <h4>88 Participants <br><span>Number Of Artists</span></h4>
+                      <h4>31 Požičaní <br><span>Number Of Artists</span></h4>
                     </div>
                     <div class="col-5">
-                      <h4 class="pics">320 Pictures <br><span>Submited Pics</span></h4>
+                      <h4 class="pics">30 Zákazníkov spokojený <br><span>Submited Pics</span></h4>
                     </div>
                   </div>
                 </div>
@@ -427,17 +427,17 @@ https://templatemo.com/tm-576-snapx-photography
             <div class="item">
               <div class="closed-item">
                 <div class="thumb">
-                  <img src="assets/images/closed-02.jpg" alt="">
-                  <span class="winner"><em>Winner:</em> Anthony Soft</span>
-                  <span class="price"><em>Award :</em> $4,200</span>
+                  <img src="assets/images/ix20.jpg" alt="">
+                  <span class="winner"><em>Majiteľ:</em> J. Mášik</span>
+                  <span class="price"><em>Cena:</em> 65€/deň</span>
                 </div>
                 <div class="down-content">
                   <div class="row">
                     <div class="col-7">
-                      <h4>96 Participants <br><span>Number Of Artists</span></h4>
+                      <h4>44 Požičaní <br><span>Number Of Artists</span></h4>
                     </div>
                     <div class="col-5">
-                      <h4 class="pics">410 Pictures <br><span>Submited Pics</span></h4>
+                      <h4 class="pics">44 Zákazníkov spokojený <br><span>Submited Pics</span></h4>
                     </div>
                   </div>
                 </div>
@@ -446,17 +446,17 @@ https://templatemo.com/tm-576-snapx-photography
             <div class="item">
               <div class="closed-item">
                 <div class="thumb">
-                  <img src="assets/images/closed-03.jpg" alt="">
-                  <span class="winner"><em>Winner:</em> Anthony Soft</span>
-                  <span class="price"><em>Award :</em> $3,200</span>
+                  <img src="assets/images/dacia.jpg" alt="">
+                  <span class="winner"><em>Majiteľ:</em> Š. Herda</span>
+                  <span class="price"><em>Cena:</em> 70€/deň</span>
                 </div>
                 <div class="down-content">
                   <div class="row">
                     <div class="col-7">
-                      <h4>74 Participants <br><span>Number Of Artists</span></h4>
+                      <h4>40 Požičaní <br><span>Number Of Artists</span></h4>
                     </div>
                     <div class="col-5">
-                      <h4 class="pics">284 Pictures <br><span>Submited Pics</span></h4>
+                      <h4 class="pics"> 40 Zákazníkov spokojený<br><span>Submited Pics</span></h4>
                     </div>
                   </div>
                 </div>
