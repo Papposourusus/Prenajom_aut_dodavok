@@ -313,17 +313,17 @@ https://templatemo.com/tm-576-snapx-photography
                 <img src="assets/images/icon-01.png" alt="">
               </div>
               <div class="right">
-                <h4>Nature Pic Contest</h4>
-                <span><em>126</em> Available Contests</span>
+                <h4>Peugeot Boxer</h4>
+                <span><em>201</em> prenajatí</span>
               </div>
             </div>
             <div class="thumb">
-              <img src="assets/images/popular-01.png" alt="">
-              <span class="category">Top Contest</span>
-              <span class="likes"><i class="fa fa-heart"></i> 256</span>
+              <img src="assets/images/pegot.jpg" alt="">
+              <span class="category">Spokojný zákazníci</span>
+              <span class="likes"><i class="fa fa-heart"></i> 198</span>
             </div>
             <div class="border-button">
-              <a href="contest-details.html">Browse Nature Pic Contests</a>
+              <a href="contest-details.html">Chcem si prenajať</a>
             </div>
           </div>
         </div>
@@ -334,17 +334,17 @@ https://templatemo.com/tm-576-snapx-photography
                 <img src="assets/images/icon-02.png" alt="">
               </div>
               <div class="right">
-                <h4>Random Pic Contest</h4>
-                <span><em>116</em> Available Contests</span>
+                <h4>Mercedes-Benz V class</h4>
+                <span><em>187</em> prenajatí</span>
               </div>
             </div>
             <div class="thumb">
-              <img src="assets/images/popular-02.png" alt="">
-              <span class="category">Top Contest</span>
-              <span class="likes"><i class="fa fa-heart"></i> 256</span>
+              <img src="assets/images/vclass.jpg" alt="">
+              <span class="category">Spokojný zákazníci</span>
+              <span class="likes"><i class="fa fa-heart"></i> 184</span>
             </div>
             <div class="border-button">
-              <a href="contest-details.html">Browse Random Pic Contests</a>
+              <a href="contest-details.html">Chcem si prenajať</a>
             </div>
           </div>
         </div>
@@ -355,17 +355,17 @@ https://templatemo.com/tm-576-snapx-photography
                 <img src="assets/images/icon-03.png" alt="">
               </div>
               <div class="right">
-                <h4>Portrait Pic Contest</h4>
-                <span><em>164</em> Available Contests</span>
+                <h4>Fiat Doblo</h4>
+                <span><em>169</em> prenajatí</span>
               </div>
             </div>
             <div class="thumb">
-              <img src="assets/images/popular-03.png" alt="">
-              <span class="category">Top Contest</span>
-              <span class="likes"><i class="fa fa-heart"></i> 256</span>
+              <img src="assets/images/doblo.jpg" alt="">
+              <span class="category">Spokojný zákazníci</span>
+              <span class="likes"><i class="fa fa-heart"></i> 158</span>
             </div>
             <div class="border-button">
-              <a href="contest-details.html">Browse Portrait Pic Contests</a>
+              <a href="contest-details.html">Chcem si prenajať</a>
             </div>
           </div>
         </div>
@@ -376,17 +376,17 @@ https://templatemo.com/tm-576-snapx-photography
                 <img src="assets/images/icon-04.png" alt="">
               </div>
               <div class="right">
-                <h4>Space Pic Contest</h4>
-                <span><em>135</em> Available Contests</span>
+                <h4>Volkswagen Transport</h4>
+                <span><em>133</em> prenajatí</span>
               </div>
             </div>
             <div class="thumb">
-              <img src="assets/images/popular-04.png" alt="">
-              <span class="category">Top Contest</span>
-              <span class="likes"><i class="fa fa-heart"></i> 256</span>
+              <img src="assets/images/trans.jpg" alt="">
+              <span class="category">Spokojný zákazníci</span>
+              <span class="likes"><i class="fa fa-heart"></i> 129</span>
             </div>
             <div class="border-button">
-              <a href="contest-details.html">Browse Space Pic Contests</a>
+              <a href="contest-details.html">Chcem si prenajať</a>
             </div>
           </div>
         </div>
