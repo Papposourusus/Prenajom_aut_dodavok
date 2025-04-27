@@ -142,7 +142,7 @@ https://templatemo.com/tm-576-snapx-photography
         <div class="col-lg col-sm-4">
           <div class="item">
             <div class="icon">
-              <img src="assets/images/icon-01.png" alt="">
+              <img src="assets/images/Br.jpg" alt="">
             </div>
             <h4>Bratislava</h4>
             <span>Dostupné vozidlá</span>
@@ -152,7 +152,7 @@ https://templatemo.com/tm-576-snapx-photography
         <div class="col-lg col-sm-4">
           <div class="item">
             <div class="icon">
-              <img src="assets/images/icon-02.png" alt="">
+              <img src="assets/images/Pres.jpg" alt="">
             </div>
             <h4>Prešov</h4>
             <span>Dostupné vozidlá</span>
@@ -162,7 +162,7 @@ https://templatemo.com/tm-576-snapx-photography
         <div class="col-lg col-sm-4">
           <div class="item">
             <div class="icon">
-              <img src="assets/images/icon-03.png" alt="">
+              <img src="assets/images/Nitra.jpg" alt="">
             </div>
             <h4>Nitra</h4>
             <span>Dostupné vozidlá</span>
@@ -172,7 +172,7 @@ https://templatemo.com/tm-576-snapx-photography
         <div class="col-lg col-sm-4">
           <div class="item">
             <div class="icon">
-              <img src="assets/images/icon-04.png" alt="">
+              <img src="assets/images/ZM.jpg" alt="">
             </div>
             <h4>Zlaté Moravce</h4>
             <span>Dostupné vozidlá</span>
@@ -182,7 +182,7 @@ https://templatemo.com/tm-576-snapx-photography
         <div class="col-lg col-sm-4">
           <div class="item">
             <div class="icon">
-              <img src="assets/images/icon-01.png" alt="">
+              <img src="assets/images/Obyce.jpg" alt="">
             </div>
             <h4>Obyce</h4>
             <span>Dostupné vozidlá</span>
