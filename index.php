@@ -508,7 +508,7 @@ https://templatemo.com/tm-576-snapx-photography
               <li>Počas 5 dní si užijete výhody našich vozidiel za zvýhodnenú cenu.</li>
             
             </ul>
-            <span class="price">$45 USD</span>
+            <span class="price">Rezervuj si ↓</span>
             <div class="border-button">
               <a href="#">Choose This Plan</a>
             </div>
@@ -517,15 +517,15 @@ https://templatemo.com/tm-576-snapx-photography
         <div class="col-lg-4">
           <div class="pricing-item">
             <img src="assets/images/pricing-03.jpg" alt="">
-            <h4>Advanced Plan</h4>
+            <h4>Desať dňový Flex</h4>
             <ul class="third-plan">
-              <li>Lorem Ipsum Dolores Sonte</li>
-              <li>Songe Lorem Ipsum Dol</li>
-              <li>Matrios Venga Heptuss</li>
-              <li>Denim Sriracha Kogi</li>
-              <li>Digital Photography Awards</li>
+              <li>Prenájom dodávky na 10 dní</li>
+              <li>Pre dlhodobé projekty, opakované potreby alebo intenzívne využitie je tu náš najvýhodnejší plán</li>
+              <li>Počas 10 dní vám poskytneme maximálnu flexibilitu a spoľahlivosť za veľmi atraktívnu cenu</li>
+              <li>Tento plán je ideálny pre tých, ktorí plánujú dlhé stěhovania,</li>
+              <li>rozsiahle projektové výpravy alebo pravidelnú prepravu tovaru.</li>
             </ul>
-            <span class="price">$85 USD</span>
+            <span class="price">Rezervuj si ↓</span>
             <div class="border-button">
               <a href="#">Choose This Plan</a>
             </div>
