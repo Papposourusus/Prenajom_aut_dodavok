@@ -144,9 +144,9 @@ https://templatemo.com/tm-576-snapx-photography
             <div class="icon">
               <img src="assets/images/icon-01.png" alt="">
             </div>
-            <h4>Nature Picture</h4>
-            <span>Available Contests</span>
-            <span class="counter">128</span>
+            <h4>Bratislava</h4>
+            <span>Dostupné vozidlá</span>
+            <span class="counter">28</span>
           </div>
         </div>
         <div class="col-lg col-sm-4">
@@ -154,9 +154,9 @@ https://templatemo.com/tm-576-snapx-photography
             <div class="icon">
               <img src="assets/images/icon-02.png" alt="">
             </div>
-            <h4>Space Contest</h4>
-            <span>Available Contests</span>
-            <span class="counter">224</span>
+            <h4>Prešov</h4>
+            <span>Dostupné vozidlá</span>
+            <span class="counter">24</span>
           </div>
         </div>
         <div class="col-lg col-sm-4">
@@ -164,9 +164,9 @@ https://templatemo.com/tm-576-snapx-photography
             <div class="icon">
               <img src="assets/images/icon-03.png" alt="">
             </div>
-            <h4>Portrait Picture</h4>
-            <span>Available Contests</span>
-            <span class="counter">145</span>
+            <h4>Nitra</h4>
+            <span>Dostupné vozidlá</span>
+            <span class="counter">8</span>
           </div>
         </div>
         <div class="col-lg col-sm-4">
@@ -174,9 +174,9 @@ https://templatemo.com/tm-576-snapx-photography
             <div class="icon">
               <img src="assets/images/icon-04.png" alt="">
             </div>
-            <h4>Nature Picture</h4>
-            <span>Available Contests</span>
-            <span class="counter">268</span>
+            <h4>Zlaté Moravce</h4>
+            <span>Dostupné vozidlá</span>
+            <span class="counter">17</span>
           </div>
         </div>
         <div class="col-lg col-sm-4">
@@ -184,9 +184,9 @@ https://templatemo.com/tm-576-snapx-photography
             <div class="icon">
               <img src="assets/images/icon-01.png" alt="">
             </div>
-            <h4>Space Picture</h4>
-            <span>Available Contests</span>
-            <span class="counter">310</span>
+            <h4>Obyce</h4>
+            <span>Dostupné vozidlá</span>
+            <span class="counter">10</span>
           </div>
         </div>
       </div>
