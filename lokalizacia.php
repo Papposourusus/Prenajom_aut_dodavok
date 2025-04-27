@@ -128,8 +128,9 @@ https://templatemo.com/tm-576-snapx-photography
     <div class="container">
       <div class="row">
         <div class="col-lg-8 offset-lg-2 header-text">
-          <h2>Discover Most Popular Categories on <em>SnapX</em></h2>
-          <p>You are allowed to freely use SnapX Photography Template for your commercial websites. You are not allowed to redistribute the template ZIP file on any other Free CSS websites.</p>
+          <h2>Objavte lokalizácie našej firmy  <em>Rentail</em></h2>
+          <p>Naša sieť pokrýva kľúčové mestá a regióny po celom Slovensku, aby sme vám priniesli rýchle a spoľahlivé riešenia pre vaše prepravné potreby. Či už ste v centre mesta alebo v menej obývaných oblastiach, máme pre vás pripravené odpovedajúce vozidlá a profesionálny servis.</p>
+          <p> Naše hlavné miesta:</p>
         </div>
       </div>
     </div>

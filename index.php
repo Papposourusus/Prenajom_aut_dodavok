@@ -478,8 +478,8 @@ https://templatemo.com/tm-576-snapx-photography
       <div class="row">
         <div class="col-lg-12">
           <div class="section-heading text-center">
-            <h6>Our Pricing</h6>
-            <h4>Photography <em>Contest Plans</em> and Price <em>Awards</em></h4>
+            <h6>Naše Plány</h6>
+            <h4>Cenové <em>Plány</em> Prenájmu  <em> Dodávok</em></h4>
           </div>
         </div>
         <div class="col-lg-4">
