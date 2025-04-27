@@ -484,7 +484,7 @@ https://templatemo.com/tm-576-snapx-photography
         </div>
         <div class="col-lg-4">
           <div class="pricing-item">
-            <img src="assets/images/pricing-01.jpg" alt="">
+            <img src="assets/images/Den1.png" alt="">
             <h4>Jedno dňový Express</h4>
             <ul class="first-plan">
               <li>Prenájom dodávky na 1 deň</li>
