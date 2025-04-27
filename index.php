@@ -485,15 +485,15 @@ https://templatemo.com/tm-576-snapx-photography
         <div class="col-lg-4">
           <div class="pricing-item">
             <img src="assets/images/pricing-01.jpg" alt="">
-            <h4>Basic Plan</h4>
+            <h4>Jedno dňový Express</h4>
             <ul class="first-plan">
-              <li>Lorem Ipsum Dolores Sonte</li>
-              <li>Songe Lorem Ipsum Dol</li>
-              <li>Matrios Venga Heptuss</li>
+              <li>Prenájom dodávky na 1 deň</li>
+              <li>Potrebujete dodávku len na jeden deň?</li>
+              <li>Služba "Express" vám umožní získať spoľahlivé vozidlo na krátkodobé použitie</li>
               <li>Denim Sriracha Kogi</li>
               <li>Digital Photography Awards</li>
             </ul>
-            <span class="price">$25 USD</span>
+            <span class="price">Rezervuj si ↓</span>
             <div class="border-button">
               <a href="#">Choose This Plan</a>
             </div>
