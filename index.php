@@ -490,8 +490,6 @@ https://templatemo.com/tm-576-snapx-photography
               <li>Prenájom dodávky na 1 deň</li>
               <li>Potrebujete dodávku len na jeden deň?</li>
               <li>Služba "Express" vám umožní získať spoľahlivé vozidlo na krátkodobé použitie</li>
-              <li>Denim Sriracha Kogi</li>
-              <li>Digital Photography Awards</li>
             </ul>
             <span class="price">Rezervuj si ↓</span>
             <div class="border-button">
@@ -502,13 +500,13 @@ https://templatemo.com/tm-576-snapx-photography
         <div class="col-lg-4">
           <div class="pricing-item">
             <img src="assets/images/pricing-02.jpg" alt="">
-            <h4>Standard Plan</h4>
+            <h4>Päť dňový Konfort</h4>
             <ul class="second-plan">
-              <li>Lorem Ipsum Dolores Sonte</li>
-              <li>Songe Lorem Ipsum Dol</li>
-              <li>Matrios Venga Heptuss</li>
-              <li>Denim Sriracha Kogi</li>
-              <li>Digital Photography Awards</li>
+              <li>Prenájom dodávky na 5 dní</li>
+              <li>Ak máte projekt, ktorý si vyžaduje pár dní dodatočnej flexibility</li>
+              <li>Prácu na viacerých miestach alebo väčší event</li>
+              <li>Počas 5 dní si užijete výhody našich vozidiel za zvýhodnenú cenu.</li>
+            
             </ul>
             <span class="price">$45 USD</span>
             <div class="border-button">
