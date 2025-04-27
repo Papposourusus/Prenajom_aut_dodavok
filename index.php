@@ -499,7 +499,7 @@ https://templatemo.com/tm-576-snapx-photography
         </div>
         <div class="col-lg-4">
           <div class="pricing-item">
-            <img src="assets/images/pricing-02.jpg" alt="">
+            <img src="assets/images/Den2.jpg" alt="">
             <h4>Päť dňový Konfort</h4>
             <ul class="second-plan">
               <li>Prenájom dodávky na 5 dní</li>
@@ -516,7 +516,7 @@ https://templatemo.com/tm-576-snapx-photography
         </div>
         <div class="col-lg-4">
           <div class="pricing-item">
-            <img src="assets/images/pricing-03.jpg" alt="">
+            <img src="assets/images/Den3.jpg" alt="">
             <h4>Desať dňový Flex</h4>
             <ul class="third-plan">
               <li>Prenájom dodávky na 10 dní</li>
