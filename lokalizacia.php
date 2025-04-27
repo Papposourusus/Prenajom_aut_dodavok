@@ -1,35 +1,5 @@
 <!DOCTYPE html>
-<?php
-$servername = "localhost";
-$username = "root";    // ak máš iné heslo, uprav
-$password = "";        // ak máš heslo, dopíš ho
-$dbname = "website_comments";  // názov tvojej databázy
 
-// Pripojenie k databáze
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Kontrola pripojenia
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-
-// Výber všetkých komentárov
-$sql = "SELECT * FROM comments ORDER BY id DESC"; 
-$result = $conn->query($sql);
-
-$comments = [];
-
-if ($result->num_rows > 0) {
-  while($row = $result->fetch_assoc()) {
-    $comments[] = $row;
-  }
-}
-
-header('Content-Type: application/json');
-echo json_encode($comments);
-
-$conn->close();
-?>
 
 <html lang="en">
 
@@ -416,13 +386,16 @@ https://templatemo.com/tm-576-snapx-photography
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="assets/js/owl-carousel.js"></script>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="assets/js/owl-carousel.js"></script> <!-- ak používaš vlastný -->
+
 <script>
 async function loadComments() {
     const response = await fetch('get_comments.php');
     const comments = await response.json();
 
     const carousel = document.getElementById('comments-carousel');
-    carousel.innerHTML = ''; // Vymažeme staré položky
+    carousel.innerHTML = ''; // Vyčistíme carousel
 
     comments.forEach(comment => {
         const item = document.createElement('div');
@@ -442,7 +415,7 @@ async function loadComments() {
         carousel.appendChild(item);
     });
 
-    // Spustíme carousel
+    // Spustíme Owl Carousel
     $('.owl-testimonials').owlCarousel({
         items: 1,
         loop: true,
@@ -454,9 +427,10 @@ async function loadComments() {
     });
 }
 
-// Načítaj komentáre po načítaní stránky
+// Zavoláme načítanie po načítaní celej stránky
 document.addEventListener('DOMContentLoaded', loadComments);
 </script>
+
 
 
   </body>
