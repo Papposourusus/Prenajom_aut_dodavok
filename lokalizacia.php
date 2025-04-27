@@ -1,4 +1,36 @@
 <!DOCTYPE html>
+<?php
+$servername = "localhost";
+$username = "root";    // ak máš iné heslo, uprav
+$password = "";        // ak máš heslo, dopíš ho
+$dbname = "website_comments";  // názov tvojej databázy
+
+// Pripojenie k databáze
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Kontrola pripojenia
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+// Výber všetkých komentárov
+$sql = "SELECT * FROM comments ORDER BY id DESC"; 
+$result = $conn->query($sql);
+
+$comments = [];
+
+if ($result->num_rows > 0) {
+  while($row = $result->fetch_assoc()) {
+    $comments[] = $row;
+  }
+}
+
+header('Content-Type: application/json');
+echo json_encode($comments);
+
+$conn->close();
+?>
+
 <html lang="en">
 
   <head>
@@ -322,78 +354,23 @@ https://templatemo.com/tm-576-snapx-photography
   </section>
 
   <section class="testimonials">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="section-heading text-center">
-            <h6>What Clients Say</h6>
-            <h4>What <em>Website</em> Users Are Saying <em>Topics</em></h4>
-          </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-heading text-center">
+          <h6>What Clients Say</h6>
+          <h4>What <em>Website</em> Users Are Saying <em>Topics</em></h4>
         </div>
-        <div class="col-lg-8 offset-lg-2">
-          <div class="owl-testimonials owl-carousel">
-            <div class="item">
-              <div class="content">
-                <div class="left-content">
-                  <p>“SnapX Photography is a professional website template for photo and video related businesses. This Bootstrap v5.1.3 HTML CSS template is provided by TemplateMo website.”</p>
-                  <h4>Thomas Wilson</h4>
-                  <span>User #007704</span>
-                </div>
-                <div class="image">
-                  <img src="assets/images/author.jpg" alt="">
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="content">
-                <div class="left-content">
-                  <p>“You may visit Too CSS website for latest collections of great templates. There are a variety of different categories for HTML CSS templates.”</p>
-                  <h4>John Walker</h4>
-                  <span>User #007772</span>
-                </div>
-                <div class="image">
-                  <img src="assets/images/author.jpg" alt="">
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="content">
-                <div class="left-content">
-                  <p>“If you need a working contact form, please visit TemplateMo contact page for more information. You can easily buy and use a simple PHP contact form.”</p>
-                  <h4>Vincent Anthon</h4>
-                  <span>User #007794</span>
-                </div>
-                <div class="image">
-                  <img src="assets/images/author.jpg" alt="">
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="content">
-                <div class="left-content">
-                  <p>“When you need Free CSS Templates, you just remember our website TemplateMo. We provide you best quality website templates at absolutely free of charge. No hidden cost involved.”</p>
-                  <h4>Alan Smithee</h4>
-                  <span>User #007765</span>
-                </div>
-                <div class="image">
-                  <img src="assets/images/author.jpg" alt="">
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="content">
-                <div class="left-content">
-                  <p>“We hope this template is very useful for your website development. If you wish to <a rel="nofollow" href="https://templatemo.com/contact" target="_blank">support TemplateMo</a>, you may make a small amount of donation via PayPal.”</p>
-                  <h4>Alan Smithee</h4>
-                  <span>User #007724</span>
-                </div>
-                <div class="image">
-                  <img src="assets/images/author.jpg" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
+      </div>
+      <div class="col-lg-8 offset-lg-2">
+        <div class="owl-testimonials owl-carousel" id="comments-carousel">
+          <!-- Komentáre sa tu načítajú dynamicky -->
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
         <div class="col-lg-12">
           <div class="clients">
             <div class="row">
@@ -435,6 +412,52 @@ https://templatemo.com/tm-576-snapx-photography
   <script src="assets/js/tabs.js"></script>
   <script src="assets/js/popup.js"></script>
   <script src="assets/js/custom.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="assets/js/owl-carousel.js"></script>
+
+<script>
+async function loadComments() {
+    const response = await fetch('get_comments.php');
+    const comments = await response.json();
+
+    const carousel = document.getElementById('comments-carousel');
+    carousel.innerHTML = ''; // Vymažeme staré položky
+
+    comments.forEach(comment => {
+        const item = document.createElement('div');
+        item.className = 'item';
+        item.innerHTML = `
+          <div class="content">
+            <div class="left-content">
+              <p>“${comment.comment}”</p>
+              <h4>${comment.username}</h4>
+              <span>User ${comment.user_id}</span>
+            </div>
+            <div class="image">
+              <img src="${comment.image_url ? comment.image_url : 'assets/images/author.jpg'}" alt="">
+            </div>
+          </div>
+        `;
+        carousel.appendChild(item);
+    });
+
+    // Spustíme carousel
+    $('.owl-testimonials').owlCarousel({
+        items: 1,
+        loop: true,
+        dots: true,
+        nav: false,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        smartSpeed: 800
+    });
+}
+
+// Načítaj komentáre po načítaní stránky
+document.addEventListener('DOMContentLoaded', loadComments);
+</script>
+
 
   </body>
 </html>
