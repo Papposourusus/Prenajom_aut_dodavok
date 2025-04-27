@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root"; 
 $password = "";
-$dbname = "website_comments";  // alebo tvoje meno databázy
+$dbname = "users";  // alebo tvoje meno databázy
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
