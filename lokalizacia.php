@@ -199,7 +199,7 @@ https://templatemo.com/tm-576-snapx-photography
         <div class="col-lg-12">
           <div class="section-heading text-center">
             <h6>Featured Contests</h6>
-            <h4>View Most <em>Popular</em> Category <em>Contests</em></h4>
+            <h4>Ako si <em> Vybrať </em> Správnu <em>Lokalizáciu</em></h4>
           </div>
         </div>
         <div class="col-lg-6">
@@ -209,13 +209,13 @@ https://templatemo.com/tm-576-snapx-photography
               <div class="hover-effect">
                 <div class="content">
                   <div class="top-content">
-                    <span class="award">Award Price</span>
-                    <span class="price">$1,600</span>
+                    <span class="award">Priemerná cena servisu</span>
+                    <span class="price">60€</span>
                   </div>
-                  <h4>Walk In The Nature Night</h4>
+                  <h4>Panónska cesta 3578/31 851 04 Bratislava</h4>
                   <div class="info">
-                    <span class="participants"><img src="assets//images/icon-03.png" alt=""><br>60<br>Participants</span>
-                    <span class="submittions"><img src="assets//images/icon-01.png" alt=""><br>188<br>Submissions</span>
+                    <span class="participants"><img src="assets//images/icon-03.png" alt=""><br>60<br>Zamestnancov</span>
+                    <span class="submittions"><img src="assets//images/icon-01.png" alt=""><br>844<br>Uspešných servisov</span>
                   </div>
                   <div class="border-button">
                     <a href="contest-details.html">Browse Nature Contests</a>
@@ -232,13 +232,13 @@ https://templatemo.com/tm-576-snapx-photography
               <div class="hover-effect">
                 <div class="content">
                   <div class="top-content">
-                    <span class="award">Award Price</span>
-                    <span class="price">$3,200</span>
+                    <span class="award">Priemerná cena servisu</span>
+                    <span class="price">55€</span>
                   </div>
-                  <h4>Walk In The Nature Night</h4>
+                  <h4>Budovatelska 11628 080 01 Presov</h4>
                   <div class="info">
-                    <span class="participants"><img src="assets//images/icon-03.png" alt=""><br>78<br>Participants</span>
-                    <span class="submittions"><img src="assets//images/icon-01.png" alt=""><br>240<br>Submissions</span>
+                    <span class="participants"><img src="assets//images/icon-03.png" alt=""><br>48<br>Zamestnancov</span>
+                    <span class="submittions"><img src="assets//images/icon-01.png" alt=""><br>597<br>Uspešných servisov</span>
                   </div>
                   <div class="border-button">
                     <a href="contest-details.html">Browse Nature Contests</a>
@@ -255,13 +255,13 @@ https://templatemo.com/tm-576-snapx-photography
               <div class="hover-effect">
                 <div class="content">
                   <div class="top-content">
-                    <span class="award">Award Price</span>
-                    <span class="price">$4,100</span>
+                    <span class="award">Priemerná cena servisu</span>
+                    <span class="price">55€</span>
                   </div>
-                  <h4>Walk In The Nature Night</h4>
+                  <h4>Cabajská 27/10 949 01 Nitra</h4>
                   <div class="info">
-                    <span class="participants"><img src="assets//images/icon-03.png" alt=""><br>112<br>Participants</span>
-                    <span class="submittions"><img src="assets//images/icon-01.png" alt=""><br>286<br>Submissions</span>
+                    <span class="participants"><img src="assets//images/icon-03.png" alt=""><br>45<br>Zamestnancov</span>
+                    <span class="submittions"><img src="assets//images/icon-01.png" alt=""><br>453<br>Uspešných servisov</span>
                   </div>
                   <div class="border-button">
                     <a href="contest-details.html">Browse Nature Contests</a>
@@ -278,13 +278,13 @@ https://templatemo.com/tm-576-snapx-photography
               <div class="hover-effect">
                 <div class="content">
                   <div class="top-content">
-                    <span class="award">Award Price</span>
-                    <span class="price">$3,400</span>
+                    <span class="award">Priemerná cena servisu</span>
+                    <span class="price">40€</span>
                   </div>
-                  <h4>Walk In The Nature Night</h4>
+                  <h4>Zelená 3605 953 01 Zlaté Moravce</h4>
                   <div class="info">
-                    <span class="participants"><img src="assets//images/icon-03.png" alt=""><br>54<br>Participants</span>
-                    <span class="submittions"><img src="assets//images/icon-01.png" alt=""><br>140<br>Submissions</span>
+                    <span class="participants"><img src="assets//images/icon-03.png" alt=""><br>30<br>Zamestnancov</span>
+                    <span class="submittions"><img src="assets//images/icon-01.png" alt=""><br>230<br>Uspešných servisov</span>
                   </div>
                   <div class="border-button">
                     <a href="contest-details.html">Browse Nature Contests</a>
@@ -301,13 +301,13 @@ https://templatemo.com/tm-576-snapx-photography
               <div class="hover-effect">
                 <div class="content">
                   <div class="top-content">
-                    <span class="award">Award Price</span>
-                    <span class="price">$2,200</span>
+                    <span class="award">Priemerná cena servisu</span>
+                    <span class="price">30€</span>
                   </div>
-                  <h4>Walk In The Nature Night</h4>
+                  <h4>Hlavná ulica 60/75 95 195 Obyce </h4>
                   <div class="info">
-                    <span class="participants"><img src="assets//images/icon-03.png" alt=""><br>68<br>Participants</span>
-                    <span class="submittions"><img src="assets//images/icon-01.png" alt=""><br>162<br>Submissions</span>
+                    <span class="participants"><img src="assets//images/icon-03.png" alt=""><br>25<br>Zamestnancov</span>
+                    <span class="submittions"><img src="assets//images/icon-01.png" alt=""><br>160<br>Uspešných servisov</span>
                   </div>
                   <div class="border-button">
                     <a href="contest-details.html">Browse Nature Contests</a>
