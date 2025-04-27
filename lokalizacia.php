@@ -205,7 +205,7 @@ https://templatemo.com/tm-576-snapx-photography
         <div class="col-lg-6">
           <div class="item">
             <div class="thumb">
-              <img src="assets/images/featured-image-02.jpg" alt="">
+              <img src="assets/images/mb.jpg" alt="">
               <div class="hover-effect">
                 <div class="content">
                   <div class="top-content">
@@ -228,7 +228,7 @@ https://templatemo.com/tm-576-snapx-photography
         <div class="col-lg-6">
           <div class="item">
             <div class="thumb">
-              <img src="assets/images/featured-image-01.jpg" alt="">
+              <img src="assets/images/100_g.png" alt="">
               <div class="hover-effect">
                 <div class="content">
                   <div class="top-content">
@@ -251,7 +251,7 @@ https://templatemo.com/tm-576-snapx-photography
         <div class="col-lg-4">
           <div class="item">
             <div class="thumb">
-              <img src="assets/images/featured-image-03.jpg" alt="">
+              <img src="assets/images/N.jpg" alt="">
               <div class="hover-effect">
                 <div class="content">
                   <div class="top-content">
@@ -274,7 +274,7 @@ https://templatemo.com/tm-576-snapx-photography
         <div class="col-lg-4">
           <div class="item">
             <div class="thumb">
-              <img src="assets/images/featured-image-04.jpg" alt="">
+              <img src="assets/images/zl.jpg" alt="">
               <div class="hover-effect">
                 <div class="content">
                   <div class="top-content">
@@ -297,7 +297,7 @@ https://templatemo.com/tm-576-snapx-photography
         <div class="col-lg-4">
           <div class="item">
             <div class="thumb">
-              <img src="assets/images/featured-image-05.jpg" alt="">
+              <img src="assets/images/gajdos.jpg" alt="">
               <div class="hover-effect">
                 <div class="content">
                   <div class="top-content">
