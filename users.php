@@ -147,42 +147,42 @@ https://templatemo.com/tm-576-snapx-photography
           <div class="info">
             <h6>Rank</h6>
             <h4>#121</h4>
-            <span>of 1680</span>
+            <span>of 993</span>
           </div>
         </div>
         <div class="col-lg-2 col-sm-6">
           <div class="info">
-            <h6>Ratings</h6>
-            <h4>4.56</h4>
+            <h6>Hodnotenie</h6>
+            <h4>4.22</h4>
             <span>of 5.00 Stars</span>
           </div>
         </div>
         <div class="col-lg-2 col-sm-6">
           <div class="info">
-            <h6>Top Rated</h6>
-            <h4>Nature</h4>
-            <span>Picture Category</span>
+            <h6>Najlepšie hodnotený</h6>
+            <h4>Renault Master</h4>
+            <span>Kateórie Dodávky</span>
           </div>
         </div>
         <div class="col-lg-2 col-sm-6">
           <div class="info">
-            <h6>Profile Views</h6>
-            <h4>8,250</h4>
+            <h6>Nášteva stránky</h6>
+            <h4>3,788</h4>
             <span>Monthly</span>
           </div>
         </div>
         <div class="col-lg-2 col-sm-6">
           <div class="info">
-            <h6>Contests Won</h6>
-            <h4>90</h4>
-            <span>of 12,400</span>
+            <h6>Vyhraných súťaží</h6>
+            <h4>11</h4>
+            <span>z 39</span>
           </div>
         </div>
         <div class="col-lg-2 col-sm-6">
           <div class="info">
-            <h6>Total Earned</h6>
+            <h6>Priemerný prevrat </h6>
             <h4>$68,000</h4>
-            <span>All Time</span>
+            <span>Mesačne</span>
           </div>
         </div>
       </div>
