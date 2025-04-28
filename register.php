@@ -1,4 +1,6 @@
 <?php
+session_start(); // na začiatku každej stránky kde používaš $_SESSION
+
 $servername = "localhost";
 $username = "root"; 
 $password = "";
@@ -18,9 +20,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO users (username, email, password) VALUES ('$register_username', '$register_email', '$register_password')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Registration successful. You can now login.";
+        $_SESSION['success_message'] = "Registrácia prebehla úspešne! Teraz sa môžeš prihlásiť.";
+        header("Location: index.php"); // sem daj svoju hlavnú stránku
+        exit();
     } else {
-        echo "Error: " . $conn->error;
+        $_SESSION['error_message'] = "Chyba pri registrácii: " . $conn->error;
+        header("Location: index.php"); // aj pri chybe späť
+        exit();
     }
 }
 
