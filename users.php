@@ -161,7 +161,7 @@ https://templatemo.com/tm-576-snapx-photography
           <div class="info">
             <h6>Najlepšie hodnotený</h6>
             <h4>Renault Master</h4>
-            <span>Kateórie Dodávky</span>
+            <span>Kategórie Dodávky</span>
           </div>
         </div>
         <div class="col-lg-2 col-sm-6">
@@ -194,7 +194,7 @@ https://templatemo.com/tm-576-snapx-photography
       <div class="row">
         <div class="col-lg-3">
           <div class="thumb">
-            <img src="assets/images/portfolio-01.jpg" alt="">
+            <img src="assets/images/coworkers.jpg" alt="">
             <div class="hover-effect">
               <div class="content">
                 <h4>Walk In the Beach</h4>
@@ -309,9 +309,9 @@ https://templatemo.com/tm-576-snapx-photography
             <img src="assets/images/portfolio-08.jpg" alt="">
             <div class="hover-effect">
               <div class="content">
-                <h4>Blue Lake Nature</h4>
-                <span>Ranked: <em>4th</em></span>
-                <span>Award Won: <em>None</em></span>
+                <h4>Úspešné založenie firmy</h4>
+                <span>Dátum:<em> 19.03.2003</em></span>
+                <span>Zisk: <em>-10000</em></span>
                 <ul>
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <li><a href="#"><i class="fa fa-eye"></i></a></li>
