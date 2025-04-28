@@ -233,8 +233,7 @@ https://templatemo.com/tm-576-snapx-photography
                 <span>Dátum: <em> 17.04.2003</em></span>
               
                 <ul>
-                  <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                  <li><a href="#"><i class="fa fa-eye"></i></a></li>
+                 
                 </ul>
               </div>
             </div>
@@ -242,12 +241,12 @@ https://templatemo.com/tm-576-snapx-photography
         </div>
         <div class="col-lg-3">
           <div class="thumb">
-            <img src="assets/images/portfolio-04.jpg" alt="">
+            <img src="assets/images/servis.jpg" alt="">
             <div class="hover-effect">
               <div class="content">
-                <h4>Forest Nature</h4>
-                <span>Ranked: <em>2nd</em></span>
-                <span>Award: <em>EOS R3</em></span>
+                <h4>Naše nové miesto</h4>
+                <span>Dátum: <em>04.10.2003</em></span>
+              
                 <ul>
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <li><a href="#"><i class="fa fa-eye"></i></a></li>
