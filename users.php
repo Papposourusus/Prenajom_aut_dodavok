@@ -199,7 +199,7 @@ https://templatemo.com/tm-576-snapx-photography
               <div class="content">
               <h4>Úspešné založenie firmy</h4>
                 <span>Dátum:<em> 19.03.2003</em></span>
-                <span>Zisk: <em>-10000</em></span>
+            
                 <ul>
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <li><a href="#"><i class="fa fa-eye"></i></a></li>
