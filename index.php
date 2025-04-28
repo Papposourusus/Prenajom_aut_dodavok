@@ -66,57 +66,56 @@ https://templatemo.com/tm-576-snapx-photography
             </div>
         </div>
 
-        <!-- Username & Password Login form -->
         <div class="user_login">
-            <form action="" method="post">
-                <label>Email / Username</label>
-                <input name="username" type="text" id="username" />
-              <br />
+    <form action="login.php" method="post">
+        <label>Email / Username</label>
+        <input name="login_username" type="text" id="login_username" required />
+        <br />
 
-                <label>Password</label>
-                <input name="password" type="password" id="password" />
-              <br />
+        <label>Password</label>
+        <input name="login_password" type="password" id="login_password" required />
+        <br />
 
-                <div class="checkbox">
-                    <input id="remember" type="checkbox" />
-                    <label for="remember">Remember me on this computer</label>
-                </div>
-
-                <div class="action_btns">
-                    <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
-                    <div class="one_half last"><button type="submit" class="btn btn_red">Login</button></div>
-                </div>
-            </form>
-
-            <a href="#" class="forgot_password">Forgot password?</a>
+        <div class="checkbox">
+            <input id="remember" type="checkbox" />
+            <label for="remember">Remember me on this computer</label>
         </div>
 
-        <!-- Register Form -->
-        <div class="user_register">
-            <form action="" method="post">
-                <label>Username</label>
-                <input name="username" type="text" id="username" />
-                <br />
-
-                <label>Email Address</label>
-                <input name="email" type="email" id="email" />
-                <br />
-
-                <label>Password</label>
-                <input name="password" type="password" id="password" />
-                <br />
-
-                <div class="checkbox">
-                    <input id="send_updates" type="checkbox" />
-                    <label for="send_updates">Send me occasional email updates</label>
-                </div>
-
-                <div class="action_btns">
-                    <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
-                    <div class="one_half last"><button type="submit" class="btn btn_red">Register</button></div>
-                </div>
-            </form>
+        <div class="action_btns">
+            <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
+            <div class="one_half last"><button type="submit" class="btn btn_red">Login</button></div>
         </div>
+    </form>
+
+    <a href="#" class="forgot_password">Forgot password?</a>
+</div>
+
+<div class="user_register">
+    <form action="register.php" method="post">
+        <label>Username</label>
+        <input name="register_username" type="text" id="register_username" required />
+        <br />
+
+        <label>Email Address</label>
+        <input name="register_email" type="email" id="register_email" required />
+        <br />
+
+        <label>Password</label>
+        <input name="register_password" type="password" id="register_password" required />
+        <br />
+
+        <div class="checkbox">
+            <input id="send_updates" type="checkbox" />
+            <label for="send_updates">Send me occasional email updates</label>
+        </div>
+
+        <div class="action_btns">
+            <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
+            <div class="one_half last"><button type="submit" class="btn btn_red">Register</button></div>
+        </div>
+    </form>
+</div>
+
         
     </section>
   </div>

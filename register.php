@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root"; 
 $password = "";
-$dbname = "users";  // alebo tvoje meno databázy
+$dbname = "users";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -11,24 +11,18 @@ if ($conn->connect_error) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $user = $_POST['username'];
-    $email = $_POST['email'];
-    $pass = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $register_username = $_POST['register_username'];
+    $register_email = $_POST['register_email'];
+    $register_password = password_hash($_POST['register_password'], PASSWORD_DEFAULT);
 
-    $sql = "INSERT INTO users (username, email, password) VALUES ('$user', '$email', '$pass')";
+    $sql = "INSERT INTO users (username, email, password) VALUES ('$register_username', '$register_email', '$register_password')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Registration successful!";
+        echo "Registration successful. You can now login.";
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $conn->error;
     }
 }
 
 $conn->close();
 ?>
-<form method="POST" action="register.php">
-  <input type="text" name="username" placeholder="Username" required />
-  <input type="email" name="email" placeholder="Email" required />
-  <input type="password" name="password" placeholder="Password" required />
-  <button type="submit">Sign Up</button>
-</form>
