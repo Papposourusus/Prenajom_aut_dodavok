@@ -273,12 +273,12 @@ https://templatemo.com/tm-576-snapx-photography
         </div>
         <div class="col-lg-3">
           <div class="thumb">
-            <img src="assets/images/portfolio-06.jpg" alt="">
+            <img src="assets/images/contract.jpg" alt="">
             <div class="hover-effect">
               <div class="content">
-                <h4>Rocky Mountain</h4>
-                <span>Ranked: <em>2nd</em></span>
-                <span>Award Won: <em>None</em></span>
+                <h4>Veľa nových spluprác</h4>
+                <span>Dátum: <em>2003-2024</em></span>
+                
                 <ul>
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <li><a href="#"><i class="fa fa-eye"></i></a></li>
@@ -289,12 +289,12 @@ https://templatemo.com/tm-576-snapx-photography
         </div>
         <div class="col-lg-5">
           <div class="thumb">
-            <img src="assets/images/portfolio-07.jpg" alt="">
+            <img src="assets/images/boss.jpg" alt="">
             <div class="hover-effect">
               <div class="content">
-                <h4>Rocky Mountain . Part 2</h4>
-                <span>Ranked: <em>2nd</em></span>
-                <span>Award Won: <em>None</em></span>
+                <h4>Zakladateľ Mark Lamonth sa rozhodol ísť do dôchotku a tak nastal čas nového veku</h4>
+                <span>Dátum: <em>23.06.2023</em></span>
+              
                 <ul>
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <li><a href="#"><i class="fa fa-eye"></i></a></li>
@@ -305,12 +305,12 @@ https://templatemo.com/tm-576-snapx-photography
         </div>
         <div class="col-lg-3">
           <div class="thumb">
-            <img src="assets/images/portfolio-08.jpg" alt="">
+            <img src="assets/images/worlds.png" alt="">
             <div class="hover-effect">
               <div class="content">
-                <h4>Úspešné založenie firmy</h4>
-                <span>Dátum:<em> 19.03.2003</em></span>
-                <span>Zisk: <em>-10000</em></span>
+                <h4>Staly sme sa hlavnímy sponzormy medzinárodných turnajov</h4>
+                <span>Dátum:<em> 29.10.2024</em></span>
+                
                 <ul>
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <li><a href="#"><i class="fa fa-eye"></i></a></li>
