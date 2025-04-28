@@ -8,9 +8,7 @@
                       <ul class="nav">
                           <li><a href="index.php">Home</a></li>
                           <li class="has-sub">
-                              <a href="javascript:void(0)" class="active">zatila nic</a>
-                              
-                              </ul>
+                        
                           </li>
                           <li><a href="lokalizacia.php">Naše miesta</a></li>
                           <li><a href="users.php">Users</a></li>
