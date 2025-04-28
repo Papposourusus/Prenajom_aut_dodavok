@@ -139,8 +139,8 @@ https://templatemo.com/tm-576-snapx-photography
       <div class="row">
         <div class="col-lg-12">
           <div class="avatar">
-            <img src="assets/images/user-avatar.jpg" alt="">
-            <h4>#007772 John Walker</h4>
+            <img src="assets/images/Mike.jpg" alt="">
+            <h4>Mark Zimmemars</h4>
           </div>
         </div>
         <div class="col-lg-2 col-sm-6">
