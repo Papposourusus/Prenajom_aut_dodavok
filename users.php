@@ -226,12 +226,12 @@ https://templatemo.com/tm-576-snapx-photography
         </div>
         <div class="col-lg-4">
           <div class="thumb">
-            <img src="assets/images/portfolio-03.jpg" alt="">
+            <img src="assets/images/newvans.jpg" alt="">
             <div class="hover-effect">
               <div class="content">
-                <h4>Walk In The Forest</h4>
-                <span>Ranked: <em>4th</em></span>
-                <span>Award: <em>EOS R7</em></span>
+                <h4>Nové prírastky do rodiny</h4>
+                <span>Dátum: <em> 17.04.2003</em></span>
+              
                 <ul>
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <li><a href="#"><i class="fa fa-eye"></i></a></li>
