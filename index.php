@@ -31,16 +31,8 @@ https://templatemo.com/tm-576-snapx-photography
 
 <?php
 session_start();
-if (isset($_SESSION['success_message'])) {
-    echo '<div class="alert alert-success">'.$_SESSION['success_message'].'</div>';
-    unset($_SESSION['success_message']);
-}
-
-if (isset($_SESSION['error_message'])) {
-    echo '<div class="alert alert-danger">'.$_SESSION['error_message'].'</div>';
-    unset($_SESSION['error_message']);
-}
 ?>
+
 
 
 <body>
