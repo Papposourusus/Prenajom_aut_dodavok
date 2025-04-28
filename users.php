@@ -321,12 +321,12 @@ https://templatemo.com/tm-576-snapx-photography
         </div>
         <div class="col-lg-4">
           <div class="thumb">
-            <img src="assets/images/portfolio-09.jpg" alt="">
+            <img src="assets/images/stonks.png" alt="">
             <div class="hover-effect">
               <div class="content">
-                <h4>Walk In The Forest</h4>
-                <span>Ranked: <em>3rd</em></span>
-                <span>Award Won: <em>None</em></span>
+                <h4>Veľa sme si už prežily ale naša cesta je len na začiatku a stále len rastie</h4>
+                <span>Dátum: <em>28.04.2025</em></span>
+                
                 <ul>
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <li><a href="#"><i class="fa fa-eye"></i></a></li>
