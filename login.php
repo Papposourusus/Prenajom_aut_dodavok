@@ -1,9 +1,10 @@
 <?php
 session_start();
+
 $servername = "localhost";
 $username = "root"; 
 $password = "";
-$dbname = "users"; 
+$dbname = "users";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -15,21 +16,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $login_username = $_POST['login_username'];
     $login_password = $_POST['login_password'];
 
-    $sql = "SELECT * FROM users WHERE email='$login_username' OR username='$login_username' LIMIT 1";
+    $sql = "SELECT * FROM users WHERE username='$login_username' OR email='$login_username'";
     $result = $conn->query($sql);
 
-    if ($result->num_rows == 1) {
-        $user = $result->fetch_assoc();
-        if (password_verify($login_password, $user['password'])) {
-            $_SESSION['user_id'] = $user['id'];
-            $_SESSION['username'] = $user['username'];
-            header("Location: index.php"); 
+    if ($result->num_rows === 1) {
+        $row = $result->fetch_assoc();
+        
+        if (password_verify($login_password, $row['password'])) {
+            $_SESSION['username'] = $row['username']; // Tu nastavíme session
+            $_SESSION['user_id'] = $row['id'];
+            $_SESSION['success_message'] = "Úspešné prihlásenie!";
+            header("Location: index.php"); // alebo na tvoju stránku
             exit();
         } else {
-            echo "Wrong password.";
+            $_SESSION['error_message'] = "Nesprávne heslo.";
+            header("Location: index.php");
+            exit();
         }
     } else {
-        echo "User not found.";
+        $_SESSION['error_message'] = "Používateľ nenájdený.";
+        header("Location: index.php");
+        exit();
     }
 }
 
