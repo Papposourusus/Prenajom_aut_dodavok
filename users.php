@@ -128,7 +128,7 @@ https://templatemo.com/tm-576-snapx-photography
       <div class="row">
         <div class="col-lg-8 offset-lg-2 header-text">
           <h2>O Nás a  <em> Naších úspechoch</em></h2>
-          <p>Rentail – Naša cesta od malej rodinnej garáže k lídrovi v prenájme dodávok V roku 2003, keď náš zakladateľ v malej garáži v srdci mesta začal snívať o tom, ako sprístupniť kvalitné a spoľahlivé mobilitné riešenia pre každého, sa rodila značka Rentail. Postupne sme vyrástli zo skromných začiatkov, spájajúc tradičné hodnoty rodinného podniku s inovatívnym prístupom a najmodernejšími technológiami. Každá naša dodávka nesie príbeh odhodlania, vášho úspechu a našej neustálej túžby prekračovať očakávania. Dnes, ako dôveryhodný partner na vašej ceste, pre vás vytvárame riešenia, ktoré zjednodušujú každodenný život a inšpirujú k novým dobrodružstvám.</p>
+          <p><em> Rentail </em> – Naša cesta od malej rodinnej garáže k lídrovi v prenájme dodávok V roku 2003, keď náš zakladateľ v malej garáži v srdci mesta začal snívať o tom, ako sprístupniť kvalitné a spoľahlivé mobilitné riešenia pre každého, sa rodila značka Rentail. Postupne sme vyrástli zo skromných začiatkov, spájajúc tradičné hodnoty rodinného podniku s inovatívnym prístupom a najmodernejšími technológiami. Každá naša dodávka nesie príbeh odhodlania, vášho úspechu a našej neustálej túžby prekračovať očakávania. Dnes, ako dôveryhodný partner na vašej ceste, pre vás vytvárame riešenia, ktoré zjednodušujú každodenný život a inšpirujú k novým dobrodružstvám.</p>
         </div>
       </div>
     </div>
