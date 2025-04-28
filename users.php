@@ -257,12 +257,12 @@ https://templatemo.com/tm-576-snapx-photography
         </div>
         <div class="col-lg-6">
           <div class="thumb">
-            <img src="assets/images/portfolio-05.jpg" alt="">
+            <img src="assets/images/xmas.jpg" alt="">
             <div class="hover-effect">
               <div class="content">
-                <h4>Fly thru the river</h4>
-                <span>Ranked: <em>1st</em></span>
-                <span>Award: <em>EOS R1</em></span>
+                <h4>Prvá Vianočná párty</h4>
+                <span>Dátum: <em>24.12.2003</em></span>
+                
                 <ul>
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <li><a href="#"><i class="fa fa-eye"></i></a></li>
