@@ -9,6 +9,9 @@
     <li><a href="index.php" class="active">Home</a></li>
     <li class="has-sub">
       <a href="javascript:void(0)">zatial nic</a>
+      <ul class="sub-menu">
+        <li><a href="contests.php">Do buducnosti</a></li>
+        <li><a href="contest-details.html">Daco take</a></li>
       </ul>
     </li>
     <li><a href="lokalizacia.php">Naše miesta</a></li>
