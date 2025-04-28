@@ -335,9 +335,7 @@ https://templatemo.com/tm-576-snapx-photography
             </div>
           </div>
         </div>
-        <div class="col-lg-12">
-          <div class="main-button">
-            <a href="#">Load More Photos</a>
+        
           </div>
         </div>
       </div>
