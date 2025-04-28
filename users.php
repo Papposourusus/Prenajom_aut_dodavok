@@ -210,12 +210,12 @@ https://templatemo.com/tm-576-snapx-photography
         </div>
         <div class="col-lg-5">
           <div class="thumb">
-            <img src="assets/images/portfolio-02.jpg" alt="">
+            <img src="assets/images/1dod.jpg" alt="">
             <div class="hover-effect">
               <div class="content">
-                <h4>Walk In The Nature</h4>
-                <span>Ranked: <em>3rd</em></span>
-                <span>Award Won: <em>EOS R3</em></span>
+                <h4>Naša prvá úspešne prenajatá dodávka</h4>
+                <span>Dátum: <em>23.03.2003</em></span>
+                
                 <ul>
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <li><a href="#"><i class="fa fa-eye"></i></a></li>
