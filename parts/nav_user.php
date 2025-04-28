@@ -8,7 +8,11 @@
                       <ul class="nav">
                           <li><a href="index.php">Home</a></li>
                           <li class="has-sub">
-                        
+                              <a href="javascript:void(0)" class="active">zatila nic</a>
+                              <ul class="sub-menu">
+                                  <li><a href="contests.php">Do buducnosti</a></li>
+                                  <li><a href="contest-details.php"> take daco</a></li>
+                              </ul>
                           </li>
                           <li><a href="lokalizacia.php">Naše miesta</a></li>
                           <li><a href="users.php">Users</a></li>
