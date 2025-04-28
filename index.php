@@ -75,22 +75,11 @@ if (isset($_SESSION['error_message'])) {
                 <span>Or use your Email address</span>
             </div>
 
-            <?php
-session_start();
-?>
-
-
-
-<div class="action_btns">
-<?php if (isset($_SESSION['username'])): ?>
-    <div class="one_half"><a href="profile.php" class="btn">Môj účet (<?= htmlspecialchars($_SESSION['username']) ?>)</a></div>
-    <div class="one_half last"><a href="logout.php" class="btn">Odhlásiť sa</a></div>
-<?php else: ?>
-    <div class="one_half"><a href="#" id="login_form" class="btn">Login</a></div>
-    <div class="one_half last"><a href="#" id="register_form" class="btn">Sign up</a></div>
-<?php endif; ?>
-</div>
-
+            <div class="action_btns">
+                <div class="one_half"><a href="#" id="login_form" class="btn">Login</a></div>
+                <div class="one_half last"><a href="#" id="register_form" class="btn">Sign up</a></div>
+            </div>
+        </div>
 
         <div class="user_login">
     <form action="login.php" method="post">

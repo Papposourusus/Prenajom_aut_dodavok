@@ -1,5 +1,5 @@
 <?php
-session_start(); // na začiatku každej stránky kde používaš $_SESSION
+session_start(); 
 
 $servername = "localhost";
 $username = "root"; 
