@@ -372,45 +372,47 @@ https://templatemo.com/tm-576-snapx-photography
             <span><a href="#">155 Michigan Ave, Chicago,<br>IL 60601, United States</a></span>
           </div>
         </div>
-        <div class="col-lg-12">
-          <form id="contact" action="" method="post">
-            <div class="row">
-              <div class="col-lg-6">
-                <fieldset>
-                  <input type="text" name="name" id="name" placeholder="Your Name..." autocomplete="on" required>
-                </fieldset>
-              </div>
-              <div class="col-lg-6">
-                <fieldset>
-                  <input type="text" name="telephone" id="telephone" placeholder="Your Telephone..." autocomplete="on" required>
-                </fieldset>
-              </div>
-              <div class="col-lg-6">
-                <fieldset>
-                  <input type="email" name="email" id="email" placeholder="Your E-mail..." required="">
-                </fieldset>
-              </div>
-              <div class="col-lg-6">
-                <fieldset>
-                  <input type="text" name="subject" id="subject" placeholder="Subject..." autocomplete="on" >
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <textarea name="message" id="message" placeholder="Your Message"></textarea>
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <button type="submit" id="form-submit" class="orange-button">Send Message Now</button>
-                </fieldset>
-              </div>
-            </div>
-          </form>
+        
+        <section class="contact-us">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-heading text-center">
+          <h6>Leave a Comment</h6>
+          <h4>Your <em>Feedback</em> is Welcome</h4>
         </div>
       </div>
+      <div class="col-lg-12">
+        <form id="comment-form" action="submit_comment.php" method="post">
+          <div class="row">
+            <div class="col-lg-6">
+              <fieldset>
+                <input type="text" name="name" id="name" placeholder="Your Name..." required>
+              </fieldset>
+            </div>
+            <div class="col-lg-6">
+              <fieldset>
+                <input type="email" name="email" id="email" placeholder="Your E-mail..." required>
+              </fieldset>
+            </div>
+            <div class="col-lg-12">
+              <fieldset>
+                <textarea name="message" id="message" placeholder="Your Comment..." rows="6" required></textarea>
+              </fieldset>
+            </div>
+            <div class="col-lg-12">
+              <fieldset>
+                <button type="submit" class="orange-button">Submit Comment</button>
+              </fieldset>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
+
+
 
   <?php include 'parts/footer.php'; ?>
 
