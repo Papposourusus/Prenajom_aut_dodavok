@@ -23,6 +23,6 @@ $stmt->execute();
 $stmt->close();
 $conn->close();
 
-header("Location: kontakt.php"); // Alebo kam chceš presmerovať
+header("Location: users.php"); // Alebo kam chceš presmerovať
 exit;
 ?>
