@@ -374,6 +374,9 @@ https://templatemo.com/tm-576-snapx-photography
         </div>
         
         <section class="contact-us">
+          
+        <form id="comment-form" action="submit_comment.php" method="post">
+
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
