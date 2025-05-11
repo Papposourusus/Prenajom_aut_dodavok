@@ -37,6 +37,9 @@ session_start();
 
 <body>
   <?php include 'parts/header.php'; ?>
+
+  <?php session_start(); ?>
+
   
 
 
@@ -120,6 +123,15 @@ session_start();
             <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
             <div class="one_half last"><button type="submit" class="btn btn_red">Register</button></div>
         </div>
+
+        <?php if (isset($_SESSION['success_message'])): ?>
+    <div class="alert alert-success"><?= $_SESSION['success_message']; unset($_SESSION['success_message']); ?></div>
+<?php endif; ?>
+
+<?php if (isset($_SESSION['error_message'])): ?>
+    <div class="alert alert-danger"><?= $_SESSION['error_message']; unset($_SESSION['error_message']); ?></div>
+<?php endif; ?>
+
     </form>
 </div>
 
@@ -544,6 +556,7 @@ session_start();
   
  
   <?php include 'parts/footer.php'; ?>
+  
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->

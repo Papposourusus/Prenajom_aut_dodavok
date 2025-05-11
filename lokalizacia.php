@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<?php
+session_start();
+if (!isset($_SESSION["username"])) {
+    header("Location: index.php"); // alebo login.php
+    exit();
+}
+?>
 
 
 <html lang="en">
