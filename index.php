@@ -29,16 +29,13 @@ https://templatemo.com/tm-576-snapx-photography
 
 -->
 
-<?php
-session_start();
-?>
 
 
 
 <body>
   <?php include 'parts/header.php'; ?>
 
-  <?php session_start(); ?>
+
 
   
 
