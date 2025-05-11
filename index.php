@@ -29,112 +29,95 @@ https://templatemo.com/tm-576-snapx-photography
 
 -->
 
+<style>
+.modal {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6); display: flex; justify-content: center; align-items: center;
+}
+.modal-content {
+  background: white; padding: 20px; border-radius: 8px; width: 300px; position: relative;
+}
+.closeBtn {
+  position: absolute; top: 10px; right: 15px; cursor: pointer; font-size: 20px;
+}
+.tab-buttons button {
+  margin: 5px; padding: 5px 10px;
+}
+.formTab {
+  margin-top: 15px;
+}
+</style>
 
 
 
 <body>
   <?php include 'parts/header.php'; ?>
 
+<script>
+const modal = document.getElementById("authModal");
+const openBtn = document.getElementById("openModalBtn");
+const closeBtn = document.querySelector(".closeBtn");
+
+const loginForm = document.getElementById("loginForm");
+const registerForm = document.getElementById("registerForm");
+const loginTab = document.getElementById("loginTab");
+const registerTab = document.getElementById("registerTab");
+
+openBtn.onclick = () => modal.style.display = "flex";
+closeBtn.onclick = () => modal.style.display = "none";
+
+loginTab.onclick = () => {
+  loginForm.style.display = "block";
+  registerForm.style.display = "none";
+};
+
+registerTab.onclick = () => {
+  loginForm.style.display = "none";
+  registerForm.style.display = "block";
+};
+
+window.onclick = function(event) {
+  if (event.target == modal) modal.style.display = "none";
+}
+</script>
 
 
   
 
 
 
-  <div id="modal" class="popupContainer" style="display:none;">
-    <div class="popupHeader">
-        <span class="header_title">Login</span>
-        <span class="modal_close"><i class="fa fa-times"></i></span>
+  <!-- Spúšťač -->
+<button id="openModalBtn">Prihlásiť sa</button>
+
+<!-- Modal (Pop-up) -->
+<div id="authModal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <span class="closeBtn">&times;</span>
+
+    <div class="tab-buttons">
+      <button id="loginTab">Prihlásenie</button>
+      <button id="registerTab">Registrácia</button>
     </div>
 
-    <section class="popupBody">
-        <!-- Social Login -->
-        <div class="social_login">
-            <div class="">
-                <a href="#" class="social_box fb">
-                    <span class="icon"><i class="fab fa-facebook"></i></span>
-                    <span class="icon_title">Connect with Facebook</span>
+    <div id="loginForm" class="formTab">
+      <form action="login.php" method="POST">
+        <input type="text" name="login_username" placeholder="Meno alebo email" required>
+        <input type="password" name="login_password" placeholder="Heslo" required>
+        <button type="submit">Prihlásiť sa</button>
+      </form>
+    </div>
 
-                </a>
-
-                <a href="#" class="social_box google">
-                    <span class="icon"><i class="fab fa-google-plus"></i></span>
-                    <span class="icon_title">Connect with Google</span>
-                </a>
-            </div>
-
-            <div class="centeredText">
-                <span>Or use your Email address</span>
-            </div>
-
-            <div class="action_btns">
-                <div class="one_half"><a href="#" id="login_form" class="btn">Login</a></div>
-                <div class="one_half last"><a href="#" id="register_form" class="btn">Sign up</a></div>
-            </div>
-        </div>
-
-        <div class="user_login">
-    <form action="login.php" method="post">
-        <label>Email / Username</label>
-        <input name="login_username" type="text" id="login_username" required />
-        <br />
-
-        <label>Password</label>
-        <input name="login_password" type="password" id="login_password" required />
-        <br />
-
-        <div class="checkbox">
-            <input id="remember" type="checkbox" />
-            <label for="remember">Remember me on this computer</label>
-        </div>
-
-        <div class="action_btns">
-            <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
-            <div class="one_half last"><button type="submit" class="btn btn_red">Login</button></div>
-        </div>
-    </form>
-
-    <a href="#" class="forgot_password">Forgot password?</a>
-</div>
-
-<div class="user_register">
-    <form action="register.php" method="post">
-        <label>Username</label>
-        <input name="register_username" type="text" id="register_username" required />
-        <br />
-
-        <label>Email Address</label>
-        <input name="register_email" type="email" id="register_email" required />
-        <br />
-
-        <label>Password</label>
-        <input name="register_password" type="password" id="register_password" required />
-        <br />
-
-        <div class="checkbox">
-            <input id="send_updates" type="checkbox" />
-            <label for="send_updates">Send me occasional email updates</label>
-        </div>
-
-        <div class="action_btns">
-            <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
-            <div class="one_half last"><button type="submit" class="btn btn_red">Register</button></div>
-        </div>
-
-        <?php if (isset($_SESSION['success_message'])): ?>
-    <div class="alert alert-success"><?= $_SESSION['success_message']; unset($_SESSION['success_message']); ?></div>
-<?php endif; ?>
-
-<?php if (isset($_SESSION['error_message'])): ?>
-    <div class="alert alert-danger"><?= $_SESSION['error_message']; unset($_SESSION['error_message']); ?></div>
-<?php endif; ?>
-
-    </form>
-</div>
-
-        
-    </section>
+    <div id="registerForm" class="formTab" style="display: none;">
+      <form action="register.php" method="POST">
+        <input type="text" name="register_username" placeholder="Používateľské meno" required>
+        <input type="email" name="register_email" placeholder="Email" required>
+        <input type="password" name="register_password" placeholder="Heslo" required>
+        <button type="submit">Registrovať sa</button>
+      </form>
+    </div>
   </div>
+</div>
+
 
   <!-- ***** Main Banner Area Start ***** -->
   <div class="main-banner">
