@@ -1,42 +1,23 @@
 <?php
-session_start();
+$conn = new mysqli("localhost", "root", "", "users");
 
-$servername = "localhost";
-$username = "root"; 
-$password = "";
-$dbname = "users";
+if ($conn->connect_error) die("Chyba pripojenia: " . $conn->connect_error);
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Chyba pripojenia: " . $conn->connect_error);
-}
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = trim($_POST['register_username']);
-    $email = trim($_POST['register_email']);
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $username = $_POST['register_username'];
+    $email = $_POST['register_email'];
     $password = password_hash($_POST['register_password'], PASSWORD_DEFAULT);
 
-    // Skontroluj či už existuje používateľ
-    $check = $conn->prepare("SELECT id FROM users WHERE username = ? OR email = ?");
-    $check->bind_param("ss", $username, $email);
-    $check->execute();
-    $check->store_result();
+    $stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $username, $email, $password);
 
-    if ($check->num_rows > 0) {
-        $_SESSION['error_message'] = "Používateľ alebo email už existuje.";
+    if ($stmt->execute()) {
+        echo "Registrácia úspešná.";
     } else {
-        $insert = $conn->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
-        $insert->bind_param("sss", $username, $email, $password);
-        if ($insert->execute()) {
-            $_SESSION['success_message'] = "Registrácia úspešná! Môžete sa prihlásiť.";
-        } else {
-            $_SESSION['error_message'] = "Chyba pri registrácii.";
-        }
+        echo "Používateľ alebo email už existuje.";
     }
 
-    header("Location: index.php");
-    exit();
+    $stmt->close();
 }
-
 $conn->close();
 ?>

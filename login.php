@@ -1,42 +1,31 @@
 <?php
 session_start();
+$conn = new mysqli("localhost", "root", "", "users");
 
-$servername = "localhost";
-$username = "root"; 
-$password = "";
-$dbname = "users";
+if ($conn->connect_error) die("Chyba pripojenia: " . $conn->connect_error);
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $username = $_POST['login_username'];
+    $password = $_POST['login_password'];
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $login_username = $_POST['login_username'];
-    $login_password = $_POST['login_password'];
-
-    $sql = "SELECT * FROM users WHERE username=? OR email=?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ss", $login_username, $login_username);
+    $stmt = $conn->prepare("SELECT * FROM users WHERE username = ? OR email = ?");
+    $stmt->bind_param("ss", $username, $username);
     $stmt->execute();
     $result = $stmt->get_result();
 
-    if ($result->num_rows === 1) {
-        $row = $result->fetch_assoc();
-        if (password_verify($login_password, $row['password'])) {
-            $_SESSION['username'] = $row['username'];
-            $_SESSION['user_id'] = $row['id'];
-            $_SESSION['success_message'] = "Úspešne prihlásený.";
+    if ($user = $result->fetch_assoc()) {
+        if (password_verify($password, $user['password'])) {
+            $_SESSION['username'] = $user['username'];
+            header("Location: index.php");
+            exit();
         } else {
-            $_SESSION['error_message'] = "Nesprávne heslo.";
+            echo "Nesprávne heslo.";
         }
     } else {
-        $_SESSION['error_message'] = "Používateľ nenájdený.";
+        echo "Používateľ nenájdený.";
     }
 
-    header("Location: index.php");
-    exit();
+    $stmt->close();
 }
-
 $conn->close();
 ?>
