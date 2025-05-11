@@ -57,6 +57,8 @@ session_start();
 
 <body>
   <?php include 'parts/header.php'; ?>
+
+  
   <script>
 const modal = document.getElementById("authModal");
 const openBtn = document.getElementById("openModalBtn");
