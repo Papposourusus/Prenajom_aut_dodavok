@@ -17,9 +17,7 @@
     <li><a href="lokalizacia.php">Naše miesta</a></li>
     <li><a href="users.php">Users</a></li>
   </ul>   
-  <div class="border-button">
-    <a id="modal_trigger" href="#modal" class="sign-in-up"><i class="fa fa-user"></i> Sign In/Up</a>
-  </div>
+  
   <a class='menu-trigger'>
     <span>Menu</span>
   </a>
