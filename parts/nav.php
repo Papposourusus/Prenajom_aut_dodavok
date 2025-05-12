@@ -36,10 +36,7 @@ if (session_status() === PHP_SESSION_NONE) {
 </div>
 
 
-  </div>
-  <a class='menu-trigger'>
-    <span>Menu</span>
-  </a>
+ 
   <!-- ***** Menu End ***** -->
 </nav>
 
