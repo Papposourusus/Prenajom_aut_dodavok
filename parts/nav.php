@@ -17,8 +17,17 @@
     <li><a href="lokalizacia.php">Naše miesta</a></li>
     <li><a href="users.php">Users</a></li>
   </ul>   
+  
   <div class="border-button">
+  <?php if (isset($_SESSION['username'])): ?>
+    <form action="logout.php" method="post" style="display:inline;">
+      <button type="submit" class="sign-in-up"><i class="fa fa-sign-out-alt"></i> Logout</button>
+    </form>
+  <?php else: ?>
     <a id="modal_trigger" href="#modal" class="sign-in-up"><i class="fa fa-user"></i> Sign In/Up</a>
+  <?php endif; ?>
+</div>
+
 
   </div>
   <a class='menu-trigger'>

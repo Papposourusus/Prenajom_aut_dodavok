@@ -56,7 +56,7 @@ https://templatemo.com/tm-576-snapx-photography
   width: 100%; padding: 10px; margin-bottom: 10px;
 }
 .auth-tab-content form button {
-  width: 100%; padding: 10px; background: #ff6600; color: #fff; border: none;
+  width: 100%; padding: 10px; background: #00bdfe; color: #fff; border: none;
 }
 
 </style>
