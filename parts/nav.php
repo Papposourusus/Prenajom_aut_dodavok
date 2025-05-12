@@ -55,21 +55,19 @@ if (session_status() === PHP_SESSION_NONE) {
 
 
 .logout-button {
-  background-color: transparent;
-  border: 2px solid #fff;
-  color: #fff;
-  padding: 8px 20px;
+  background-color: #00bdfe; /* oranžová farba */
+  border: none;
+  color: white;
+  padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
   cursor: pointer;
   font-size: 14px;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .logout-button:hover {
-  background-color: #fff;
-  color: #000;
-}
-
+  background-color: ##00bdfe;
+  }
 
 </style>
