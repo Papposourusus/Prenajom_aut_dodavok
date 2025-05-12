@@ -1,3 +1,9 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
+
 <nav class="main-nav">
   <!-- ***** Logo Start ***** -->
   <a href="index.html" class="logo_d">
@@ -17,7 +23,7 @@
     <li><a href="lokalizacia.php">Naše miesta</a></li>
     <li><a href="users.php">Users</a></li>
   </ul>   
-  
+
   <div class="border-button">
   <?php if (isset($_SESSION['username'])): ?>
     <form action="logout.php" method="post" style="display:inline;">
