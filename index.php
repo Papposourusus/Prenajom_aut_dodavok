@@ -50,7 +50,7 @@ https://templatemo.com/tm-576-snapx-photography
   background: #eee; cursor: pointer;
 }
 .auth-tabs .active {
-  background: #ff6600; color: #fff;
+  background: #00bdfe; color: #fff;
 }
 .auth-tab-content form input {
   width: 100%; padding: 10px; margin-bottom: 10px;
