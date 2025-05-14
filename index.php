@@ -147,151 +147,45 @@ function showTab(tabId) {
   <!-- ***** Main Banner Area End ***** -->
 
 
-  <section class="featured-items" id="featured-items">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="owl-features owl-carousel" style="position: relative; z-index: 5;">
-            <div class="item">
-              <div class="thumb">
-                <img src="assets/images/Master.jpg" alt="">
-                <div class="hover-effect">
-                  <div class="content">
-                    <h4>Renault master <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(4.5)</span></h4>
+  <div class="owl-features owl-carousel" style="position: relative; z-index: 5;">
+<?php
+$conn = new mysqli("localhost", "root", "", "users");
+if ($conn->connect_error) {
+    die("Chyba pripojenia: " . $conn->connect_error);
+}
+
+$sql = "SELECT * FROM vehicles";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0):
+    while ($row = $result->fetch_assoc()):
+?>
+    <div class="item">
+        <div class="thumb">
+            <img src="assets/images/<?php echo htmlspecialchars($row['image']); ?>" alt="">
+            <div class="hover-effect">
+                <div class="content">
+                    <h4>
+                        <?php echo htmlspecialchars($row['title']); ?>
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                        <span>(4.5)</span>
+                    </h4>
                     <ul>
-                      <li><span>Cena:</span> 60€/deň</li>
-                      <li><span>Majiteľ:</span> Maduda s.r.o</li>
-                      <li><span>Rok výroby:</span> 2007</li>
+                        <li><span>Cena:</span> <?php echo $row['price_per_day']; ?>€/deň</li>
+                        <li><span>Majiteľ:</span> <?php echo htmlspecialchars($row['owner']); ?></li>
+                        <li><span>Rok výroby:</span> <?php echo $row['year']; ?></li>
                     </ul>
-                  </div>
                 </div>
-              </div>
             </div>
-            <div class="item">
-              <div class="thumb">
-                <img src="assets/images/vclass.jpg" alt="">
-                <div class="hover-effect">
-                  <div class="content">
-                    <h4>Mercedes-Benz V class <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(4.5)</span></h4>
-                    <ul>
-                      <li><span>Cena:</span> 80€/deň</li>
-                      <li><span>Majiteľ:</span> Hedin Atomotive</li>
-                      <li><span>Rok výroby</span> 2020</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="thumb">
-                <img src="assets/images/trans.jpg" alt="">
-                <div class="hover-effect">
-                  <div class="content">
-                    <h4>Volkswagen Transport<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(4.5)</span></h4>
-                    <ul>
-                      <li><span>Cena</span> 75€/deň</li>
-                      <li><span>Majiteľ:</span> </li>
-                      <li><span>Rok výroby:</span> 2013</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="thumb">
-                <img src="assets/images/transit.jpg" alt="">
-                <div class="hover-effect">
-                  <div class="content">
-                    <h4>Ford Transit <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(4.5)</span></h4>
-                    <ul>
-                      <li><span>Cena:</span> 80€/deň</li>
-                      <li><span>Majiteľ:</span>Tim Radobický</li>
-                      <li><span>Rok výroby:</span> 2021</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="thumb">
-                <img src="assets/images/pegot.jpg" alt="">
-                <div class="hover-effect">
-                  <div class="content">
-                    <h4>Peugeot Boxer<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(4.5)</span></h4>
-                    <ul>
-                      <li><span>Cena:</span> 70€/deň</li>
-                      <li><span>Majiteľ:</span> Alex"Smažák"Pláštiak</li>
-                      <li><span>Rok výroby:</span>2015</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="thumb">
-                <img src="assets/images/doblo.jpg" alt="">
-                <div class="hover-effect">
-                  <div class="content">
-                    <h4>Fiat Doblo <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(4.5)</span></h4>
-                    <ul>
-                      <li><span>Cena:</span> 60€/deň</li>
-                      <li><span>Majiteľ:</span> Maduda s.r.o.</li>
-                      <li><span>Rok výroby:</span> 2010</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="thumb">
-                <img src="assets/images/malibu.jpg" alt="">
-                <div class="hover-effect">
-                  <div class="content">
-                    <h4>Fiat Doblo Malibu <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(4.5)</span></h4>
-                    <ul>
-                      <li><span>Cena:</span> 55€/deň</li>
-                      <li><span>Majiteľ:</span> Maduda s.r.o.</li>
-                      <li><span>Rok výroby:</span> 2010</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="thumb">
-                <img src="assets/images/hbyy.jpg" alt="">
-                <div class="hover-effect">
-                  <div class="content">
-                    <h4>Hobby Van <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(4.5)</span></h4>
-                    <ul>
-                      <li><span>Cena:</span> 80€/deň</li>
-                      <li><span>Majiteľ:</span> HaBByBy</li>
-                      <li><span>Rok výroby:</span> 2012</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="thumb">
-                <img src="assets/images/featured-03.jpg" alt="">
-                <div class="hover-effect">
-                  <div class="content">
-                    <h4>Fly In The Nature <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(4.5)</span></h4>
-                    <ul>
-                      <li><span>Contest Winner:</span> Vincent Adam</li>
-                      <li><span>Contest Author:</span> Anthony Soft</li>
-                      <li><span>Awards:</span> $1,200 + Canon EOS R10</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
-  </section>
+<?php
+    endwhile;
+endif;
+$conn->close();
+?>
+</div>
+
 
 
   <section class="popular-categories">

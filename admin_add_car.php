@@ -1,29 +1,51 @@
 <?php
 session_start();
-if ($_SESSION['role'] !== 'admin') {
-    die("Nemáš oprávnenie.");
+
+// Kontrola, či je admin
+if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
+    die("Nemáš oprávnenie pristupovať sem.");
 }
 
 $conn = new mysqli("localhost", "root", "", "users");
-if ($conn->connect_error) die("Chyba DB.");
+if ($conn->connect_error) die("Chyba DB: " . $conn->connect_error);
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $title = $_POST['title'];
-    $description = $_POST['description'];
     $price = $_POST['price'];
-    $image = $_POST['image']; // napr. cesta k obrázku v assets
+    $owner = $_POST['owner'];
+    $year = $_POST['year'];
 
-    $stmt = $conn->prepare("INSERT INTO cars (title, description, image, price) VALUES (?, ?, ?, ?)");
-    $stmt->bind_param("sssd", $title, $description, $image, $price);
-    $stmt->execute();
-    echo "Auto bolo pridané!";
+    // Uloženie obrázku
+    $image_name = $_FILES['image']['name'];
+    $image_tmp = $_FILES['image']['tmp_name'];
+    move_uploaded_file($image_tmp, "assets/images/" . $image_name);
+
+    $stmt = $conn->prepare("INSERT INTO vehicles (title, image, price_per_day, owner, year) VALUES (?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssdsi", $title, $image_name, $price, $owner, $year);
+
+    if ($stmt->execute()) {
+        echo "Auto bolo pridané.";
+    } else {
+        echo "Chyba: " . $stmt->error;
+    }
 }
 ?>
 
-<form method="POST">
-    <input name="title" placeholder="Názov auta" required>
-    <textarea name="description" placeholder="Popis" required></textarea>
-    <input name="image" placeholder="Cesta k obrázku" required>
-    <input name="price" type="number" step="0.01" placeholder="Cena za deň" required>
-    <button type="submit">Pridať auto</button>
+<form method="post" enctype="multipart/form-data">
+    <label>Názov auta:</label><br>
+    <input type="text" name="title" required><br><br>
+
+    <label>Cena na deň (€):</label><br>
+    <input type="number" name="price" step="0.01" required><br><br>
+
+    <label>Majiteľ:</label><br>
+    <input type="text" name="owner" required><br><br>
+
+    <label>Rok výroby:</label><br>
+    <input type="number" name="year" min="1900" max="2099" required><br><br>
+
+    <label>Obrázok (jpg/png):</label><br>
+    <input type="file" name="image" accept="image/*" required><br><br>
+
+    <button type="submit">Pridať vozidlo</button>
 </form>
