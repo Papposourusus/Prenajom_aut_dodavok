@@ -44,24 +44,27 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 ?>
 
 
-<form method="post" enctype="multipart/form-data">
-    <label>Názov auta:</label><br>
-    <input type="text" name="title" required><br><br>
+<div class="car-form-container">
+  <h2>Pridaj nové auto</h2>
+  <form method="post" enctype="multipart/form-data">
+    <label for="name">Názov auta:</label>
+    <input type="text" name="name" required>
 
-    <label>Cena na deň (€):</label><br>
-    <input type="number" name="price" step="0.01" required><br><br>
+    <label for="price">Cena za deň (€):</label>
+    <input type="number" name="price" required>
 
-    <label>Majiteľ:</label><br>
-    <input type="text" name="owner" required><br><br>
+    <label for="owner">Majiteľ:</label>
+    <input type="text" name="owner" required>
 
-    <label>Rok výroby:</label><br>
-    <input type="number" name="year" min="1900" max="2099" required><br><br>
+    <label for="year">Rok výroby:</label>
+    <input type="number" name="year" required>
 
-    <label>Obrázok (jpg/png):</label><br>
-    <input type="file" name="image" accept="image/*" required><br><br>
+    <label for="image">Obrázok auta:</label>
+    <input type="file" name="image" accept="image/*" required>
 
-    <button type="submit">Pridať vozidlo</button>
-</form>
+    <button type="submit" name="add_vehicle">Pridať auto</button>
+  </form>
+</div>
 
 
 
