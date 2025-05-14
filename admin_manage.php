@@ -61,7 +61,7 @@ $comments = $conn_comments->query("SELECT * FROM comments");
     <h2>🚗 Autá</h2>
     <table>
         <tr>
-            <th>ID</th><th>Názov</th><th>Cena</th><th>Majiteľ</th><th>Rok</th><th>Obrázok</th><th>Akcia</th>
+            <th>ID</th><th>Názov</th><th>Obrázok</th><th>Cena na deň</th><th>Majiteľ</th><th>Rok</th>
         </tr>
         <?php if ($vehicles): while ($row = $vehicles->fetch_assoc()): ?>
         <tr>
@@ -84,6 +84,8 @@ $comments = $conn_comments->query("SELECT * FROM comments");
         <?php endif; ?>
     </table>
 </div>
+
+
 
 <div class="section">
     <h2>💬 Komentáre</h2>
