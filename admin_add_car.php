@@ -6,6 +6,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
     die("Nemáš oprávnenie pristupovať sem.");
 }
 
+// Pripojenie k databáze
 $conn = new mysqli("localhost", "root", "", "auta");
 if ($conn->connect_error) die("Chyba DB: " . $conn->connect_error);
 
@@ -15,21 +16,33 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $owner = $_POST['owner'];
     $year = $_POST['year'];
 
-    // Uloženie obrázku
-    $image_name = $_FILES['image']['name'];
+    // Spracovanie obrázku
+    $image_name = basename($_FILES['image']['name']);
     $image_tmp = $_FILES['image']['tmp_name'];
-    move_uploaded_file($image_tmp, "assets/images/" . $image_name);
+    $upload_path = "assets/images/" . $image_name;
 
-    $stmt = $conn->prepare("INSERT INTO vehicles (title, image, price_per_day, owner, year) VALUES (?, ?, ?, ?, ?)");
-    $stmt->bind_param("ssdsi", $title, $image, $price, $owner, $year);
+    if (move_uploaded_file($image_tmp, $upload_path)) {
+        $image = $image_name;
 
-    if ($stmt->execute()) {
-        echo "Auto bolo pridané.";
+        // Vloženie do DB
+        $stmt = $conn->prepare("INSERT INTO vehicles (title, image, price_per_day, owner, year) VALUES (?, ?, ?, ?, ?)");
+        if ($stmt) {
+            $stmt->bind_param("ssdsi", $title, $image, $price, $owner, $year);
+            if ($stmt->execute()) {
+                echo "Auto bolo úspešne pridané.";
+            } else {
+                echo "Chyba pri vykonávaní dotazu: " . $stmt->error;
+            }
+            $stmt->close();
+        } else {
+            echo "Chyba pri príprave dotazu: " . $conn->error;
+        }
     } else {
-        echo "Chyba: " . $stmt->error;
+        echo "Chyba pri nahrávaní obrázku.";
     }
 }
 ?>
+
 
 <form method="post" enctype="multipart/form-data">
     <label>Názov auta:</label><br>
