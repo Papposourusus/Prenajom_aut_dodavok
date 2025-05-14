@@ -67,6 +67,7 @@ $comments = $conn_comments->query("SELECT * FROM comments");
         <tr>
             <td><?= $row['id'] ?></td>
             <td><?= htmlspecialchars($row['title']) ?></td>
+            <td><?= htmlspecialchars($row['image']) ?></td>
             <td><?= htmlspecialchars($row['price_per_day']) ?>€</td>
             <td><?= htmlspecialchars($row['owner']) ?></td>
             <td><?= htmlspecialchars($row['year']) ?></td>
