@@ -30,7 +30,7 @@ if (isset($_POST['delete_comment'])) {
 $vehicles = $conn->query("SELECT * FROM auta");
 
 // Získanie komentárov
-$comments = $conn->query("SELECT * FROM website_comments");
+$comments = $conn->query("SELECT * FROM comments");
 
 ?>
 
