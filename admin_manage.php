@@ -31,3 +31,5 @@ while ($comment = $comments->fetch_assoc()) {
     echo "<p>{$comment['content']} <a href='?delete_comment={$comment['id']}'>Odstrániť</a></p>";
 }
 ?>
+
+
