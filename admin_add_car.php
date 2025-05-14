@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     move_uploaded_file($image_tmp, "assets/images/" . $image_name);
 
     $stmt = $conn->prepare("INSERT INTO vehicles (title, image, price_per_day, owner, year) VALUES (?, ?, ?, ?, ?)");
-    $stmt->bind_param("ssdsi", $title, $image_name, $price, $owner, $year);
+    $stmt->bind_param("ssdsi", $title, $image, $price, $owner, $year);
 
     if ($stmt->execute()) {
         echo "Auto bolo pridané.";
