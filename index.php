@@ -21,6 +21,10 @@
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
 <!--
 
 TemplateMo 576 SnapX Photography
@@ -59,7 +63,24 @@ https://templatemo.com/tm-576-snapx-photography
   width: 100%; padding: 10px; background: #00bdfe; color: #fff; border: none;
 }
 
+
+
+.vehicle-carousel-section {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+.vehicle-carousel .card {
+  background: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.vehicle-carousel .card:hover {
+  transform: translateY(-5px);
+}
+
+
 </style>
+
 
 
 
@@ -146,45 +167,38 @@ function showTab(tabId) {
   </div>
   <!-- ***** Main Banner Area End ***** -->
 
-
-  <div class="owl-features owl-carousel" style="position: relative; z-index: 5;">
 <?php
-$conn = new mysqli("localhost", "root", "", "users");
-if ($conn->connect_error) {
-    die("Chyba pripojenia: " . $conn->connect_error);
+$mysqli = new mysqli("localhost", "root", "", "vehicle"); 
+
+if ($mysqli->connect_errno) {
+    echo "Failed to connect: " . $mysqli->connect_error;
+    exit();
 }
 
-$sql = "SELECT * FROM vehicles";
-$result = $conn->query($sql);
+$query = "SELECT * FROM vehicle";
+$result = $mysqli->query($query);
+?>
 
-if ($result->num_rows > 0):
-    while ($row = $result->fetch_assoc()):
-?>
-    <div class="item">
-        <div class="thumb">
-            <img src="assets/images/<?php echo htmlspecialchars($row['image']); ?>" alt="">
-            <div class="hover-effect">
-                <div class="content">
-                    <h4>
-                        <?php echo htmlspecialchars($row['title']); ?>
-                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                        <span>(4.5)</span>
-                    </h4>
-                    <ul>
-                        <li><span>Cena:</span> <?php echo $row['price_per_day']; ?>€/deň</li>
-                        <li><span>Majiteľ:</span> <?php echo htmlspecialchars($row['owner']); ?></li>
-                        <li><span>Rok výroby:</span> <?php echo $row['year']; ?></li>
-                    </ul>
-                </div>
-            </div>
+
+<section class="vehicle-carousel-section">
+  <div class="container">
+    <h2 class="text-center">Our Vehicles</h2>
+    <div class="owl-carousel vehicle-carousel">
+      <?php while($row = $result->fetch_assoc()): ?>
+        <div class="item text-center">
+          <div class="card p-3" style="border: 1px solid #eee; border-radius: 10px;">
+            <img src="assets/images/<?= htmlspecialchars($row['image']) ?>" alt="<?= htmlspecialchars($row['title']) ?>" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+            <h4><?= htmlspecialchars($row['title']) ?></h4>
+            <p><strong>Owner:</strong> <?= htmlspecialchars($row['owner']) ?></p>
+            <p><strong>Year:</strong> <?= htmlspecialchars($row['year']) ?></p>
+            <p><strong>Price/Day:</strong> €<?= number_format($row['price_per_day'], 2) ?></p>
+          </div>
         </div>
+      <?php endwhile; ?>
     </div>
-<?php
-    endwhile;
-endif;
-$conn->close();
-?>
-</div>
+  </div>
+</section>
+
 
 
 
@@ -447,6 +461,25 @@ $conn->close();
   <script src="assets/js/tabs.js"></script>
   <script src="assets/js/popup.js"></script>
   <script src="assets/js/custom.js"></script>
+
+  <!-- Owl Carousel JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+    $('.vehicle-carousel').owlCarousel({
+      items: 3,
+      loop: true,
+      margin: 20,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      dots: true,
+      nav: false
+    });
+  });
+</script>
+
 
   </body>
 </html>
