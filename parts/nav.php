@@ -16,8 +16,8 @@ if (session_status() === PHP_SESSION_NONE) {
     <li class="has-sub">
       <a href="javascript:void(0)">zatial nic</a>
       <ul class="sub-menu">
-        <li><a href="contests.php">Do buducnosti</a></li>
-        <li><a href="contest-details.html">Daco take</a></li>
+        <li><a href="admin-page1.php">Admin Page 1</a></li>
+        <li><a href="admin-page2.php">Admin Page 2</a></li>
       </ul>
     </li>
     <li><a href="lokalizacia.php">Naše miesta</a></li>
@@ -34,6 +34,10 @@ if (session_status() === PHP_SESSION_NONE) {
     <a id="modal_trigger" href="#modal" class="sign-in-up"><i class="fa fa-user"></i> Sign In/Up</a>
   <?php endif; ?>
 </div>
+
+
+
+
 
 
  

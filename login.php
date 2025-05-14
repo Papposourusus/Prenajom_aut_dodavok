@@ -1,4 +1,9 @@
 <?php
+
+$_SESSION['username'] = $row['username'];
+$_SESSION['user_id'] = $row['id'];
+$_SESSION['role'] = $row['role']; 
+
 session_start();
 $conn = new mysqli("localhost", "root", "", "users");
 
