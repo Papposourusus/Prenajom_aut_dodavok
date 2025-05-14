@@ -93,9 +93,9 @@ $comments = $conn_comments->query("SELECT * FROM comments");
         <?php if ($comments): while ($row = $comments->fetch_assoc()): ?>
         <tr>
             <td><?= $row['id'] ?></td>
-            <td><?= htmlspecialchars($row['user_id']) ?></td>
-            <td><?= htmlspecialchars($row['vehicle_id']) ?></td>
-            <td><?= htmlspecialchars($row['content']) ?></td>
+            <td><?= htmlspecialchars($row['username']) ?></td>
+            <td><?= htmlspecialchars($row['email']) ?></td>
+            <td><?= htmlspecialchars($row['comment']) ?></td>
             <td><?= htmlspecialchars($row['created_at']) ?></td>
             <td>
                 <form method="post">
