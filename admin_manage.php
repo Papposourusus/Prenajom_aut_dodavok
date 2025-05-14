@@ -6,7 +6,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
 }
 
 // Pripojenie k databáze users (auta)
-$conn_users = new mysqli("localhost", "root", "", "users");
+$conn_users = new mysqli("localhost", "root", "", "auta");
 if ($conn_users->connect_error) die("Chyba pripojenia k USERS: " . $conn_users->connect_error);  
 
 // Pripojenie k databáze website_comments (komentáre)
@@ -16,7 +16,7 @@ if ($conn_comments->connect_error) die("Chyba pripojenia k COMMENTS: " . $conn_c
 // Odstránenie auta
 if (isset($_POST['delete_vehicle'])) {
     $id = intval($_POST['vehicle_id']);
-    $stmt = $conn_users->prepare("DELETE FROM auta WHERE id = ?");
+    $stmt = $conn_auta->prepare("DELETE FROM auta WHERE id = ?");
     $stmt->bind_param("i", $id);
     $stmt->execute();
     $stmt->close();
@@ -32,7 +32,7 @@ if (isset($_POST['delete_comment'])) {
 }
 
 // Získanie áut
-$vehicles = $conn_users->query("SELECT * FROM auta");
+$vehicles = $conn_auta->query("SELECT * FROM auta");
 
 // Získanie komentárov
 $comments = $conn_comments->query("SELECT * FROM comments");
