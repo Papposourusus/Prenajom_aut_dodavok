@@ -179,7 +179,6 @@ $query = "SELECT * FROM auta";
 $result = $mysqli->query($query);
 ?>
 
-<img src="assets/images/<?php echo $row['image']; ?>" alt="">
 
 
 <section class="vehicle-carousel-section">
@@ -464,22 +463,27 @@ $result = $mysqli->query($query);
   <script src="assets/js/popup.js"></script>
   <script src="assets/js/custom.js"></script>
 
-  <!-- Owl Carousel JS -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  
+<!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 <script>
-  $(document).ready(function(){
-    $('.vehicle-carousel').owlCarousel({
-      items: 3,
-      loop: true,
-      margin: 20,
-      autoplay: true,
-      autoplayTimeout: 3000,
-      dots: true,
-      nav: false
-    });
+$(document).ready(function(){
+  $(".vehicle-carousel").owlCarousel({
+    items: 3,
+    loop: true,
+    margin: 10,
+    nav: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    smartSpeed: 800
   });
+});
 </script>
 
 
