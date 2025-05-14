@@ -6,7 +6,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
     die("Nemáš oprávnenie pristupovať sem.");
 }
 
-$conn = new mysqli("localhost", "root", "", "users");
+$conn = new mysqli("localhost", "root", "", "auta");
 if ($conn->connect_error) die("Chyba DB: " . $conn->connect_error);
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
