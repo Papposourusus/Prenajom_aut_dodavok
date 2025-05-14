@@ -61,7 +61,7 @@ $comments = $conn->query("SELECT * FROM website_comments");
         <tr>
             <td><?= $row['id'] ?></td>
             <td><?= htmlspecialchars($row['title']) ?></td>
-            <td><?= htmlspecialchars($row['price']) ?>€</td>
+            <td><?= htmlspecialchars($row['price_per_day']) ?>€</td>
             <td><?= htmlspecialchars($row['owner']) ?></td>
             <td><?= htmlspecialchars($row['year']) ?></td>
             <td><img src="<?= htmlspecialchars($row['image']) ?>" width="100"></td>
