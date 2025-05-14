@@ -16,8 +16,8 @@ if (session_status() === PHP_SESSION_NONE) {
     <li class="has-sub">
       <a href="javascript:void(0)">zatial nic</a>
       <ul class="sub-menu">
-        <li><a href="admin-page1.php">Admin Page 1</a></li>
-        <li><a href="admin-page2.php">Admin Page 2</a></li>
+        <li><a href="admin_add_car.php">Admin Page 1</a></li>
+        <li><a href="admin_manage.php">Admin Page 2</a></li>
       </ul>
     </li>
     <li><a href="lokalizacia.php">Naše miesta</a></li>
