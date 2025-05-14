@@ -32,7 +32,7 @@ if (isset($_POST['delete_comment'])) {
 }
 
 // Získanie áut
-$vehicles = $conn_auta->query("SELECT * FROM auta");
+$vehicles = $conn_users->query("SELECT * FROM auta");
 
 // Získanie komentárov
 $comments = $conn_comments->query("SELECT * FROM comments");
