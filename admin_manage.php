@@ -7,7 +7,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
 
 // Pripojenie k databáze users (auta)
 $conn_auta = new mysqli("localhost", "root", "", "auta");
-if ($conn_users->connect_error) die("Chyba pripojenia k USERS: " . $conn_users->connect_error);  
+if ($conn_auta->connect_error) die("Chyba pripojenia k USERS: " . $conn_users->connect_error);  
 
 // Pripojenie k databáze website_comments (komentáre)
 $conn_comments = new mysqli("localhost", "root", "", "website_comments");
