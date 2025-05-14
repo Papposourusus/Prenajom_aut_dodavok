@@ -179,6 +179,8 @@ $query = "SELECT * FROM auta";
 $result = $mysqli->query($query);
 ?>
 
+<img src="assets/images/<?php echo $row['image']; ?>" alt="">
+
 
 <section class="vehicle-carousel-section">
   <div class="container">
