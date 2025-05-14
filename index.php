@@ -175,7 +175,7 @@ if ($mysqli->connect_errno) {
     exit();
 }
 
-$query = "SELECT * FROM vehicle";
+$query = "SELECT * FROM vehicles";
 $result = $mysqli->query($query);
 ?>
 
