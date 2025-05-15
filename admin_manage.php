@@ -71,7 +71,8 @@ $comments = $conn_comments->query("SELECT * FROM comments");
             <td><?= htmlspecialchars($row['price_per_day']) ?>€</td>
             <td><?= htmlspecialchars($row['owner']) ?></td>
             <td><?= htmlspecialchars($row['year']) ?></td>
-            <td><img src="<?= htmlspecialchars($row['image']) ?>" width="100"></td>
+            <img src="assets/images/<?= htmlspecialchars($row['image']) ?>" width="100">
+
             <td>
                 <form method="post">
                     <input type="hidden" name="vehicle_id" value="<?= $row['id'] ?>">
