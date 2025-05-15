@@ -61,7 +61,14 @@ $comments = $conn_comments->query("SELECT * FROM comments");
     <h2>🚗 Autá</h2>
     <table>
         <tr>
-            <th>ID</th><th>Názov</th><th>Obrázok</th><th>Cena na deň</th><th>Majiteľ</th><th>Rok</th>
+            <th>ID</th>
+            <th>Názov</th>
+            <th>Obrázok (názov)</th>
+            <th>Cena na deň</th>
+            <th>Majiteľ</th>
+            <th>Rok</th>
+            <th>Náhľad</th>
+            <th>Akcia</th>
         </tr>
         <?php if ($vehicles): while ($row = $vehicles->fetch_assoc()): ?>
         <tr>
@@ -71,8 +78,7 @@ $comments = $conn_comments->query("SELECT * FROM comments");
             <td><?= htmlspecialchars($row['price_per_day']) ?>€</td>
             <td><?= htmlspecialchars($row['owner']) ?></td>
             <td><?= htmlspecialchars($row['year']) ?></td>
-            <img src="assets/images/<?= htmlspecialchars($row['image']) ?>" width="100">
-
+            <td><img src="assets/images/<?= htmlspecialchars($row['image']) ?>" width="100"></td>
             <td>
                 <form method="post">
                     <input type="hidden" name="vehicle_id" value="<?= $row['id'] ?>">
@@ -81,10 +87,11 @@ $comments = $conn_comments->query("SELECT * FROM comments");
             </td>
         </tr>
         <?php endwhile; else: ?>
-        <tr><td colspan="7">Žiadne autá v databáze.</td></tr>
+        <tr><td colspan="8">Žiadne autá v databáze.</td></tr>
         <?php endif; ?>
     </table>
 </div>
+
 
 
 
