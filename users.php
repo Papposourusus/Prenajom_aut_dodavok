@@ -72,6 +72,10 @@ https://templatemo.com/tm-576-snapx-photography
 
 
 
+<body>
+
+ <?php include 'parts/header_user.php'; ?>
+
 <script>
 document.getElementById('modal_trigger').onclick = function(e) {
   e.preventDefault();
@@ -94,7 +98,7 @@ function showTab(tabId) {
 
 
 
-  <?php include 'parts/header_user.php'; ?>
+ 
   
   <div id="authModal" class="auth-modal" style="display: none;">
   <div class="auth-modal-content">
