@@ -1,11 +1,20 @@
 <?php
-$mysqli = new mysqli("localhost", "root", "", "auta"); 
+class Vehicle {
+    public $id;
+    public $title;
+    public $owner;
+    public $year;
+    public $price_per_day;
+    public $image;
 
-if ($mysqli->connect_errno) {
-    echo "Failed to connect: " . $mysqli->connect_error;
-    exit();
+    public function __construct($data) {
+        $this->id = $data['id'];
+        $this->title = $data['title'];
+        $this->owner = $data['owner'];
+        $this->year = $data['year'];
+        $this->price_per_day = $data['price_per_day'];
+        $this->image = $data['image'];
+    }
 }
 
-$query = "SELECT * FROM auta";
-$result = $mysqli->query($query);
 ?>
