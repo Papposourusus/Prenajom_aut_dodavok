@@ -88,7 +88,7 @@ https://templatemo.com/tm-576-snapx-photography
   <?php include 'parts/header.php'; ?>
 
 <script type="module">
-  import AuthModal from './assets/js/modal.js';
+  import AuthModal from '.layout/ModalController.php';
 
   document.addEventListener('DOMContentLoaded', () => {
     new AuthModal('#modal_trigger', '#authModal');
