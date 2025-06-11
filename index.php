@@ -46,7 +46,7 @@
   </style>
   <?php
 // Načítaj triedu
-require_once 'classes/PageRenderer.php';
+require_once 'layout/PageRenderer.php';
 
 // Vytvor inštanciu triedy
 $page = new PageRenderer();
