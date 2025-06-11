@@ -62,7 +62,7 @@ https://templatemo.com/tm-576-snapx-photography
 <body>
   <?php include 'parts/header.php'; ?>
 
-  <?php require_once 'classes/AuthModal.php';
+  <?php require_once 'Auth\auth-modal.php';
 AuthModal::render();
 ?>
   
