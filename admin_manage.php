@@ -36,7 +36,7 @@ $comments = $commentManager->getAllComments();
     <meta charset="UTF-8">
     <title>Správa áut a komentárov</title>
     <style>/* CSS rovnaké ako predtým */</style>
-    <link rel="stylesheet" href="admin_manage.css">
+    <link rel="stylesheet" href="CarManage\admin_manage.css">
 
 </head>
 <body>
