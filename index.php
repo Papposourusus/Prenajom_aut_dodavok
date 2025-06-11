@@ -222,86 +222,51 @@ AuthModal::render();
     </div>
   </section>
 
- 
+ <?php
+require 'db.php';
 
-  <section class="closed-contests">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="section-heading text-center">
-            <h6>Osobné autá na prenájom</h6>
-            <h4><em>Na výber od </em> MPV-čok <em> po </em> Kombička </em></h4>
-          </div>
+$stmt = $pdo->query("SELECT * FROM cars");
+$cars = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
+<section class="closed-contests">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-heading text-center">
+          <h6>Osobné autá na prenájom</h6>
+          <h4><em>Na výber od </em> MPV-čok <em> po </em> Kombička</h4>
         </div>
-        <div class="col-lg-12">
-          <div class="owl-features owl-carousel" style="position: relative; z-index: 5;">
+      </div>
+      <div class="col-lg-12">
+        <div class="owl-features owl-carousel" style="position: relative; z-index: 5;">
+          <?php foreach ($cars as $car): ?>
             <div class="item">
               <div class="closed-item">
                 <div class="thumb">
-                  <img src="assets/images/audi.jpg" alt="">
-                  <span class="winner"><em>Majiteľ:</em> Daniel Fritz</span>
-                  <span class="price"><em>Cena:</em> 120€/deň</span>
+                  <img src="<?= htmlspecialchars($car['image_path']) ?>" alt="">
+                  <span class="winner"><em>Majiteľ:</em> <?= htmlspecialchars($car['owner']) ?></span>
+                  <span class="price"><em>Cena:</em> <?= $car['price_per_day'] ?>€/deň</span>
                 </div>
                 <div class="down-content">
                   <div class="row">
                     <div class="col-7">
-                      <h4>31 Požičaní <br><span>Number Of Artists</span></h4>
+                      <h4><?= $car['rentals'] ?> Požičaní <br><span>Number Of Artists</span></h4>
                     </div>
                     <div class="col-5">
-                      <h4 class="pics">30 Zákazníkov spokojený <br><span>Submited Pics</span></h4>
+                      <h4 class="pics"><?= $car['satisfied_customers'] ?> Zákazníkov spokojený <br><span>Submited Pics</span></h4>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="item">
-              <div class="closed-item">
-                <div class="thumb">
-                  <img src="assets/images/ix20.jpg" alt="">
-                  <span class="winner"><em>Majiteľ:</em> J. Mášik</span>
-                  <span class="price"><em>Cena:</em> 65€/deň</span>
-                </div>
-                <div class="down-content">
-                  <div class="row">
-                    <div class="col-7">
-                      <h4>44 Požičaní <br><span>Number Of Artists</span></h4>
-                    </div>
-                    <div class="col-5">
-                      <h4 class="pics">44 Zákazníkov spokojený <br><span>Submited Pics</span></h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="closed-item">
-                <div class="thumb">
-                  <img src="assets/images/dacia.jpg" alt="">
-                  <span class="winner"><em>Majiteľ:</em> Š. Herda</span>
-                  <span class="price"><em>Cena:</em> 70€/deň</span>
-                </div>
-                <div class="down-content">
-                  <div class="row">
-                    <div class="col-7">
-                      <h4>40 Požičaní <br><span>Number Of Artists</span></h4>
-                    </div>
-                    <div class="col-5">
-                      <h4 class="pics"> 40 Zákazníkov spokojený<br><span>Submited Pics</span></h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="border-button text-center">
-            <a href="contests.html">Browse Open Contests</a>
-          </div>
+          <?php endforeach; ?>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <section class="pricing-plans">
     <div class="container">
