@@ -48,5 +48,4 @@
 
   </style>
 </head>
-<body>
-<?php include 'parts/header.php'; ?>
+
