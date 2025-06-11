@@ -1,5 +1,5 @@
 
-<?php require_once 'classes/VehicleRepository.php';
+<?php require_once 'VehicleRepository.php';
 $vehicleRepo = new VehicleRepository();
 $vehicles = $vehicleRepo->getAllVehicles();
 ?>
