@@ -3,6 +3,9 @@
 $vehicleRepo = new VehicleRepository();
 $vehicles = $vehicleRepo->getAllVehicles();
 ?>
+ <?php require_once 'Auth\auth-modal.php';
+AuthModal::render();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -62,9 +65,7 @@ https://templatemo.com/tm-576-snapx-photography
 <body>
   <?php include 'parts/header.php'; ?>
 
-  <?php require_once 'Auth\auth-modal.php';
-AuthModal::render();
-?>
+ 
   
 
 
