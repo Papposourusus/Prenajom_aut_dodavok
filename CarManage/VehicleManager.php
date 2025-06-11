@@ -2,8 +2,8 @@
 class VehicleManager {
     private $conn;
 
-    public function __construct($conn) {
-        $this->conn = $conn;
+    public function __construct($dbConn) {
+        $this->conn = $dbConn;
     }
 
     public function getAllVehicles() {
@@ -16,4 +16,3 @@ class VehicleManager {
         return $stmt->execute();
     }
 }
-?>

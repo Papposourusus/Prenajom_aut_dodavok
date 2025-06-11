@@ -2,8 +2,8 @@
 class CommentManager {
     private $conn;
 
-    public function __construct($conn) {
-        $this->conn = $conn;
+    public function __construct($dbConn) {
+        $this->conn = $dbConn;
     }
 
     public function getAllComments() {
@@ -16,4 +16,3 @@ class CommentManager {
         return $stmt->execute();
     }
 }
-?>
