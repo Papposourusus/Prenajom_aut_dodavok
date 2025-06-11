@@ -1,7 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
   <head>
+    
 
     <meta charset="utf-8">
     <meta name="author" content="templatemo">
@@ -42,8 +44,7 @@
 }
 
   </style>
-
-<?php
+  <?php
 // Načítaj triedu
 require_once 'classes/PageRenderer.php';
 
@@ -52,6 +53,10 @@ $page = new PageRenderer();
 
 // Zavolaj vykreslenie pohľadu "home" (views/home.php)
 $page->render('home');
+?>
+
+
+
 
 
   <!-- ***** Main Banner Area Start ***** -->
