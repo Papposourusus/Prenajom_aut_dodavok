@@ -142,7 +142,11 @@ function showTab(tabId) {
 </div>
 
 
-
+<?php 
+require_once 'index/VehicleRepository.php';
+$vehicleRepo = new VehicleRepository();
+$vehicles = $vehicleRepo->getAllVehicles();
+?>
 
   <!-- ***** Main Banner Area Start ***** -->
   <div class="main-banner">
@@ -185,11 +189,7 @@ function showTab(tabId) {
   </div>
 <?php endforeach; ?>
 
-<?php 
-require_once 'index/VehicleRepository.php';
-$vehicleRepo = new VehicleRepository();
-$vehicles = $vehicleRepo->getAllVehicles();
-?>
+
 
 
 
