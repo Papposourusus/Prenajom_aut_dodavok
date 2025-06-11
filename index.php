@@ -1,9 +1,7 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
   <head>
-    
 
     <meta charset="utf-8">
     <meta name="author" content="templatemo">
@@ -27,9 +25,46 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
-<?php include 'parts/header.php'; ?>
+<!--
+
+TemplateMo 576 SnapX Photography
+
+https://templatemo.com/tm-576-snapx-photography
+
+-->
 
 <style>
+.auth-modal {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 9999;
+}
+.auth-modal-content {
+  background: #fff; padding: 30px; border-radius: 8px; width: 300px; position: relative;
+}
+.auth-modal-close {
+  position: absolute; top: 10px; right: 15px; font-size: 20px; cursor: pointer;
+}
+.auth-tabs {
+  text-align: center; margin-bottom: 20px;
+}
+.auth-tabs button {
+  padding: 10px 20px; margin: 0 5px; border: none;
+  background: #eee; cursor: pointer;
+}
+.auth-tabs .active {
+  background: #00bdfe; color: #fff;
+}
+.auth-tab-content form input {
+  width: 100%; padding: 10px; margin-bottom: 10px;
+}
+.auth-tab-content form button {
+  width: 100%; padding: 10px; background: #00bdfe; color: #fff; border: none;
+}
+
+
+
 .vehicle-carousel-section {
   padding: 60px 0;
   background-color: #f9f9f9;
@@ -43,19 +78,34 @@
   transform: translateY(-5px);
 }
 
-  </style>
-  <?php
-// Načítaj triedu
-require_once 'layout/PageRenderer.php';
 
-// Vytvor inštanciu triedy
-$page = new PageRenderer();
+</style>
 
-// Zavolaj vykreslenie pohľadu "home" (views/home.php)
-$page->render('home');
+
+
+
+<body>
+  <?php include 'parts/header.php'; ?>
+
+<script type="module">
+  import AuthModal from './assets/js/modal.js';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    new AuthModal('#modal_trigger', '#authModal');
+  });
+</script>
+
+<?php
+$modal = new AuthModalRenderer();
+echo $modal->render();
 ?>
 
 
+  
+
+
+
+  
 
 
 
