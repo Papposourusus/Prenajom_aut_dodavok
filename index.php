@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,37 +35,6 @@ https://templatemo.com/tm-576-snapx-photography
 -->
 
 <style>
-.auth-modal {
-  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-  background-color: rgba(0,0,0,0.6);
-  display: flex; align-items: center; justify-content: center;
-  z-index: 9999;
-}
-.auth-modal-content {
-  background: #fff; padding: 30px; border-radius: 8px; width: 300px; position: relative;
-}
-.auth-modal-close {
-  position: absolute; top: 10px; right: 15px; font-size: 20px; cursor: pointer;
-}
-.auth-tabs {
-  text-align: center; margin-bottom: 20px;
-}
-.auth-tabs button {
-  padding: 10px 20px; margin: 0 5px; border: none;
-  background: #eee; cursor: pointer;
-}
-.auth-tabs .active {
-  background: #00bdfe; color: #fff;
-}
-.auth-tab-content form input {
-  width: 100%; padding: 10px; margin-bottom: 10px;
-}
-.auth-tab-content form button {
-  width: 100%; padding: 10px; background: #00bdfe; color: #fff; border: none;
-}
-
-
-
 .vehicle-carousel-section {
   padding: 60px 0;
   background-color: #f9f9f9;
@@ -87,60 +57,19 @@ https://templatemo.com/tm-576-snapx-photography
 <body>
   <?php include 'parts/header.php'; ?>
 
-<script>
-document.getElementById('modal_trigger').onclick = function(e) {
-  e.preventDefault();
-  document.getElementById('authModal').style.display = 'flex';
-};
-
-function closeAuthModal() {
-  document.getElementById('authModal').style.display = 'none';
-}
-
-function showTab(tabId) {
-  document.getElementById('loginTab').style.display = 'none';
-  document.getElementById('registerTab').style.display = 'none';
-  document.querySelectorAll('.auth-tabs button').forEach(btn => btn.classList.remove('active'));
-  
-  document.getElementById(tabId).style.display = 'block';
-  event.target.classList.add('active');
-}
-</script>
+  <?php require_once 'index\VehicleRepository.php';
+$vehicleRepo = new VehicleRepository();
+$vehicles = $vehicleRepo->getAllVehicles();
+?>
 
 
 
-  
+<?php
+require_once 'Auth/AuthModal.php'; 
+AuthModal::render();              
+?>
 
-
-
-  <div id="authModal" class="auth-modal" style="display: none;">
-  <div class="auth-modal-content">
-    <span class="auth-modal-close" onclick="closeAuthModal()">&times;</span>
-    
-    <div class="auth-tabs">
-      <button onclick="showTab('loginTab')" class="active">Prihlásiť sa</button>
-      <button onclick="showTab('registerTab')">Registrovať sa</button>
-    </div>
-    
-    <div id="loginTab" class="auth-tab-content">
-      <form action="login.php" method="post">
-        <input type="text" name="login_username" placeholder="Meno alebo e-mail" required><br>
-        <input type="password" name="login_password" placeholder="Heslo" required><br>
-        <button type="submit">Prihlásiť sa</button>
-      </form>
-    </div>
-    
-    <div id="registerTab" class="auth-tab-content" style="display: none;">
-      <form action="register.php" method="post">
-        <input type="text" name="register_username" placeholder="Používateľské meno" required><br>
-        <input type="email" name="register_email" placeholder="Email" required><br>
-        <input type="password" name="register_password" placeholder="Heslo" required><br>
-        <button type="submit">Registrovať sa</button>
-      </form>
-    </div>
-  </div>
-</div>
-
+ 
 
 
 
@@ -167,17 +96,6 @@ function showTab(tabId) {
   </div>
   <!-- ***** Main Banner Area End ***** -->
 
-<?php
-$mysqli = new mysqli("localhost", "root", "", "auta"); 
-
-if ($mysqli->connect_errno) {
-    echo "Failed to connect: " . $mysqli->connect_error;
-    exit();
-}
-
-$query = "SELECT * FROM auta";
-$result = $mysqli->query($query);
-?>
 
 
 
@@ -185,25 +103,24 @@ $result = $mysqli->query($query);
   <div class="container">
     <h2 class="text-center">Our Vehicles</h2>
     <div class="owl-carousel vehicle-carousel">
-      <?php while($row = $result->fetch_assoc()): ?>
-        <div class="item text-center">
-          <div class="card p-3" style="border: 1px solid #eee; border-radius: 10px;">
-            <img src="assets/images/<?= htmlspecialchars($row['image']) ?>" alt="<?= htmlspecialchars($row['title']) ?>" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
-            <h4><?= htmlspecialchars($row['title']) ?></h4>
-            <p><strong>Owner:</strong> <?= htmlspecialchars($row['owner']) ?></p>
-            <p><strong>Year:</strong> <?= htmlspecialchars($row['year']) ?></p>
-            <p><strong>Price/Day:</strong> €<?= number_format($row['price_per_day'], 2) ?></p>
-          </div>
-        </div>
-      <?php endwhile; ?>
+      <?php foreach ($vehicles as $vehicle): ?>
+  <div class="item text-center">
+    <div class="card p-3" style="border: 1px solid #eee; border-radius: 10px;">
+      <img src="assets/images/<?= htmlspecialchars($vehicle->image) ?>" alt="<?= htmlspecialchars($vehicle->title) ?>" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+      <h4><?= htmlspecialchars($vehicle->title) ?></h4>
+      <p><strong>Owner:</strong> <?= htmlspecialchars($vehicle->owner) ?></p>
+      <p><strong>Year:</strong> <?= htmlspecialchars($vehicle->year) ?></p>
+      <p><strong>Price/Day:</strong> €<?= number_format($vehicle->price_per_day, 2) ?></p>
+    </div>
+  </div>
+<?php endforeach; ?>
+
     </div>
   </div>
 </section>
 
 
-
-
-  <section class="popular-categories">
+ <section class="popular-categories">
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-6">
@@ -305,84 +222,51 @@ $result = $mysqli->query($query);
     </div>
   </section>
 
-  <section class="closed-contests">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="section-heading text-center">
-            <h6>Osobné autá na prenájom</h6>
-            <h4><em>Na výber od </em> MPV-čok <em> po </em> Kombička </em></h4>
-          </div>
+ <?php
+require 'dbMPV.php';
+
+$stmt = $pdo->query("SELECT * FROM cars");
+$cars = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
+<section class="closed-contests">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-heading text-center">
+          <h6>Osobné autá na prenájom</h6>
+          <h4><em>Na výber od </em> MPV-čok <em> po </em> Kombička</h4>
         </div>
-        <div class="col-lg-12">
-          <div class="owl-features owl-carousel" style="position: relative; z-index: 5;">
+      </div>
+      <div class="col-lg-12">
+        <div class="owl-features owl-carousel" style="position: relative; z-index: 5;">
+          <?php foreach ($cars as $car): ?>
             <div class="item">
               <div class="closed-item">
                 <div class="thumb">
-                  <img src="assets/images/audi.jpg" alt="">
-                  <span class="winner"><em>Majiteľ:</em> Daniel Fritz</span>
-                  <span class="price"><em>Cena:</em> 120€/deň</span>
+                  <img src="<?= htmlspecialchars($car['image_path']) ?>" alt="">
+                  <span class="winner"><em>Majiteľ:</em> <?= htmlspecialchars($car['owner']) ?></span>
+                  <span class="price"><em>Cena:</em> <?= $car['price_per_day'] ?>€/deň</span>
                 </div>
                 <div class="down-content">
                   <div class="row">
                     <div class="col-7">
-                      <h4>31 Požičaní <br><span>Number Of Artists</span></h4>
+                      <h4><?= $car['rentals'] ?> Požičaní <br><span>Number Of Artists</span></h4>
                     </div>
                     <div class="col-5">
-                      <h4 class="pics">30 Zákazníkov spokojený <br><span>Submited Pics</span></h4>
+                      <h4 class="pics"><?= $car['satisfied_customers'] ?> Zákazníkov spokojený <br><span>Submited Pics</span></h4>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="item">
-              <div class="closed-item">
-                <div class="thumb">
-                  <img src="assets/images/ix20.jpg" alt="">
-                  <span class="winner"><em>Majiteľ:</em> J. Mášik</span>
-                  <span class="price"><em>Cena:</em> 65€/deň</span>
-                </div>
-                <div class="down-content">
-                  <div class="row">
-                    <div class="col-7">
-                      <h4>44 Požičaní <br><span>Number Of Artists</span></h4>
-                    </div>
-                    <div class="col-5">
-                      <h4 class="pics">44 Zákazníkov spokojený <br><span>Submited Pics</span></h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="closed-item">
-                <div class="thumb">
-                  <img src="assets/images/dacia.jpg" alt="">
-                  <span class="winner"><em>Majiteľ:</em> Š. Herda</span>
-                  <span class="price"><em>Cena:</em> 70€/deň</span>
-                </div>
-                <div class="down-content">
-                  <div class="row">
-                    <div class="col-7">
-                      <h4>40 Požičaní <br><span>Number Of Artists</span></h4>
-                    </div>
-                    <div class="col-5">
-                      <h4 class="pics"> 40 Zákazníkov spokojený<br><span>Submited Pics</span></h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="border-button text-center">
-            <a href="contests.html">Browse Open Contests</a>
-          </div>
+          <?php endforeach; ?>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <section class="pricing-plans">
     <div class="container">
