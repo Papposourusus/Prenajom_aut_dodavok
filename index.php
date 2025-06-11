@@ -167,38 +167,30 @@ function showTab(tabId) {
   </div>
   <!-- ***** Main Banner Area End ***** -->
 
-<?php
-$mysqli = new mysqli("localhost", "root", "", "auta"); 
-
-if ($mysqli->connect_errno) {
-    echo "Failed to connect: " . $mysqli->connect_error;
-    exit();
-}
-
-$query = "SELECT * FROM auta";
-$result = $mysqli->query($query);
-?>
-
 
 
 <section class="vehicle-carousel-section">
   <div class="container">
     <h2 class="text-center">Our Vehicles</h2>
     <div class="owl-carousel vehicle-carousel">
-      <?php while($row = $result->fetch_assoc()): ?>
-        <div class="item text-center">
-          <div class="card p-3" style="border: 1px solid #eee; border-radius: 10px;">
-            <img src="assets/images/<?= htmlspecialchars($row['image']) ?>" alt="<?= htmlspecialchars($row['title']) ?>" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
-            <h4><?= htmlspecialchars($row['title']) ?></h4>
-            <p><strong>Owner:</strong> <?= htmlspecialchars($row['owner']) ?></p>
-            <p><strong>Year:</strong> <?= htmlspecialchars($row['year']) ?></p>
-            <p><strong>Price/Day:</strong> €<?= number_format($row['price_per_day'], 2) ?></p>
-          </div>
-        </div>
-      <?php endwhile; ?>
+      <<?php foreach ($vehicles as $vehicle): ?>
+  <div class="item text-center">
+    <div class="card p-3" style="border: 1px solid #eee; border-radius: 10px;">
+      <img src="assets/images/<?= htmlspecialchars($vehicle->image) ?>" alt="<?= htmlspecialchars($vehicle->title) ?>" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+      <h4><?= htmlspecialchars($vehicle->title) ?></h4>
+      <p><strong>Owner:</strong> <?= htmlspecialchars($vehicle->owner) ?></p>
+      <p><strong>Year:</strong> <?= htmlspecialchars($vehicle->year) ?></p>
+      <p><strong>Price/Day:</strong> €<?= number_format($vehicle->price_per_day, 2) ?></p>
     </div>
   </div>
-</section>
+<?php endforeach; ?>
+
+<?php 
+require_once 'classes/VehicleRepository.php';
+$vehicleRepo = new VehicleRepository();
+$vehicles = $vehicleRepo->getAllVehicles();
+?>
+
 
 
 
