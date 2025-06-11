@@ -4,9 +4,9 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
     die("Nemáte oprávnenie na zobrazenie tejto stránky.");
 }
 
-require_once 'Database.php';
-require_once 'VehicleManager.php';
-require_once 'CommentManager.php';
+require_once 'db_admin.php';
+require_once 'CarManage\VehicleManager.php';
+require_once 'CarManage\CommentManager.php';
 
 // Inicializuj databázy
 $autaDb = new Database("auta");
