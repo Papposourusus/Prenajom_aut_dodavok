@@ -1,19 +1,17 @@
 <?php
-class Vehicle {
-    public $id;
-    public $title;
-    public $owner;
-    public $year;
-    public $price_per_day;
-    public $image;
+class Database {
+    private $host = "localhost";
+    private $user = "root";
+    private $pass = "";
+    private $dbname = "auta";
+    public $conn;
 
-    public function __construct($data) {
-        $this->id = $data['id'];
-        $this->title = $data['title'];
-        $this->owner = $data['owner'];
-        $this->year = $data['year'];
-        $this->price_per_day = $data['price_per_day'];
-        $this->image = $data['image'];
+    public function connect() {
+        $this->conn = new mysqli($this->host, $this->user, $this->pass, $this->dbname);
+        if ($this->conn->connect_error) {
+            die("Connection failed: " . $this->conn->connect_error);
+        }
+        return $this->conn;
     }
 }
 
