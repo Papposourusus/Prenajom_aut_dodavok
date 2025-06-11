@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (move_uploaded_file($image_tmp, $upload_path)) {
         $image = $image_name;
 
-        // Vloženie do DB
+        
         $stmt = $conn->prepare("INSERT INTO auta (title, image, price_per_day, owner, year) VALUES (?, ?, ?, ?, ?)");
         if ($stmt) {
             $stmt->bind_param("ssdsi", $title, $image, $price, $owner, $year);
