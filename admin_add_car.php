@@ -5,7 +5,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
     die("Nemáš oprávnenie pristupovať sem.");
 }
 
-require_once 'classes/VehicleManager.php';
+require_once 'addCar/VehicleManager.php';
 
 $vehicleManager = new VehicleManager("localhost", "root", "", "auta");
 
