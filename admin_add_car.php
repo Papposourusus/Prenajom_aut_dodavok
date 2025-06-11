@@ -24,5 +24,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $message = $success ? "Auto bolo úspešne pridané." : "Chyba pri nahrávaní auta.";
 }
 
-include 'views/addVehicleForm.php';
+include 'addCar/addVehicleForm.php';
 ?>
