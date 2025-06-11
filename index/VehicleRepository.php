@@ -1,6 +1,6 @@
 <?php
 require_once 'Database.php';
-require_once 'Vehicle.php';
+require_once 'index/Vehicle.php';
 
 class VehicleRepository {
     private $conn;

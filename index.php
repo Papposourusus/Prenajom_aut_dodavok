@@ -186,7 +186,7 @@ function showTab(tabId) {
 <?php endforeach; ?>
 
 <?php 
-require_once 'classes/VehicleRepository.php';
+require_once 'index/VehicleRepository.php';
 $vehicleRepo = new VehicleRepository();
 $vehicles = $vehicleRepo->getAllVehicles();
 ?>
