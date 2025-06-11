@@ -19,6 +19,8 @@
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+    <?php include 'parts/header_cat.php'; ?>
+
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/fontawesome.css">
@@ -70,7 +72,7 @@ https://templatemo.com/tm-576-snapx-photography
 
 <body>
 
-  <?php include 'parts/header_cat.php'; ?>
+  
   
 
 <script>

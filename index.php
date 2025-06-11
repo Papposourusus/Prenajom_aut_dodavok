@@ -27,6 +27,32 @@
 
 <?php include 'parts/header.php'; ?>
 
+<style>
+.vehicle-carousel-section {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+.vehicle-carousel .card {
+  background: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.vehicle-carousel .card:hover {
+  transform: translateY(-5px);
+}
+
+  </style>
+
+<?php
+// Načítaj triedu
+require_once 'classes/PageRenderer.php';
+
+// Vytvor inštanciu triedy
+$page = new PageRenderer();
+
+// Zavolaj vykreslenie pohľadu "home" (views/home.php)
+$page->render('home');
+
 
   <!-- ***** Main Banner Area Start ***** -->
   <div class="main-banner">
