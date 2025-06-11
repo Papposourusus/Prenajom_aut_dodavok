@@ -201,9 +201,7 @@ $result = $mysqli->query($query);
 </section>
 
 
-
-
-  <section class="popular-categories">
+ <section class="popular-categories">
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-6">
@@ -304,6 +302,8 @@ $result = $mysqli->query($query);
       </div>
     </div>
   </section>
+
+ 
 
   <section class="closed-contests">
     <div class="container">
