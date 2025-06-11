@@ -3,9 +3,11 @@
 $vehicleRepo = new VehicleRepository();
 $vehicles = $vehicleRepo->getAllVehicles();
 ?>
- <?php require_once 'Auth/auth-modal.php';
-AuthModal::render();
+<?php
+require_once 'classes/AuthModal.php';
+AuthModal::render(); 
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
