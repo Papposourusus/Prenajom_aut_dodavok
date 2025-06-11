@@ -1,3 +1,9 @@
+
+<?php require_once 'classes/VehicleRepository.php';
+$vehicleRepo = new VehicleRepository();
+$vehicles = $vehicleRepo->getAllVehicles();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -167,17 +173,6 @@ function showTab(tabId) {
   </div>
   <!-- ***** Main Banner Area End ***** -->
 
-<?php
-$mysqli = new mysqli("localhost", "root", "", "auta"); 
-
-if ($mysqli->connect_errno) {
-    echo "Failed to connect: " . $mysqli->connect_error;
-    exit();
-}
-
-$query = "SELECT * FROM auta";
-$result = $mysqli->query($query);
-?>
 
 
 
