@@ -30,7 +30,8 @@ $vehicles = $vehicleManager->getAllVehicles();
 $comments = $commentManager->getAllComments();
 
 
-  if (isset($_POST['delete_vehicle'])) {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    if (isset($_POST['delete_vehicle'])) {
         $vehicleManager->deleteVehicle((int)$_POST['vehicle_id']);
     } elseif (isset($_POST['delete_comment'])) {
         $commentManager->deleteComment((int)$_POST['comment_id']);
@@ -45,8 +46,7 @@ $comments = $commentManager->getAllComments();
         );
     }
 }
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-  
+
 ?>
 
 <!DOCTYPE html>
