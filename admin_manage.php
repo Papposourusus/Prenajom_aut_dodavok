@@ -28,6 +28,25 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 // Získaj dáta
 $vehicles = $vehicleManager->getAllVehicles();
 $comments = $commentManager->getAllComments();
+
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    if (isset($_POST['delete_vehicle'])) {
+        $vehicleManager->deleteVehicle((int)$_POST['vehicle_id']);
+    } elseif (isset($_POST['delete_comment'])) {
+        $commentManager->deleteComment((int)$_POST['comment_id']);
+    } elseif (isset($_POST['update_vehicle'])) {
+        $vehicleManager->updateVehicle(
+            (int)$_POST['vehicle_id'],
+            $_POST['title'],
+            $_POST['image'],
+            (float)$_POST['price_per_day'],
+            $_POST['owner'],
+            (int)$_POST['year']
+        );
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +54,7 @@ $comments = $commentManager->getAllComments();
 <head>
     <meta charset="UTF-8">
     <title>Správa áut a komentárov</title>
-    <style>/* CSS rovnaké ako predtým */</style>
+
     <link rel="stylesheet" href="CarManage\admin_manage.css">
 
 </head>
@@ -58,6 +77,18 @@ $comments = $commentManager->getAllComments();
                 <form method="post">
                     <input type="hidden" name="vehicle_id" value="<?= $row['id'] ?>">
                     <button type="submit" name="delete_vehicle" class="delete-btn">Vymazať</button>
+                    <td>
+    <form method="post">
+        <input type="hidden" name="vehicle_id" value="<?= $row['id'] ?>">
+        <input type="text" name="title" value="<?= htmlspecialchars($row['title']) ?>" required>
+        <input type="text" name="image" value="<?= htmlspecialchars($row['image']) ?>" required>
+        <input type="number" name="price_per_day" step="0.01" value="<?= htmlspecialchars($row['price_per_day']) ?>" required>
+        <input type="text" name="owner" value="<?= htmlspecialchars($row['owner']) ?>" required>
+        <input type="number" name="year" value="<?= htmlspecialchars($row['year']) ?>" required>
+        <button type="submit" name="update_vehicle">Uložiť zmeny</button>
+    </form>
+</td>
+
                 </form>
             </td>
         </tr>
@@ -90,6 +121,9 @@ $comments = $commentManager->getAllComments();
         <?php endif; ?>
     </table>
 </div>
+
+
+
 
 </body>
 </html>

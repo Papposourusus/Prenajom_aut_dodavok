@@ -1,61 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 20px;
+}
 
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f8f9fa;
-        padding: 20px;
-        color: #333;
-    }
+h2 {
+    margin-top: 40px;
+    color: #333;
+}
 
-    h2 {
-        margin-top: 40px;
-        color: #343a40;
-        border-bottom: 2px solid #ccc;
-        padding-bottom: 10px;
-    }
+.section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
 
-    .section {
-        margin-bottom: 50px;
-    }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
 
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        background-color: #fff;
-        box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
 
-    th, td {
-        padding: 10px 15px;
-        border: 1px solid #dee2e6;
-        text-align: center;
-        vertical-align: middle;
-    }
+table th {
+    background-color: #007BFF;
+    color: white;
+}
 
-    th {
-        background-color: #007bff;
-        color: white;
-    }
+img {
+    border-radius: 8px;
+}
 
-    tr:nth-child(even) {
-        background-color: #f2f2f2;
-    }
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
 
-    img {
-        max-width: 100px;
-        border-radius: 6px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
+input[type="text"],
+input[type="number"] {
+    padding: 5px;
+    width: 100px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
 
-    .delete-btn {
-        padding: 6px 12px;
-        background-color: #dc3545;
-        border: none;
-        color: white;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: background 0.3s ease;
-    }
+button {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease-in-out;
+}
 
-    .delete-btn:hover {
-        background-color: #c82333;
-    }
+button[name="delete_vehicle"],
+button[name="delete_comment"] {
+    background-color: #dc3545;
+    color: white;
+}
+
+button[name="update_vehicle"] {
+    background-color: #28a745;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+}
