@@ -26,6 +26,7 @@ class VehicleManager {
     $stmt->bind_param("ssdsii", $title, $image, $pricePerDay, $owner, $year, $id);
     return $stmt->execute();
 }
+}
 
 
 
