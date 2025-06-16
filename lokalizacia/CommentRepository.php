@@ -2,26 +2,28 @@
 require_once 'Comment.php';
 
 class CommentRepository {
-    private $conn;
+    private $conn; // mysqli objekt
 
-    public function __construct($connection) {
-        $this->conn = $connection;  // $connection je už PDO alebo mysqli
+    public function __construct(mysqli $connection) {
+        $this->conn = $connection;
     }
 
     public function addComment(Comment $comment): bool {
-        $stmt = $this->conn->prepare("INSERT INTO comments (user, comment, created_at) VALUES (:user, :comment, :created_at)");
-        return $stmt->execute([
-            ':user' => $comment->user,
-            ':comment' => $comment->comment,
-            ':created_at' => $comment->created_at
-        ]);
+        $stmt = $this->conn->prepare("INSERT INTO comments (user, comment, created_at) VALUES (?, ?, ?)");
+        if (!$stmt) {
+            return false; // chyba pri príprave
+        }
+        $stmt->bind_param("sss", $comment->user, $comment->comment, $comment->created_at);
+        $result = $stmt->execute();
+        $stmt->close();
+        return $result;
     }
 
     public function getAllComments(): array {
-        $stmt = $this->conn->query("SELECT * FROM comments ORDER BY created_at DESC");
+        $result = $this->conn->query("SELECT * FROM comments ORDER BY created_at DESC");
         $comments = [];
 
-        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        while ($row = $result->fetch_assoc()) {
             $comments[] = new Comment($row);
         }
 
