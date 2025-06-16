@@ -277,21 +277,7 @@ AuthModal::render();
 </section>
 
  <?php require_once 'lokalizacia\comments.php';?>
-<section id="comments-section" style="max-width:700px; margin: 30px auto;">
-    <h2>Komentáre používateľov</h2>
 
-    <?php if (count($comments) > 0): ?>
-        <?php foreach ($comments as $comment): ?>
-            <div style="border:1px solid #ccc; margin-bottom:10px; padding:10px; border-radius:5px;">
-                <strong><?= htmlspecialchars($comment['user']) ?></strong>
-                <em>(<?= htmlspecialchars($comment['created_at']) ?>)</em><br>
-                <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
-            </div>
-        <?php endforeach; ?>
-    <?php else: ?>
-        <p>Zatiaľ nie sú žiadne komentáre.</p>
-    <?php endif; ?>
-  </section>
 
 
         <div class="col-lg-12">
