@@ -1,5 +1,5 @@
 <?php
-require_once 'CommentRepository.php';
+require_once 'lokalizacia\CommentRepository.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = trim($_POST['name'] ?? '');
