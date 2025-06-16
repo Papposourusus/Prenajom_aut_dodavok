@@ -311,7 +311,7 @@ AuthModal::render();
 <script>
 async function loadComments() {
   try {
-    const response = await fetch('Comment.php');
+    const response = await fetch('lokalizacia\get_comments.php');
     if (!response.ok) throw new Error('Network response was not ok');
     const comments = await response.json();
 
