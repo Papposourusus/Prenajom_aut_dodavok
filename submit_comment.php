@@ -5,7 +5,8 @@ require_once 'Comment.php';
 
 // vytvorenie inštancie pripojenia
 $dbInstance = new Database();
-$conn = $dbInstance->getConnection(); // musíš mať takú metódu, ktorá vráti mysqli alebo PDO
+$conn = $db->connect();
+; // musíš mať takú metódu, ktorá vráti mysqli alebo PDO
 
 $commentRepo = new CommentRepository($conn);
 
