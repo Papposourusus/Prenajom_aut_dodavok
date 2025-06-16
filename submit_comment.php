@@ -16,10 +16,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $commentRepo = new CommentRepository($db);
 
     $comment = new Comment([
-        'user' => $user,
-        'comment' => $commentText,
-        'created_at' => date('Y-m-d H:i:s')
-    ]);
+    'user' => $user,
+    'comment' => $commentText,
+    'created_at' => date('Y-m-d H:i:s')
+]);
+
 
     if ($commentRepo->addComment($comment)) {
         header('Location: index.php?success=1');

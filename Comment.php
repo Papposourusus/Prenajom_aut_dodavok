@@ -7,10 +7,9 @@ class Comment {
 
     public function __construct(array $data) {
         $this->id = $data['id'] ?? null;
-        $this->username = $data['user'];
-        $this->comment = $data['comment'];
+        $this->user = $data['user'] ?? '';          // vždy nastav, aj keby to bola prázdna string
+        $this->comment = $data['comment'] ?? '';
         $this->created_at = $data['created_at'] ?? date('Y-m-d H:i:s');
     }
 }
-
 ?>
