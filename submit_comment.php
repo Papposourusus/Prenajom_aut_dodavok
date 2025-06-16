@@ -1,32 +1,29 @@
 <?php
 require_once 'lokalizacia\CommentRepository.php';
-require_once 'get_comments.php';
-
+require_once 'Comment.php';
+require_once 'Database.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $name = trim($_POST['name'] ?? '');
-    $email = trim($_POST['email'] ?? '');
-    $message = trim($_POST['message'] ?? '');
+    $user = $_POST['name'] ?? '';
+    $commentText = $_POST['message'] ?? '';
 
-    if (empty($name) || empty($email) || empty($message) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        die("Prosím vyplňte všetky polia správne.");
-    }
+    if ($user && $commentText) {
+        $comment = new Comment([
+            'user' => $user,
+            'comment' => $commentText,
+            'created_at' => date('Y-m-d H:i:s')
+        ]);
 
-    $comment = new Comment([
-        'username' => $name,
-        'email' => $email,
-        'text' => $message,
-    ]);
+        $repo = new CommentRepository(new Database());
 
-    $repo = new CommentRepository();
-    if ($repo->save($comment)) {
-        header("Location: thank_you.php");
-        exit();
+        if ($repo->save($comment)) {
+            header('Location: index.php?success=1');
+            exit;
+        } else {
+            echo "Nastala chyba pri ukladaní komentára.";
+        }
     } else {
-        echo "Nastala chyba pri ukladaní komentára.";
+        echo "Vyplňte všetky polia.";
     }
-} else {
-    header("Location: index.php");
-    exit();
 }
 ?>
