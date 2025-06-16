@@ -2,31 +2,19 @@
 require_once 'Comment.php';
 
 class CommentRepository {
-    private mysqli $conn;
+    private $conn;
 
-    public function __construct(mysqli $connection) {
-        $this->conn = $connection;
-    }
-
-    public function addComment(Comment $comment): bool {
-        $stmt = $this->conn->prepare("INSERT INTO comments (user, comment, created_at) VALUES (?, ?, ?)");
-        if (!$stmt) {
-            return false;
-        }
-        $stmt->bind_param("sss", $comment->user, $comment->comment, $comment->created_at);
-        $result = $stmt->execute();
-        $stmt->close();
-        return $result;
+    public function __construct($conn) {
+        $this->conn = $conn;
     }
 
     public function getAllComments(): array {
+        $sql = "SELECT * FROM comments ORDER BY created_at DESC";
+        $result = $this->conn->query($sql);
+
         $comments = [];
-        $result = $this->conn->query("SELECT * FROM comments ORDER BY created_at DESC");
-        if ($result) {
-            while ($row = $result->fetch_assoc()) {
-                $comments[] = new Comment($row);
-            }
-            $result->free();
+        while ($row = $result->fetch_assoc()) {
+            $comments[] = new Comment($row);
         }
         return $comments;
     }

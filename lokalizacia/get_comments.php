@@ -3,10 +3,15 @@ require_once 'Comment.php';
 require_once 'lokalizacia\CommentRepository.php.php';
 require_once 'Database.php';
 
-$repo = new CommentRepository(new Database());
-$comments = $repo->getAll();
+header('Content-Type: application/json');
 
-foreach ($comments as $comment) {
-    echo "<p><strong>" . htmlspecialchars($comment->user) . ":</strong> " . htmlspecialchars($comment->comment) . " <em>(" . $comment->created_at . ")</em></p>";
-}
+$db = new Database();
+$conn = $db->connect();
+
+$commentRepo = new CommentRepository($conn);
+$comments = $commentRepo->getAllComments();
+
+echo json_encode($comments);
+
+$db->disconnect();
 ?>

@@ -299,28 +299,19 @@ AuthModal::render();
 
   <?php include 'parts/footer.php'; ?>
 
-  <!-- Scripts -->
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!-- CSS Owl Carousel -->
+<link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+<link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
 
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  
-  <script src="assets/js/tabs.js"></script>
-  <script src="assets/js/popup.js"></script>
-  <script src="assets/js/custom.js"></script>
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="assets/js/owl-carousel.js"></script>
-
+<!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="assets/js/owl-carousel.js"></script> 
+<!-- Owl Carousel JS -->
+<script src="owlcarousel/owl.carousel.min.js"></script>
 
 <script>
 async function loadComments() {
   try {
-    const response = await fetch('Comment.php');
+    const response = await fetch('get_comments.php');
     if (!response.ok) throw new Error('Network response was not ok');
     const comments = await response.json();
 
