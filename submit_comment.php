@@ -16,7 +16,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $repo = new CommentRepository(new Database());
 
-        if ($repo->save($comment)) {
+        if ($commentRepo->addComment($comment);
+) {
             header('Location: index.php?success=1');
             exit;
         } else {
