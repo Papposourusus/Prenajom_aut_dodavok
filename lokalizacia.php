@@ -267,7 +267,7 @@ AuthModal::render();
         </div>
       </div>
       <div class="col-lg-8 offset-lg-2">
-       <div id="comments-container"></div>
+      
         </div>
       </div>
     </div>
