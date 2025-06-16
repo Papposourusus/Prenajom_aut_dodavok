@@ -2,10 +2,14 @@
 require_once 'Comment.php';
 
 class CommentRepository {
-    private PDO $conn;
+    private $conn;
 
-    public function __construct(Database $db) {
-        $this->conn = $db->getConnection();
+    public function __construct($connection) {
+        $this->conn = $connection;  // $connection je už PDO alebo mysqli
+    }
+
+    
+
     }
 
     public function addComment(Comment $comment): bool {
@@ -27,5 +31,5 @@ class CommentRepository {
 
         return $comments;
     }
-}
+
 ?>

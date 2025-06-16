@@ -1,7 +1,11 @@
 <?php
-require_once 'Comment.php';
-require_once 'lokalizacia\CommentRepository.php';
 require_once 'Database.php';
+require_once 'lokalizacia/CommentRepository.php';
+
+$commentRepository = new CommentRepository($db);  
+
+
+
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
