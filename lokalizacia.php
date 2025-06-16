@@ -20,6 +20,7 @@
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <?php include 'parts/header_cat.php'; ?>
+    <?php require_once 'comments.php';?>
 
     <!-- Owl Carousel CSS -->
 <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
@@ -273,6 +274,23 @@ AuthModal::render();
   </div>
 </section>
 
+<section id="comments-section" style="max-width:700px; margin: 30px auto;">
+    <h2>Komentáre používateľov</h2>
+
+    <?php if (count($comments) > 0): ?>
+        <?php foreach ($comments as $comment): ?>
+            <div style="border:1px solid #ccc; margin-bottom:10px; padding:10px; border-radius:5px;">
+                <strong><?= htmlspecialchars($comment['user']) ?></strong>
+                <em>(<?= htmlspecialchars($comment['created_at']) ?>)</em><br>
+                <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
+            </div>
+        <?php endforeach; ?>
+    <?php else: ?>
+        <p>Zatiaľ nie sú žiadne komentáre.</p>
+    <?php endif; ?>
+  </section>
+
+
         <div class="col-lg-12">
           <div class="clients">
             <div class="row">
@@ -304,47 +322,7 @@ AuthModal::render();
   <?php include 'parts/footer.php'; ?>
 
 
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<!-- Owl Carousel JS -->
-<script src="owlcarousel/owl.carousel.min.js"></script>
-
-
-
-<script>
-async function loadComments() {
-  try {
-    const response = await fetch('lokalizacia\get_comments.php');
-    if (!response.ok) throw new Error('Failed to fetch comments');
-    const comments = await response.json();
-
-    const container = document.getElementById('comments-container');
-    container.innerHTML = ''; // vyčistíme obsah
-
-    comments.forEach(c => {
-      const div = document.createElement('div');
-      div.style.border = '1px solid #ccc';
-      div.style.marginBottom = '10px';
-      div.style.padding = '10px';
-      div.style.borderRadius = '5px';
-
-      div.innerHTML = `
-        <strong>${c.user}</strong> <em>(${c.created_at})</em><br>
-        <p>${c.comment}</p>
-      `;
-
-      container.appendChild(div);
-    });
-  } catch (error) {
-    console.error('Chyba pri načítaní komentárov:', error);
-  }
-}
-
-document.addEventListener('DOMContentLoaded', loadComments);
-
-
-</script>
-
+  
 
 
   </body>
