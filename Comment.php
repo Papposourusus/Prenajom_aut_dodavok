@@ -1,7 +1,7 @@
 <?php
 class Comment {
     public ?int $id;
-    public string $username;
+    public string $user;
     public string $comment;
     public string $created_at;
 
