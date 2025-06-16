@@ -311,7 +311,7 @@ AuthModal::render();
 <script>
 async function loadComments() {
   try {
-    const response = await fetch('lokalizacia\get_comments.php');
+    const response = await fetch('lokalizacia/get_comments.php');
     if (!response.ok) throw new Error('Network response was not ok');
     const comments = await response.json();
 
@@ -329,7 +329,7 @@ async function loadComments() {
             <span>${comment.created_at}</span>
           </div>
           <div class="image">
-            <img src="${comment.image_url ? comment.image_url : 'assets/images/author.jpg'}" alt="User image">
+            <img src="assets/images/author.jpg" alt="User image">
           </div>
         </div>
       `;
