@@ -1,5 +1,5 @@
 <?php
-require_once 'CommentRepository.php';
+require_once 'lokalizacia\CommentRepository.php';
 
 $repo = new CommentRepository();
 $comments = $repo->getAllComments();
