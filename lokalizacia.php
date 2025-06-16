@@ -263,7 +263,6 @@ AuthModal::render();
       </div>
       <div class="col-lg-8 offset-lg-2">
         <div class="owl-testimonials owl-carousel" id="comments-carousel">
-          <!-- Komentáre sa tu načítajú dynamicky -->
         </div>
       </div>
     </div>
@@ -316,7 +315,7 @@ AuthModal::render();
 <script src="assets/js/owl-carousel.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="assets/js/owl-carousel.js"></script> <!-- ak používaš vlastný -->
+<script src="assets/js/owl-carousel.js"></script> 
 
 <script>
 async function loadComments() {
