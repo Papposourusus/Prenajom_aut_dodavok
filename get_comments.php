@@ -1,32 +1,17 @@
 <?php
-$servername = "localhost";
-$username = "root";    
-$password = "";       
-$dbname = "website_comments";  
+class Comment {
+    public ?int $id;
+    public string $username;
+    public string $email;
+    public string $text;
+    public string $created_at;
 
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+    public function __construct(array $data) {
+        $this->id = $data['id'] ?? null;
+        $this->username = $data['username'];
+        $this->email = $data['email'];
+        $this->text = $data['text'];
+        $this->created_at = $data['created_at'] ?? date('Y-m-d H:i:s');
+    }
 }
-
-
-$sql = "SELECT * FROM comments ORDER BY id DESC"; 
-$result = $conn->query($sql);
-
-$comments = [];
-
-if ($result->num_rows > 0) {
-  while($row = $result->fetch_assoc()) {
-    $comments[] = $row;
-  }
-}
-
-
-header('Content-Type: application/json');
-echo json_encode($comments);
-
-$conn->close();
 ?>
