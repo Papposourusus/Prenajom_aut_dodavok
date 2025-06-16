@@ -8,10 +8,6 @@ class CommentRepository {
         $this->conn = $connection;  // $connection je už PDO alebo mysqli
     }
 
-    
-
-    }
-
     public function addComment(Comment $comment): bool {
         $stmt = $this->conn->prepare("INSERT INTO comments (user, comment, created_at) VALUES (:user, :comment, :created_at)");
         return $stmt->execute([
@@ -31,5 +27,5 @@ class CommentRepository {
 
         return $comments;
     }
-
+}
 ?>
