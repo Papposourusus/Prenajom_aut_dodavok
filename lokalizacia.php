@@ -266,7 +266,7 @@ AuthModal::render();
         </div>
       </div>
       <div class="col-lg-8 offset-lg-2">
-        <div class="owl-carousel owl-theme" id="comments-carousel">
+       <div id="comments-container"></div>
         </div>
       </div>
     </div>
@@ -315,46 +315,33 @@ AuthModal::render();
 async function loadComments() {
   try {
     const response = await fetch('get_comments.php');
-    if (!response.ok) throw new Error('Network response was not ok');
+    if (!response.ok) throw new Error('Failed to fetch comments');
     const comments = await response.json();
 
-    const carousel = $('#comments-carousel');
-    carousel.trigger('destroy.owl.carousel'); // ak už carousel beží, zresetujeme ho
-    carousel.html(''); // vymažeme obsah
+    const container = document.getElementById('comments-container');
+    container.innerHTML = ''; // vyčistíme obsah
 
-    comments.forEach(comment => {
-      const item = `
-        <div class="item">
-          <div class="content">
-            <p>“${comment.comment}”</p>
-            <h4>${comment.user}</h4>
-            <span>${comment.created_at}</span>
-          </div>
-        </div>
+    comments.forEach(c => {
+      const div = document.createElement('div');
+      div.style.border = '1px solid #ccc';
+      div.style.marginBottom = '10px';
+      div.style.padding = '10px';
+      div.style.borderRadius = '5px';
+
+      div.innerHTML = `
+        <strong>${c.user}</strong> <em>(${c.created_at})</em><br>
+        <p>${c.comment}</p>
       `;
-      carousel.append(item);
-    });
 
-    // Inicializujeme carousel s autoplay a efektom posunu
-    carousel.owlCarousel({
-      items: 1,
-      loop: true,
-      dots: true,
-      autoplay: true,
-      autoplayTimeout: 4000,
-      smartSpeed: 800,
-      nav: false,
-      autoplayHoverPause: true
+      container.appendChild(div);
     });
-
   } catch (error) {
     console.error('Chyba pri načítaní komentárov:', error);
   }
 }
 
-$(document).ready(function(){
-  loadComments();
-});
+document.addEventListener('DOMContentLoaded', loadComments);
+
 
 </script>
 
