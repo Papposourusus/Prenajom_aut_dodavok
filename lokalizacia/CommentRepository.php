@@ -29,10 +29,11 @@ class CommentRepository {
 
    
     public function save(Comment $comment): bool {
-        $stmt = $this->conn->prepare("INSERT INTO comments (username, email, text, created_at) VALUES (?, ?, ?, ?)");
-        if (!$stmt) return false;
+        $stmt = $this->conn->prepare("INSERT INTO comments (username, comment, created_at) VALUES (?, ?, ?)");
 
-        $stmt->bind_param("ssss", $comment->username, $comment->email, $comment->text, $comment->created_at);
+
+
+        $stmt->bind_param("sss", $comment->username, $comment->comment, $comment->created_at);
 
         $result = $stmt->execute();
         $stmt->close();
