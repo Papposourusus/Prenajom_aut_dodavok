@@ -41,7 +41,7 @@ https://templatemo.com/tm-576-snapx-photography
 
 -->
 
- <?php require_once 'lokalizacia\comments.php';?>
+
   </head>
 
 
@@ -276,6 +276,7 @@ AuthModal::render();
   </div>
 </section>
 
+ <?php require_once 'lokalizacia\comments.php';?>
 <section id="comments-section" style="max-width:700px; margin: 30px auto;">
     <h2>Komentáre používateľov</h2>
 
