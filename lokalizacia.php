@@ -20,7 +20,7 @@
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <?php include 'parts/header_cat.php'; ?>
-    <?php require_once 'lokalizacia\comments.php';?>
+   
 
     <!-- Owl Carousel CSS -->
 <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
@@ -40,6 +40,8 @@ TemplateMo 576 SnapX Photography
 https://templatemo.com/tm-576-snapx-photography
 
 -->
+
+ <?php require_once 'lokalizacia\comments.php';?>
   </head>
 
 
