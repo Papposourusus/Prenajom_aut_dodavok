@@ -1,6 +1,6 @@
 <?php
 require_once 'Comment.php';
-require_once 'lokalizacia\CommentRepository.php.php';
+require_once 'lokalizacia\CommentRepository.php';
 require_once 'Database.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
