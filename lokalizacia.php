@@ -41,7 +41,6 @@ https://templatemo.com/tm-576-snapx-photography
 
 -->
 
-
   </head>
 
 
@@ -277,7 +276,6 @@ AuthModal::render();
 </section>
 
  <?php require_once 'lokalizacia\comments.php';?>
-
 
 
         <div class="col-lg-12">
