@@ -1,12 +1,14 @@
 <?php
 require_once 'lokalizacia\CommentRepository.php';
-require_once 'Comment.php';
-require_once 'Database.php';
 
-$repo = new CommentRepository(new Database());
-$comments = $repo->getAll();
+$repo = new CommentRepository();
+$comments = $repo->getAllComments();
 
 foreach ($comments as $comment) {
-    echo "<p><strong>" . htmlspecialchars($comment->user) . ":</strong> " . htmlspecialchars($comment->comment) . " <em>(" . $comment->created_at . ")</em></p>";
+    echo "<div class='comment'>";
+    echo "<h5>" . htmlspecialchars($comment->username) . " <small>(" . htmlspecialchars($comment->email) . ")</small></h5>";
+    echo "<p>" . nl2br(htmlspecialchars($comment->text)) . "</p>";
+    echo "<small>" . $comment->created_at . "</small>";
+    echo "</div>";
 }
 ?>
