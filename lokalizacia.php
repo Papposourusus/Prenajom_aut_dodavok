@@ -314,7 +314,7 @@ AuthModal::render();
 <script>
 async function loadComments() {
   try {
-    const response = await fetch('get_comments.php');
+    const response = await fetch('lokalizacia\get_comments.php');
     if (!response.ok) throw new Error('Failed to fetch comments');
     const comments = await response.json();
 
