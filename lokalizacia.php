@@ -332,11 +332,11 @@ async function loadComments() {
           <div class="content">
             <div class="left-content">
               <p>“${comment.comment}”</p>
-              <h4>${comment.username}</h4>
-              <span>User ${comment.user_id}</span>
+              <h4>${comment.user}</h4>
+              <span>${new Date(comment.created_at).toLocaleDateString()}</span>
             </div>
             <div class="image">
-              <img src="${comment.image_url ? comment.image_url : 'assets/images/author.jpg'}" alt="">
+              <img src="assets/images/author.jpg" alt="User">
             </div>
           </div>
         `;
@@ -355,7 +355,6 @@ async function loadComments() {
     });
 }
 
-// Zavoláme načítanie po načítaní celej stránky
 document.addEventListener('DOMContentLoaded', loadComments);
 </script>
 
