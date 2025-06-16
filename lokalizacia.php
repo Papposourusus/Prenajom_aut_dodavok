@@ -21,6 +21,10 @@
 
     <?php include 'parts/header_cat.php'; ?>
 
+    <!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+<link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/fontawesome.css">
@@ -262,7 +266,7 @@ AuthModal::render();
         </div>
       </div>
       <div class="col-lg-8 offset-lg-2">
-        <div class="owl-testimonials owl-carousel" id="comments-carousel">
+        <div class="owl-carousel owl-theme" id="comments-carousel">
         </div>
       </div>
     </div>
@@ -299,60 +303,59 @@ AuthModal::render();
 
   <?php include 'parts/footer.php'; ?>
 
-<!-- CSS Owl Carousel -->
-<link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-<link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
 
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!-- Owl Carousel JS -->
 <script src="owlcarousel/owl.carousel.min.js"></script>
 
+
+
 <script>
 async function loadComments() {
   try {
-    const response = await fetch('lokalizacia/get_comments.php');
+    const response = await fetch('get_comments.php');
     if (!response.ok) throw new Error('Network response was not ok');
     const comments = await response.json();
 
-    const carousel = document.getElementById('comments-carousel');
-    carousel.innerHTML = ''; // Vyčistíme carousel
+    const carousel = $('#comments-carousel');
+    carousel.trigger('destroy.owl.carousel'); // ak už carousel beží, zresetujeme ho
+    carousel.html(''); // vymažeme obsah
 
     comments.forEach(comment => {
-      const item = document.createElement('div');
-      item.className = 'item';
-      item.innerHTML = `
-        <div class="content">
-          <div class="left-content">
+      const item = `
+        <div class="item">
+          <div class="content">
             <p>“${comment.comment}”</p>
             <h4>${comment.user}</h4>
             <span>${comment.created_at}</span>
           </div>
-          <div class="image">
-            <img src="assets/images/author.jpg" alt="User image">
-          </div>
         </div>
       `;
-      carousel.appendChild(item);
+      carousel.append(item);
     });
 
-    // Inicializujeme Owl Carousel na elemente s triedou owl-testimonials
-    $('.owl-testimonials').owlCarousel({
+    // Inicializujeme carousel s autoplay a efektom posunu
+    carousel.owlCarousel({
       items: 1,
       loop: true,
       dots: true,
-      nav: false,
       autoplay: true,
       autoplayTimeout: 4000,
-      smartSpeed: 800
+      smartSpeed: 800,
+      nav: false,
+      autoplayHoverPause: true
     });
+
   } catch (error) {
     console.error('Chyba pri načítaní komentárov:', error);
   }
 }
 
-// Spustíme načítanie po načítaní celej stránky
-document.addEventListener('DOMContentLoaded', loadComments);
+$(document).ready(function(){
+  loadComments();
+});
+
 </script>
 
 
