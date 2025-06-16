@@ -319,42 +319,48 @@ AuthModal::render();
 
 <script>
 async function loadComments() {
+  try {
     const response = await fetch('get_comments.php');
+    if (!response.ok) throw new Error('Network response was not ok');
     const comments = await response.json();
 
     const carousel = document.getElementById('comments-carousel');
     carousel.innerHTML = ''; // Vyčistíme carousel
 
     comments.forEach(comment => {
-        const item = document.createElement('div');
-        item.className = 'item';
-        item.innerHTML = `
-          <div class="content">
-            <div class="left-content">
-              <p>“${comment.comment}”</p>
-              <h4>${comment.user}</h4>
-              <span>${new Date(comment.created_at).toLocaleDateString()}</span>
-            </div>
-            <div class="image">
-              <img src="assets/images/author.jpg" alt="User">
-            </div>
+      const item = document.createElement('div');
+      item.className = 'item';
+      item.innerHTML = `
+        <div class="content">
+          <div class="left-content">
+            <p>“${comment.comment}”</p>
+            <h4>${comment.user}</h4>
+            <span>${comment.created_at}</span>
           </div>
-        `;
-        carousel.appendChild(item);
+          <div class="image">
+            <img src="${comment.image_url ? comment.image_url : 'assets/images/author.jpg'}" alt="User image">
+          </div>
+        </div>
+      `;
+      carousel.appendChild(item);
     });
 
-    // Spustíme Owl Carousel
+    // Inicializujeme Owl Carousel na elemente s triedou owl-testimonials
     $('.owl-testimonials').owlCarousel({
-        items: 1,
-        loop: true,
-        dots: true,
-        nav: false,
-        autoplay: true,
-        autoplayTimeout: 4000,
-        smartSpeed: 800
+      items: 1,
+      loop: true,
+      dots: true,
+      nav: false,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      smartSpeed: 800
     });
+  } catch (error) {
+    console.error('Chyba pri načítaní komentárov:', error);
+  }
 }
 
+// Spustíme načítanie po načítaní celej stránky
 document.addEventListener('DOMContentLoaded', loadComments);
 </script>
 
