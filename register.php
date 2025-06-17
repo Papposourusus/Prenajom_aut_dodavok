@@ -29,7 +29,8 @@ class Register {
             $stmt->execute(['username' => $username, 'email' => $email]);
 
             if ($stmt->fetch()) {
-                $_SESSION['error_message'] = "Používateľ s týmto menom alebo emailom už existuje.";
+               FlashMessage::setError("Používateľ už existuje.");
+
                 header("Location: index.php");
                 exit();
             }
@@ -45,7 +46,8 @@ class Register {
                 'password' => $hashedPassword
             ]);
 
-            $_SESSION['success_message'] = "Registrácia úspešná. Môžete sa prihlásiť.";
+         FlashMessage::setSuccess("Registrácia úspešná. Môžete sa prihlásiť.");
+
             header("Location: index.php");
             exit();
 

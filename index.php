@@ -69,18 +69,18 @@ require_once 'Auth/AuthModal.php';
 
 AuthModal::render();
 
-
-if (isset($_SESSION['success_message'])) {
-    echo '<div class="alert alert-success">'.htmlspecialchars($_SESSION['success_message']).'</div>';
-    unset($_SESSION['success_message']);
-}
-
-if (isset($_SESSION['error_message'])) {
-    echo '<div class="alert alert-error">'.htmlspecialchars($_SESSION['error_message']).'</div>';
-    unset($_SESSION['error_message']);
-}
-
 ?>
+
+<?php
+session_start();
+require_once 'FlashMessage.php';
+FlashMessage::printStyles();
+FlashMessage::display();
+FlashMessage::printScript();
+?>
+
+
+
 
  
 
