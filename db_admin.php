@@ -1,7 +1,7 @@
 <?php
 class Database {
     private $host = "localhost";
-    private $db_name = "auta";
+    private $db_name = "auta";  // alebo "users" podľa toho, kde je tabuľka users
     private $username = "root";
     private $password = "";
     public $conn;
@@ -17,3 +17,4 @@ class Database {
         }
     }
 }
+?>
