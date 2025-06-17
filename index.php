@@ -68,16 +68,11 @@ require_once 'Auth/AuthModal.php';
 
 AuthModal::render();
 
-?>
-
-<?php
-require_once 'Auth\FlashMessage.php';
+require_once 'Auth/FlashMessage.php';
 FlashMessage::printStyles();
 FlashMessage::display();
 FlashMessage::printScript();
 ?>
-
-
 
 
  
