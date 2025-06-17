@@ -64,8 +64,20 @@ $vehicles = $vehicleRepo->getAllVehicles();
 
 
 <?php
-require_once 'Auth/AuthModal.php'; 
-AuthModal::render();// statická metoda triedy              
+session_start();
+require_once 'Auth/AuthModal.php';
+
+AuthModal::render();
+
+if (isset($_SESSION['success_message'])) {
+    echo '<div style="color:green;">' . htmlspecialchars($_SESSION['success_message']) . '</div>';
+    unset($_SESSION['success_message']);
+}
+
+if (isset($_SESSION['error_message'])) {
+    echo '<div style="color:red;">' . htmlspecialchars($_SESSION['error_message']) . '</div>';
+    unset($_SESSION['error_message']);
+}
 ?>
 
  
