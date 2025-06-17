@@ -14,6 +14,19 @@ function showMessage() {
 showMessage();
 ?>
 
+<script>
+window.onload = function() {
+    const alert = document.querySelector('.alert');
+    if (alert) {
+        setTimeout(() => {
+            alert.style.opacity = '0';
+            setTimeout(() => alert.remove(), 500);
+        }, 4000);
+    }
+};
+</script>
+
+
 
 <style>
 .alert {
@@ -48,14 +61,3 @@ showMessage();
 </style>
 
 
-<script>
-window.onload = function() {
-    const alert = document.querySelector('.alert');
-    if (alert) {
-        setTimeout(() => {
-            alert.style.opacity = '0';
-            setTimeout(() => alert.remove(), 500);
-        }, 4000);
-    }
-};
-</script>
