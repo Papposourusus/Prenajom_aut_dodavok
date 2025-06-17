@@ -64,6 +64,7 @@ $vehicles = $vehicleRepo->getAllVehicles();
 
 
 <?php
+session_start();
 require_once 'Auth/AuthModal.php';
 
 AuthModal::render();
