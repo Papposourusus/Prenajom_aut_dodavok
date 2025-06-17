@@ -1,18 +1,18 @@
 <?php
-session_start();
-
-function showMessage() {
-    if (isset($_SESSION['success_message'])) {
-        echo '<div class="alert success">'.htmlspecialchars($_SESSION['success_message']).'</div>';
-        unset($_SESSION['success_message']);
-    } elseif (isset($_SESSION['error_message'])) {
-        echo '<div class="alert error">'.htmlspecialchars($_SESSION['error_message']).'</div>';
-        unset($_SESSION['error_message']);
+class FlashMessage {
+    public static function show() {
+        if (isset($_SESSION['success_message'])) {
+            echo '<div class="alert success">'.htmlspecialchars($_SESSION['success_message']).'</div>';
+            unset($_SESSION['success_message']);
+        } elseif (isset($_SESSION['error_message'])) {
+            echo '<div class="alert error">'.htmlspecialchars($_SESSION['error_message']).'</div>';
+            unset($_SESSION['error_message']);
+        }
     }
 }
 
-showMessage();
 ?>
+
 
 <script>
 window.onload = function() {
