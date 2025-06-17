@@ -64,7 +64,6 @@ $vehicles = $vehicleRepo->getAllVehicles();
 
 
 <?php
-session_start();
 require_once 'Auth/AuthModal.php';
 
 AuthModal::render();
@@ -72,7 +71,6 @@ AuthModal::render();
 ?>
 
 <?php
-session_start();
 require_once 'Auth\FlashMessage.php';
 FlashMessage::printStyles();
 FlashMessage::display();
