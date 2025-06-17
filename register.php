@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'db_admin.php';
+require_once 'db_admin.php'; // tvoja trieda Database
 
 class Register {
     public static function handle() {
@@ -24,20 +24,20 @@ class Register {
             $db = new Database();
             $conn = $db->connect();
 
-            // Skontroluj, či už používateľ existuje podľa mena alebo emailu
+            // Skontroluj, či už existuje používateľ s týmto menom alebo emailom
             $stmt = $conn->prepare("SELECT id FROM users WHERE username = :username OR email = :email");
             $stmt->execute(['username' => $username, 'email' => $email]);
 
             if ($stmt->fetch()) {
-                $_SESSION['error_message'] = "Používateľ s daným menom alebo emailom už existuje.";
+                $_SESSION['error_message'] = "Používateľ s týmto menom alebo emailom už existuje.";
                 header("Location: index.php");
                 exit();
             }
 
-            // Hashovanie hesla
+            // Hashuj heslo
             $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-            // Vloženie nového používateľa s rolou 'user'
+            // Vlož nového používateľa s rolou "user"
             $stmt = $conn->prepare("INSERT INTO users (username, email, password, role) VALUES (:username, :email, :password, 'user')");
             $stmt->execute([
                 'username' => $username,
@@ -57,4 +57,5 @@ class Register {
     }
 }
 
+// Spusti handler pri načítaní súboru
 Register::handle();
