@@ -30,6 +30,10 @@
 
 </style>
 
+<style>
+/* Štýly ostávajú rovnaké ako si poslal predtým */
+</style>
+
 <div id="authModal" class="auth-modal" style="display: none;">
   <div class="auth-modal-content">
     <span class="auth-modal-close" onclick="closeAuthModal()">&times;</span>
