@@ -65,6 +65,10 @@ $vehicles = $vehicleRepo->getAllVehicles();
 
 <?php
 session_start();
+require_once 'Auth/AuthModal.php';
+
+AuthModal::render();
+
 
 if (isset($_SESSION['success_message'])) {
     echo '<div class="alert alert-success">'.htmlspecialchars($_SESSION['success_message']).'</div>';
