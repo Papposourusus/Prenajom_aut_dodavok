@@ -10,8 +10,8 @@ class Register {
             exit();
         }
 
-        $username = $_POST['register_username'] ?? '';
-        $email = $_POST['register_email'] ?? '';
+        $username = trim($_POST['register_username'] ?? '');
+        $email = trim($_POST['register_email'] ?? '');
         $password = $_POST['register_password'] ?? '';
 
         if (empty($username) || empty($email) || empty($password)) {
@@ -24,19 +24,21 @@ class Register {
             $db = new Database();
             $conn = $db->connect();
 
+            // Skontroluj, či už používateľ existuje podľa mena alebo emailu
             $stmt = $conn->prepare("SELECT id FROM users WHERE username = :username OR email = :email");
             $stmt->execute(['username' => $username, 'email' => $email]);
 
             if ($stmt->fetch()) {
-                $_SESSION['error_message'] = "Používateľ už existuje.";
+                $_SESSION['error_message'] = "Používateľ s daným menom alebo emailom už existuje.";
                 header("Location: index.php");
                 exit();
             }
 
+            // Hashovanie hesla
             $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-            $stmt = $conn->prepare("INSERT INTO users (username, email, password, role) 
-                                    VALUES (:username, :email, :password, 'user')");
+            // Vloženie nového používateľa s rolou 'user'
+            $stmt = $conn->prepare("INSERT INTO users (username, email, password, role) VALUES (:username, :email, :password, 'user')");
             $stmt->execute([
                 'username' => $username,
                 'email' => $email,

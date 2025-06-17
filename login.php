@@ -10,13 +10,20 @@ class Login {
             exit();
         }
 
-        $username = $_POST['login_username'] ?? '';
+        $username = trim($_POST['login_username'] ?? '');
         $password = $_POST['login_password'] ?? '';
+
+        if (empty($username) || empty($password)) {
+            $_SESSION['error_message'] = "Vyplňte všetky polia.";
+            header("Location: index.php");
+            exit();
+        }
 
         try {
             $db = new Database();
             $conn = $db->connect();
 
+            // Nájdi používateľa podľa mena alebo emailu
             $stmt = $conn->prepare("SELECT * FROM users WHERE username = :username OR email = :email");
             $stmt->execute(['username' => $username, 'email' => $username]);
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -24,7 +31,7 @@ class Login {
             if ($user && password_verify($password, $user['password'])) {
                 $_SESSION['username'] = $user['username'];
                 $_SESSION['user_id'] = $user['id'];
-                $_SESSION['role'] = $user['role']; // admin alebo user
+                $_SESSION['role'] = $user['role'];  // 'admin' alebo 'user'
                 $_SESSION['success_message'] = "Úspešné prihlásenie!";
 
                 header("Location: index.php");
