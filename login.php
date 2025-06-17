@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'db_admin.php';
 
 class Login {
@@ -30,14 +31,4 @@ class Login {
                 exit();
             } else {
                 $_SESSION['error_message'] = "Nesprávne meno alebo heslo.";
-                header("Location: index.php");
-                exit();
-            }
-
-        } catch (PDOException $e) {
-            $_SESSION['error_message'] = "Chyba databázy: " . $e->getMessage();
-            header("Location: index.php");
-            exit();
-        }
-    }
-}
+                header
