@@ -5,8 +5,8 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
 }
 
 require_once 'db_admin.php'; 
-require_once 'CarManage/VehicleManager.php';
-require_once 'CarManage/CommentManager.php';
+require_once 'addCar\VehicleManager.php';
+require_once 'Comment.php';
 
 $db = new Database("auta");
 
