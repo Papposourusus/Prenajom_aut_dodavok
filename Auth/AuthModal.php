@@ -4,4 +4,3 @@ class AuthModal {
         include __DIR__ . '/../Auth/auth-modal.php';
     }
 }
-?>

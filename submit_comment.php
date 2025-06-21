@@ -1,28 +1,23 @@
 <?php
-$host = 'localhost';
-$db = 'website_comments';
-$user = 'root';
-$pass = '';
+require_once 'Database.php'; 
+require_once 'lokalizacia/CommentRepository.php';
+require_once 'Comment.php';
 
-$conn = new mysqli($host, $user, $pass, $db);
-if ($conn->connect_error) {
-    die("Chyba pripojenia: " . $conn->connect_error);
+
+$dbInstance = new Database();
+$conn = $dbInstance->connect();  
+
+$commentRepo = new CommentRepository($conn);
+
+$comment = new Comment([
+    'user' => $_POST['name'],
+    'comment' => $_POST['message'],
+    'created_at' => date('Y-m-d H:i:s')
+]);
+
+if ($commentRepo->addComment($comment)) {
+    echo "Komentár bol uložený.";
+} else {
+    echo "Nastala chyba pri ukladaní komentára.";
 }
-
-$name = $_POST['name'];
-$email = $_POST['email'];
-$message = $_POST['message'];
-
-$stmt = $conn->prepare("INSERT INTO comments (username, email, comment) VALUES (?, ?, ?)");
-if (!$stmt) {
-    die("Chyba v prepare: " . $conn->error);
-}
-
-$stmt->bind_param("sss", $name, $email, $message);
-$stmt->execute();
-$stmt->close();
-$conn->close();
-
-header("Location: users.php"); // Alebo kam chceš presmerovať
-exit;
 ?>

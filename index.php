@@ -53,21 +53,25 @@ https://templatemo.com/tm-576-snapx-photography
 
 
 
-
 <body>
   <?php include 'parts/header.php'; ?>
 
   <?php require_once 'index\VehicleRepository.php';
-$vehicleRepo = new VehicleRepository();
+$vehicleRepo = new VehicleRepository();// 
 $vehicles = $vehicleRepo->getAllVehicles();
 ?>
 
 
 
 <?php
-require_once 'Auth/AuthModal.php'; 
-AuthModal::render();              
+session_start();
+require_once 'Auth/AuthModal.php';
+
+AuthModal::render();
+
+
 ?>
+
 
  
 
@@ -104,20 +108,22 @@ AuthModal::render();
     <h2 class="text-center">Our Vehicles</h2>
     <div class="owl-carousel vehicle-carousel">
       <?php foreach ($vehicles as $vehicle): ?>
-  <div class="item text-center">
-    <div class="card p-3" style="border: 1px solid #eee; border-radius: 10px;">
-      <img src="assets/images/<?= htmlspecialchars($vehicle->image) ?>" alt="<?= htmlspecialchars($vehicle->title) ?>" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
-      <h4><?= htmlspecialchars($vehicle->title) ?></h4>
-      <p><strong>Owner:</strong> <?= htmlspecialchars($vehicle->owner) ?></p>
-      <p><strong>Year:</strong> <?= htmlspecialchars($vehicle->year) ?></p>
-      <p><strong>Price/Day:</strong> €<?= number_format($vehicle->price_per_day, 2) ?></p>
-    </div>
-  </div>
-<?php endforeach; ?>
-
+        <div class="item text-center">
+          <div class="card p-3" style="border: 1px solid #eee; border-radius: 10px;">
+            <img src="assets/images/<?= htmlspecialchars($vehicle->image) ?>" 
+                 alt="<?= htmlspecialchars($vehicle->title) ?>" 
+                 style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+            <h4><?= htmlspecialchars($vehicle->title) ?></h4>
+            <p><strong>Owner:</strong> <?= htmlspecialchars($vehicle->owner ?? '(nezadaný)') ?></p>
+            <p><strong>Year:</strong> <?= htmlspecialchars($vehicle->year) ?></p>
+            <p><strong>Price/Day:</strong> €<?= number_format($vehicle->price_per_day, 2) ?></p>
+          </div>
+        </div>
+      <?php endforeach; ?>
     </div>
   </div>
 </section>
+
 
 
  <section class="popular-categories">

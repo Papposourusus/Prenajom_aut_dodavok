@@ -20,6 +20,11 @@
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <?php include 'parts/header_cat.php'; ?>
+   
+
+    <!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+<link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
 
 
     <!-- Additional CSS Files -->
@@ -35,6 +40,7 @@ TemplateMo 576 SnapX Photography
 https://templatemo.com/tm-576-snapx-photography
 
 -->
+
   </head>
 
 
@@ -262,13 +268,15 @@ AuthModal::render();
         </div>
       </div>
       <div class="col-lg-8 offset-lg-2">
-        <div class="owl-testimonials owl-carousel" id="comments-carousel">
-          <!-- Komentáre sa tu načítajú dynamicky -->
+      
         </div>
       </div>
     </div>
   </div>
 </section>
+
+ <?php require_once 'lokalizacia\comments.php';?>
+
 
         <div class="col-lg-12">
           <div class="clients">
@@ -300,66 +308,8 @@ AuthModal::render();
 
   <?php include 'parts/footer.php'; ?>
 
-  <!-- Scripts -->
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
   
-  <script src="assets/js/tabs.js"></script>
-  <script src="assets/js/popup.js"></script>
-  <script src="assets/js/custom.js"></script>
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="assets/js/owl-carousel.js"></script>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="assets/js/owl-carousel.js"></script> <!-- ak používaš vlastný -->
-
-<script>
-async function loadComments() {
-    const response = await fetch('get_comments.php');
-    const comments = await response.json();
-
-    const carousel = document.getElementById('comments-carousel');
-    carousel.innerHTML = ''; // Vyčistíme carousel
-
-    comments.forEach(comment => {
-        const item = document.createElement('div');
-        item.className = 'item';
-        item.innerHTML = `
-          <div class="content">
-            <div class="left-content">
-              <p>“${comment.comment}”</p>
-              <h4>${comment.username}</h4>
-              <span>User ${comment.user_id}</span>
-            </div>
-            <div class="image">
-              <img src="${comment.image_url ? comment.image_url : 'assets/images/author.jpg'}" alt="">
-            </div>
-          </div>
-        `;
-        carousel.appendChild(item);
-    });
-
-    // Spustíme Owl Carousel
-    $('.owl-testimonials').owlCarousel({
-        items: 1,
-        loop: true,
-        dots: true,
-        nav: false,
-        autoplay: true,
-        autoplayTimeout: 4000,
-        smartSpeed: 800
-    });
-}
-
-// Zavoláme načítanie po načítaní celej stránky
-document.addEventListener('DOMContentLoaded', loadComments);
-</script>
-
 
 
   </body>

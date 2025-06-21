@@ -1,34 +1,20 @@
 <?php
 session_start();
+
+echo 'Session started.<br>';
+
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
     die("Nemáte oprávnenie na zobrazenie tejto stránky.");
 }
 
-require_once 'db_admin.php';
-require_once 'CarManage\VehicleManager.php';
-require_once 'CarManage\CommentManager.php';
+require_once 'db_admin.php'; 
+require_once 'addCar/VehicleManager.php';
+require_once 'Comment.php';
 
-// Inicializuj databázy
-$autaDb = new Database("auta");
-$commentDb = new Database("website_comments");
+$db = new Database("auta");
 
-// Inicializuj manažérov
-$vehicleManager = new VehicleManager($autaDb->getConnection());
-$commentManager = new CommentManager($commentDb->getConnection());
-
-// Spracuj mazanie
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    if (isset($_POST['delete_vehicle'])) {
-        $vehicleManager->deleteVehicle((int)$_POST['vehicle_id']);
-    } elseif (isset($_POST['delete_comment'])) {
-        $commentManager->deleteComment((int)$_POST['comment_id']);
-    }
-}
-
-// Získaj dáta
-$vehicles = $vehicleManager->getAllVehicles();
-$comments = $commentManager->getAllComments();
-
+$vehicleManager = new VehicleManager($db->getConnection());
+$commentManager = new CommentManager($db->getConnection());
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (isset($_POST['delete_vehicle'])) {
@@ -47,83 +33,84 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 
+$vehicles = $vehicleManager->getAllVehicles();
+$comments = $commentManager->getAllComments();
+
 ?>
 
 <!DOCTYPE html>
 <html lang="sk">
 <head>
-    <meta charset="UTF-8">
-    <title>Správa áut a komentárov</title>
-
-    <link rel="stylesheet" href="CarManage\admin_manage.css">
-
+<meta charset="UTF-8">
+<title>Správa áut a komentárov</title>
+<style>
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    th { background-color: #f2f2f2; }
+    img { max-width: 150px; height: auto; }
+    form { margin: 0; }
+    button { background-color: #e74c3c; color: white; border: none; padding: 5px 10px; cursor: pointer; border-radius: 3px; }
+    button:hover { background-color: #c0392b; }
+</style>
 </head>
 <body>
 
-<div class="section">
-    <h2>🚗 Autá</h2>
-    <table>
-        <tr><th>ID</th><th>Názov</th><th>Obrázok</th><th>Cena</th><th>Majiteľ</th><th>Rok</th><th>Náhľad</th><th>Akcia</th></tr>
-        <?php if ($vehicles && $vehicles->num_rows > 0): while ($row = $vehicles->fetch_assoc()): ?>
-        <tr>
-            <td><?= $row['id'] ?></td>
-            <td><?= htmlspecialchars($row['title']) ?></td>
-            <td><?= htmlspecialchars($row['image']) ?></td>
-            <td><?= htmlspecialchars($row['price_per_day']) ?>€</td>
-            <td><?= htmlspecialchars($row['owner']) ?></td>
-            <td><?= htmlspecialchars($row['year']) ?></td>
-            <td><img src="assets/images/<?= htmlspecialchars($row['image']) ?>" width="100"></td>
-            <td>
-                <form method="post">
-                    <input type="hidden" name="vehicle_id" value="<?= $row['id'] ?>">
-                    <button type="submit" name="delete_vehicle" class="delete-btn">Vymazať</button>
-                    <td>
-    <form method="post">
-        <input type="hidden" name="vehicle_id" value="<?= $row['id'] ?>">
-        <input type="text" name="title" value="<?= htmlspecialchars($row['title']) ?>" required>
-        <input type="text" name="image" value="<?= htmlspecialchars($row['image']) ?>" required>
-        <input type="number" name="price_per_day" step="0.01" value="<?= htmlspecialchars($row['price_per_day']) ?>" required>
-        <input type="text" name="owner" value="<?= htmlspecialchars($row['owner']) ?>" required>
-        <input type="number" name="year" value="<?= htmlspecialchars($row['year']) ?>" required>
-        <button type="submit" name="update_vehicle">Uložiť zmeny</button>
-    </form>
-</td>
+<h1>Správa áut a komentárov</h1>
 
-                </form>
-            </td>
-        </tr>
-        <?php endwhile; else: ?>
-        <tr><td colspan="8">Žiadne autá v databáze.</td></tr>
-        <?php endif; ?>
-    </table>
-</div>
+<h2>Autá</h2>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Názov</th>
+        <th>Obrázok</th>
+        <th>Cena za deň (€)</th>
+        <th>Majiteľ</th>
+        <th>Rok</th>
+        <th>Akcie</th>
+    </tr>
+    <?php foreach ($vehicles as $vehicle): ?>
+    <tr>
+        <td><?= htmlspecialchars($vehicle['id']) ?></td>
+        <td><?= htmlspecialchars($vehicle['title']) ?></td>
+        <td><img src="assets/images/<?= htmlspecialchars($vehicle['image']) ?>" alt="Obrázok auta"></td>
+        <td><?= htmlspecialchars($vehicle['price_per_day']) ?></td>
+        <td><?= htmlspecialchars($vehicle['owner']) ?></td>
+        <td><?= htmlspecialchars($vehicle['year']) ?></td>
+        <td>
+            <form method="post" onsubmit="return confirm('Naozaj chcete vymazať toto auto?');">
+                <input type="hidden" name="vehicle_id" value="<?= $vehicle['id'] ?>">
+                <button type="submit" name="delete_vehicle">Vymazať</button>
+            </form>
+        </td>
+    </tr>
+    <?php endforeach; ?>
+</table>
 
-<div class="section">
-    <h2>💬 Komentáre</h2>
-    <table>
-        <tr><th>ID</th><th>Používateľ</th><th>Email</th><th>Komentár</th><th>Dátum</th><th>Akcia</th></tr>
-        <?php if ($comments && $comments->num_rows > 0): while ($row = $comments->fetch_assoc()): ?>
-        <tr>
-            <td><?= $row['id'] ?></td>
-            <td><?= htmlspecialchars($row['username']) ?></td>
-            <td><?= htmlspecialchars($row['email']) ?></td>
-            <td><?= htmlspecialchars($row['comment']) ?></td>
-            <td><?= htmlspecialchars($row['created_at']) ?></td>
-            <td>
-                <form method="post">
-                    <input type="hidden" name="comment_id" value="<?= $row['id'] ?>">
-                    <button type="submit" name="delete_comment" class="delete-btn">Vymazať</button>
-                </form>
-            </td>
-        </tr>
-        <?php endwhile; else: ?>
-        <tr><td colspan="6">Žiadne komentáre v databáze.</td></tr>
-        <?php endif; ?>
-    </table>
-</div>
-
-
-
+<h2>Komentáre</h2>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Používateľ</th>
+        <th>Email</th>
+        <th>Komentár</th>
+        <th>Dátum</th>
+        <th>Akcie</th>
+    </tr>
+    <?php foreach ($comments as $comment): ?>
+    <tr>
+        <td><?= htmlspecialchars($comment['id']) ?></td>
+        <td><?= htmlspecialchars($comment['user']) ?></td>
+        <td><?= htmlspecialchars($comment['comment']) ?></td>
+        <td><?= htmlspecialchars($comment['created_at']) ?></td>
+        <td>
+            <form method="post" onsubmit="return confirm('Naozaj chcete vymazať tento komentár?');">
+                <input type="hidden" name="comment_id" value="<?= $comment['id'] ?>">
+                <button type="submit" name="delete_comment">Vymazať</button>
+            </form>
+        </td>
+    </tr>
+    <?php endforeach; ?>
+</table>
 
 </body>
 </html>

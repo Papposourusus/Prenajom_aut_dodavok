@@ -1,19 +1,22 @@
 <?php
-require_once __DIR__ . 'Database.php';
+require_once 'Comment.php';
 
-class CommentRepository
-{
+class CommentRepository {
     private $conn;
 
-    public function __construct()
-    {
-        $this->conn = Database::getInstance()->getConnection();
+    public function __construct($conn) {
+        $this->conn = $conn;
     }
 
-    public function getAllComments()
-    {
-        $stmt = $this->conn->prepare("SELECT * FROM comments ORDER BY id DESC");
-        $stmt->execute();
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    public function getAllComments(): array {
+        $sql = "SELECT * FROM comments ORDER BY created_at DESC";
+        $result = $this->conn->query($sql);
+
+        $comments = [];
+        while ($row = $result->fetch_assoc()) {
+            $comments[] = new Comment($row);
+        }
+        return $comments;
     }
 }
+?>
