@@ -99,8 +99,7 @@ $comments = $commentManager->getAllComments();
     <?php foreach ($comments as $comment): ?>
     <tr>
         <td><?= htmlspecialchars($comment['id']) ?></td>
-        <td><?= htmlspecialchars($comment['username']) ?></td>
-        <td><?= htmlspecialchars($comment['email']) ?></td>
+        <td><?= htmlspecialchars($comment['user']) ?></td>
         <td><?= htmlspecialchars($comment['comment']) ?></td>
         <td><?= htmlspecialchars($comment['created_at']) ?></td>
         <td>
