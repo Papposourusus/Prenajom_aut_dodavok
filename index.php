@@ -57,7 +57,7 @@ https://templatemo.com/tm-576-snapx-photography
   <?php include 'parts/header.php'; ?>
 
   <?php require_once 'index\VehicleRepository.php';
-$vehicleRepo = new VehicleRepository();// vytvorenie novej triedy - komun. z databazou
+$vehicleRepo = new VehicleRepository();// 
 $vehicles = $vehicleRepo->getAllVehicles();
 ?>
 

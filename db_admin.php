@@ -1,8 +1,7 @@
 <?php
 class Database {
     private $host = "localhost";
-    private $db_name = "auta";   // tvoja databáza
-    private $username = "root";
+    private $db_name = "auta";   
     private $password = "";
     public $conn;
 

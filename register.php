@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'db_admin.php'; // tvoja trieda Database
+require_once 'db_admin.php'; 
 
 class Register {
     public static function handle() {
@@ -24,7 +24,7 @@ class Register {
             $db = new Database();
             $conn = $db->connect();
 
-            // Skontroluj, či už existuje používateľ s týmto menom alebo emailom
+            
             $stmt = $conn->prepare("SELECT id FROM users WHERE username = :username OR email = :email");
             $stmt->execute(['username' => $username, 'email' => $email]);
 
@@ -35,10 +35,10 @@ class Register {
                 exit();
             }
 
-            // Hashuj heslo
+           
             $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-            // Vlož nového používateľa s rolou "user"
+          
             $stmt = $conn->prepare("INSERT INTO users (username, email, password, role) VALUES (:username, :email, :password, 'user')");
             $stmt->execute([
                 'username' => $username,
@@ -59,5 +59,5 @@ class Register {
     }
 }
 
-// Spusti handler pri načítaní súboru
+
 Register::handle();

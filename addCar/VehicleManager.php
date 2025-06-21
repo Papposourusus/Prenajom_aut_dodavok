@@ -1,29 +1,22 @@
 <?php
-
 class VehicleManager {
     private $conn;
 
-    public function __construct($host, $user, $password, $database) {
-        $this->conn = new mysqli($host, $user, $password, $database);
-        if ($this->conn->connect_error) {
-            die("Chyba DB: " . $this->conn->connect_error);
-        }
+    public function __construct($dbConnection) {
+        $this->conn = $dbConnection;
     }
 
-    public function addVehicle($title, $price, $owner, $year, $imageFile) {
-        $imageName = basename($imageFile['name']);
-        $imageTmp = $imageFile['tmp_name'];
-        $uploadPath = "assets/images/" . $imageName;
+    public function getAllVehicles() {
+        return $this->conn->query("SELECT * FROM auta");
+    }
 
-        if (move_uploaded_file($imageTmp, $uploadPath)) {
-            $stmt = $this->conn->prepare("INSERT INTO auta (title, image, price_per_day, owner, year) VALUES (?, ?, ?, ?, ?)");
-            if ($stmt) {
-                $stmt->bind_param("ssdsi", $title, $imageName, $price, $owner, $year);
-                $result = $stmt->execute();
-                $stmt->close();
-                return $result;
-            }
-        }
-        return false;
+    public function deleteVehicle($id) {
+        $stmt = $this->conn->prepare("DELETE FROM auta WHERE id = ?");
+        $stmt->execute([$id]);
+    }
+
+    public function updateVehicle($id, $title, $image, $price, $owner, $year) {
+        $stmt = $this->conn->prepare("UPDATE auta SET title = ?, image = ?, price_per_day = ?, owner = ?, year = ? WHERE id = ?");
+        $stmt->execute([$title, $image, $price, $owner, $year, $id]);
     }
 }
