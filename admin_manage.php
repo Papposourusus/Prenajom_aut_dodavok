@@ -5,6 +5,7 @@ error_reporting(E_ALL);
 echo 'Debug: Script začal';
 session_start();
 
+echo 'Session started.<br>';
 
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
     die("Nemáte oprávnenie na zobrazenie tejto stránky.");
@@ -18,6 +19,26 @@ $db = new Database("auta");
 
 $vehicleManager = new VehicleManager($db->getConnection());
 $commentManager = new CommentManager($db->getConnection());
+
+
+
+$autaDb = new Database("auta");
+echo 'Database auta created.<br>';
+$commentDb = new Database("auta"); // tá istá databáza, lebo máš auta a comments v jednej db
+echo 'Database comments created.<br>';
+
+$vehicleManager = new VehicleManager($autaDb->getConnection());
+echo 'VehicleManager created.<br>';
+$commentManager = new CommentManager($commentDb->getConnection());
+echo 'CommentManager created.<br>';
+
+
+
+
+
+
+
+
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (isset($_POST['delete_vehicle'])) {
@@ -36,6 +57,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 
+
+echo 'About to get vehicles.<br>';
+
 $vehicles = $vehicleManager->getAllVehicles();
 $comments = $commentManager->getAllComments();
+
+
+if ($vehicles) {
+    echo 'Vehicles loaded.<br>';
+} else {
+    echo 'Vehicles NOT loaded.<br>';
+}
+
 ?>
