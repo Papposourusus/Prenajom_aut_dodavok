@@ -1,8 +1,5 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-echo 'Debug: Script začal';
+
 session_start();
 
 echo 'Session started.<br>';
@@ -19,24 +16,6 @@ $db = new Database("auta");
 
 $vehicleManager = new VehicleManager($db->getConnection());
 $commentManager = new CommentManager($db->getConnection());
-
-
-
-$autaDb = new Database("auta");
-echo 'Database auta created.<br>';
-$commentDb = new Database("auta"); // tá istá databáza, lebo máš auta a comments v jednej db
-echo 'Database comments created.<br>';
-
-$vehicleManager = new VehicleManager($autaDb->getConnection());
-echo 'VehicleManager created.<br>';
-$commentManager = new CommentManager($commentDb->getConnection());
-echo 'CommentManager created.<br>';
-
-
-
-
-
-
 
 
 
@@ -58,16 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 
 
-echo 'About to get vehicles.<br>';
-
 $vehicles = $vehicleManager->getAllVehicles();
 $comments = $commentManager->getAllComments();
 
 
-if ($vehicles) {
-    echo 'Vehicles loaded.<br>';
-} else {
-    echo 'Vehicles NOT loaded.<br>';
-}
-
-?>

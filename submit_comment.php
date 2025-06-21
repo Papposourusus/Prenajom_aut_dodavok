@@ -1,11 +1,11 @@
 <?php
-require_once 'database.php'; 
+require_once 'Database.php'; 
 require_once 'lokalizacia/CommentRepository.php';
 require_once 'Comment.php';
 
-// vytvorenie inštancie pripojenia
+
 $dbInstance = new Database();
-$conn = $dbInstance->connect();  // tu použi $dbInstance, nie $db
+$conn = $dbInstance->connect();  
 
 $commentRepo = new CommentRepository($conn);
 
